@@ -5,6 +5,7 @@ import ProductsSection from "../components/ProductsSection/ProductsSection";
 import Trandy from "./../components/Trandy/Trandy";
 import Subscriber from "../components/Subscriber/Subscriber";
 import JustArrived from "./../components/JustArrived/JustArrived";
+import OwlDemo from "../components/Footer/OwlDemo";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Trandy />
       <Subscriber />
       <JustArrived />
+      <OwlDemo/>
     </div>
   );
 };

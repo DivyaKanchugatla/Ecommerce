@@ -1,58 +1,59 @@
 import React from "react";
 import "./Trandy.css";
-
+import { ADD_CART } from "../../store/actions/CartActions";
+import { useDispatch } from "react-redux";
 const data = [
   {
-    id: 1,
+    id: 31,
     image: "https://technext.github.io/eshopper/img/product-1.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
     cross_price: 123,
   },
   {
-    id: 2,
+    id: 32,
     image: "https://technext.github.io/eshopper/img/product-2.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
     cross_price: 123,
   },
   {
-    id: 3,
+    id: 33,
     image: "https://technext.github.io/eshopper/img/product-3.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
     cross_price: 123,
   },
   {
-    id: 4,
+    id: 34,
     image: "https://technext.github.io/eshopper/img/product-4.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
     cross_price: 123,
   },
   {
-    id: 5,
+    id: 35,
     image: "https://technext.github.io/eshopper/img/product-5.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
     cross_price: 123,
   },
   {
-    id: 6,
+    id: 36,
     image: "https://technext.github.io/eshopper/img/product-6.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
     cross_price: 123,
   },
   {
-    id: 7,
+    id: 37,
     image: "https://technext.github.io/eshopper/img/product-7.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
     cross_price: 123,
   },
   {
-    id: 8,
+    id: 38,
     image: "https://technext.github.io/eshopper/img/product-8.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
@@ -61,6 +62,7 @@ const data = [
 ];
 
 function Trandy() {
+  const dispatch=useDispatch()
   return (
     <>
       <div className="trandy-heading-container">
@@ -88,7 +90,7 @@ function Trandy() {
                         
                                <a href="kd" className="text-dark p-0"><i className="fas fa-eye mr-1 fas-color"></i><span className="view-button">View Detail</span></a>
                                 
-                               <a href="kd" className="text-dark p-0"><i className="fas fa-shopping-cart mr-1 fas-color"></i><span className = "view-button">Add To Cart</span></a>
+                               <button   onClick={()=>dispatch({type:ADD_CART,payload:product})} className="text-dark p-0"><i className="fas fa-shopping-cart mr-1 fas-color"></i><span className = "view-button">Add To Cart</span></button>
                              </div>
                          </div>
                      </div>

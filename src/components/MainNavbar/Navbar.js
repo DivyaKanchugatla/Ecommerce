@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Carousel from './Carousel';
 import './Navbar.css'
 
@@ -55,13 +56,13 @@ const Navbar = () => {
                      {/* Home Navbar starts from here */}
                     <div className="collapse navbar-collapse justify-content-between d-lg-block" id="navbarCollapse">
                         <div className="navbar-nav mr-auto py-0">
-                            <a href="index.html" className="nav-item nav-link items">Home</a>
+                            <Link to="/" className="nav-item nav-link items">Home</Link>
                             <a href="shop.html" className="nav-item nav-link items">Shop</a>
-                            <a href="detail.html" className="nav-item nav-link items">Shop Detail</a>
+                            <Link to="/Shopdetails" className="nav-item nav-link items">Shop Detail</Link>
                             <div className="nav-item dropdown">
                                 <a href="#k" className="nav-link dropdown-toggle items" data-toggle="dropdown" aria-expanded="false">Pages</a>
                                 <div className="dropdown-menu rounded-0 m-0">
-                                    <a href="cart.html" className="dropdown-item items">Shopping Cart</a>
+                                    <Link to="/Shopingcart" className="dropdown-item items">Shopping Cart</Link>
                                     <a href="checkout.html" className="dropdown-item items">Checkout</a>
                                 </div>
                             </div>
