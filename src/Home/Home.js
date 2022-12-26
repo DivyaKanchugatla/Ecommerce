@@ -1,16 +1,22 @@
-import React from 'react'
-import Feature from '../components/Features/Feature'
-import Offersection from '../components/OffersSection/Offersection'
-import ProductsSection from '../components/ProductsSection/ProductsSection'
+import React from "react";
+import Feature from "../components/Features/Feature";
+import Offersection from "../components/OffersSection/Offersection";
+import ProductsSection from "../components/ProductsSection/ProductsSection";
+import Trandy from "./../components/Trandy/Trandy";
+import Subscriber from "../components/Subscriber/Subscriber";
+import JustArrived from "./../components/JustArrived/JustArrived";
 
 const Home = () => {
   return (
-    <>
-    <Feature/>
-    <ProductsSection/>
-    <Offersection/>
-    </>
-  )
-}
+    <div>
+      <Feature />
+      <ProductsSection />
+      <Offersection />
+      <Trandy />
+      <Subscriber />
+      <JustArrived />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
