@@ -1,6 +1,5 @@
 import React from 'react'
 import Carousel from './Carousel';
-import useLocation from 'react-router-dom';
 import './Navbar.css'
 
 const Navbar = () => {
