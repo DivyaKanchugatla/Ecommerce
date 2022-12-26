@@ -1,15 +1,21 @@
-import React from 'react'
-import Navbar from './components/MainNavbar/Navbar'
-import TopNavbar from './components/TopNavbar/TopNavbar'
+import React from "react";
+import Navbar from "./components/MainNavbar/Navbar";
+import TopNavbar from "./components/TopNavbar/TopNavbar";
+import Trandy from "./components/Trandy/Trandy";
+import Subscriber from "./components/Subscriber/Subscriber";
+import JustArrived from "./components/JustArrived/JustArrived";
 
 const App = () => {
   return (
     <>
-    <TopNavbar/>
-    <Navbar/>
-    
-    </>
-  )
-}
+      <TopNavbar />
+      <Navbar />
 
-export default App
+      <Trandy />
+      <Subscriber />
+      <JustArrived />
+    </>
+  );
+};
+
+export default App;
