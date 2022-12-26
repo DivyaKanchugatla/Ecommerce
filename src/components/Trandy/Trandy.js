@@ -4,56 +4,56 @@ import "./Trandy.css";
 const data = [
   {
     id: 1,
-    imgSrc: "https://technext.github.io/eshopper/img/product-1.jpg",
+    image: "https://technext.github.io/eshopper/img/product-1.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
     cross_price: 123,
   },
   {
     id: 2,
-    imgSrc: "https://technext.github.io/eshopper/img/product-2.jpg",
+    image: "https://technext.github.io/eshopper/img/product-2.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
     cross_price: 123,
   },
   {
     id: 3,
-    imgSrc: "https://technext.github.io/eshopper/img/product-3.jpg",
+    image: "https://technext.github.io/eshopper/img/product-3.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
     cross_price: 123,
   },
   {
     id: 4,
-    imgSrc: "https://technext.github.io/eshopper/img/product-4.jpg",
+    image: "https://technext.github.io/eshopper/img/product-4.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
     cross_price: 123,
   },
   {
     id: 5,
-    imgSrc: "https://technext.github.io/eshopper/img/product-5.jpg",
+    image: "https://technext.github.io/eshopper/img/product-5.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
     cross_price: 123,
   },
   {
     id: 6,
-    imgSrc: "https://technext.github.io/eshopper/img/product-6.jpg",
+    image: "https://technext.github.io/eshopper/img/product-6.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
     cross_price: 123,
   },
   {
     id: 7,
-    imgSrc: "https://technext.github.io/eshopper/img/product-7.jpg",
+    image: "https://technext.github.io/eshopper/img/product-7.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
     cross_price: 123,
   },
   {
     id: 8,
-    imgSrc: "https://technext.github.io/eshopper/img/product-8.jpg",
+    image: "https://technext.github.io/eshopper/img/product-8.jpg",
     title: "Colorful Stylish Shirt",
     price: 123,
     cross_price: 123,
@@ -69,13 +69,13 @@ function Trandy() {
       <div className="container-fluid pt-5">
          <div className="row">
          {data.map((product,index) => {
-                  const {title,imgSrc,price} = product; 
+                  const {title,image,price} = product; 
            return (
                  <div className="col-12 col-md-6 col-lg-3 pb-1"  key={index}>
                  
                          <div className="card border-0 mb-4">
                              <div className="card-header p-0 product-img border bg-transparent overflow-hidden">
-                                 <img className="img-fluid w-100 h-100 img-styling" src={imgSrc} alt=""/>
+                                 <img className="img-fluid w-100 h-100 img-styling" src={image} alt=""/>
                              </div>
                              <div className="card-body border-left border-right text-center p-0 pt-4 pb-3">
                                  <h6 className="text-truncate mb-3">{title}</h6>
