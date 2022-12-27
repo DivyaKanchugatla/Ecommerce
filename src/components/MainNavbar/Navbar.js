@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { Link,useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import Carousel from './Carousel';
 import './Navbar.css'
 
@@ -67,8 +66,7 @@ const Navbar = () => {
                             <Link to="/" className="nav-item nav-link items">Home</Link>
                             <Link to="/shop" className="nav-item nav-link items">Shop</Link>
                             <Link to="/product/1" className="nav-item nav-link items">Shop Detail</Link>
-                            <a href="shop.html" className="nav-item nav-link items">Shop</a>
-                            <Link to="/Shopdetails" className="nav-item nav-link items">Shop Detail</Link>
+                           
                             <div className="nav-item dropdown">
                                 <a href="#k" className="nav-link dropdown-toggle items" data-toggle="dropdown" aria-expanded="false">Pages</a>
                                 <div className="dropdown-menu rounded-0 m-0">
