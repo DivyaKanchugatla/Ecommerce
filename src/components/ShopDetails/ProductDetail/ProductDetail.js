@@ -5,15 +5,19 @@ import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import {removeSelectedProduct,selectedProduct} from '../../../store/actions/ProductActions'
 import Rating from './Rating';
+import { ADD_CART } from '../../../store/actions/CartActions';
+import {  DECREASE_QUANTITY,INCREASE_QUANTITY } from '../../../store/actions/CartActions';
 
 
 const ProductDetail = () => {
+   let items = useSelector((state)=>state._cardProduct)
     let product = useSelector((state) => state.product);
     const {productId}=useParams();
     
     const dispatch = useDispatch();
     console.log(product);
-    const {title,image,description,price,rating}=product;
+    const {title,image,description,price,rating,id}=product;
+    let key = id;
     const fetchProductDetail = async (id) =>{
         const response = await axios.get(`https://fakestoreapi.com/products/${id}`)
         .catch((err) => {
@@ -171,17 +175,21 @@ const ProductDetail = () => {
         </div>
         <div className="d-flex mb-4 pt-2 center">
         <div className='add-icon-button-container d-flex flex-row justify-content-center text-center p-2' style={{width:"130px"}}>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className='add-icon' >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className='add-icon' onClick={() =>
+                            dispatch({ type: DECREASE_QUANTITY, payload: key })
+                          }>
                       <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/>
                     </svg>
-                    <p class="d-inline-block count-value">0</p>
+                    <p class="d-inline-block count-value">{items.quantity}</p>
                      {/* <p className='d-inline-block count-value'>{item.quantity}</p> */}
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  className='add-icon'>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  className='add-icon'  onClick={() =>
+                            dispatch({ type: INCREASE_QUANTITY, payload: key })
+                          }>
                         <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
                       </svg>
                     </div>
                     <div className='add-icon-button-container d-flex flex-row justify-content-center text-center p-2' >
-                    <button className=" shopdetail-addtocart-button p-2 text-center">
+                    <button  onClick={()=>dispatch({type:ADD_CART,payload:product})} className=" shopdetail-addtocart-button p-2 text-center">
                           <i className="fa fa-shopping-cart shopdetail-addtocart" /> Add To Cart
                     </button>
         </div>  

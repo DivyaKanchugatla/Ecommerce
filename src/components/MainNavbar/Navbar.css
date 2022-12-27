@@ -1,6 +1,12 @@
+/* .items{
+    color:#0c0c0b !important;
+    padding: 20px;
+} */
 .items{
     color:#0c0c0b !important;
     padding: 20px;
+    border-width:0px;
+    background-color: transparent;
 }
 .items:hover {
     color: #D19C97 !important;
@@ -56,13 +62,17 @@
     margin-top: -1px;
     padding: 0 30px;
     background-color: #d19c97;
+    z-index: 0 !important;
+    position:relative;
   }
   .categoriesdropdown:hover{
     background-color: #d19c97;
   }
   .navoverplay {
     width: calc(100% - 30px);
-    z-index: 1;
+    z-index: 1 !important;
+    position: absolute;
+    background-color: white;
   }
     
 

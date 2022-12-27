@@ -1,7 +1,9 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import './TopNavbar.css'
 
 const TopNavbar = () => {
+    const itemsInCart=useSelector((state)=>state._cardProduct.numberCart)
   return (
     <>
         {/* TopNavbar starts from here*/}
@@ -80,7 +82,7 @@ const TopNavbar = () => {
                 </a>
                 <a href="kd" className="btn border mr-3">
                     <i className="fas fa-shopping-cart icon-color"></i>
-                    <span className="badge">0</span>
+                    <span className="badge">{itemsInCart}</span>
                 </a>
             </div>
             {/*code for cart and heart icons ends here*/}

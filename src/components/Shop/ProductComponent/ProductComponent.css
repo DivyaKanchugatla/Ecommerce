@@ -37,3 +37,17 @@
  .carousel-container{
   width:300px;
  }
+ .view-button {
+  color: black;
+  border: none !important; 
+  background-color: white !important;
+}
+.view-button:hover {
+  color: #d19c97 !important;
+  text-decoration: none;
+}
+.view-button:focus,:active{
+   box-shadow:none;
+   border:none !important;
+   text-decoration: none;
+  }

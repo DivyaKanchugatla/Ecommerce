@@ -10,10 +10,6 @@
   left: 0;
   top: 0;
   z-index: 99;
-
-
-  height: 100vh;
-  width: 100vw;
 }
 
 section{
@@ -22,7 +18,7 @@ section{
   justify-content: center;
   border-radius: 10px;
   background-color:lightcyan;
-  height: 80vh;
+  height: 95vh;
   width: 70%;
 }
 
@@ -51,12 +47,22 @@ section .Login-contentbx{
 
 @media screen and (max-width:576px) { 
   section{
-    height: 80vh !important;
+    height: 100% !important;
   }
   section .Login-contentbx{
-  
+  height: 100% !important;
     width: 100% !important;
   
+  }
+  .social-btn{
+    height: 35px!important;
+    width:90% !important;
+  }
+  .Login-btn{
+    background-color: #4886FF;
+    color: white;
+    width: 70px !important;
+    height: 30px !important;
   }
  
 }
@@ -67,7 +73,7 @@ section .Login-contentbx{
     justify-content: center;
     border-radius: 10px;
     
-    height: 70vh;
+    height: 95vh;
     width: 95%;
   }
   section .Login-contentbx{ 
@@ -83,7 +89,7 @@ section .Login-contentbx{
   .hr-lines:before{
     content:" ";
     height: 2px;
-    width: 115px !important;
+    width: 90px !important;
     background:#d0d0d0;
     display: block;
     position: absolute;
@@ -94,7 +100,7 @@ section .Login-contentbx{
   .hr-lines:after{
     content:" ";
     height: 2px;
-    width: 115px !important;
+    width: 90px !important;
     background: #d0d0d0;
     display: block;
     position: absolute;
@@ -113,7 +119,7 @@ section .Login-contentbx{
   .hr-lines:before{
     content:" ";
     height: 2px;
-    width: 120px !important;
+    width: 90px !important;
     background:#d0d0d0;
     display: block;
     position: absolute;
@@ -124,7 +130,7 @@ section .Login-contentbx{
   .hr-lines:after{
     content:" ";
     height: 2px;
-    width: 120px !important;
+    width: 90px !important;
     background: #d0d0d0;
     display: block;
     position: absolute;
@@ -143,11 +149,13 @@ section .Login-contentbx .formbx .inputbx{
 
 .remember{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between !important;
   margin: 5px;
+
 }
 .remember a{
   text-decoration: none;
+
 
 }
 .forgotpassword{
@@ -180,7 +188,7 @@ section .imgbx{
 
 .Login-icon {
   padding: 9px;
-  color:  #9d9fa0;
+  color:  #9d9fa0 !important;
   min-width: 40px;
   border-right: 2px solid;
   text-align: center;
@@ -232,5 +240,8 @@ section .imgbx{
 
 .social-btn{
   margin-bottom:10px !important ;
+  font-size: 12px !important;
+  width:95% !important;
+
 }
 
