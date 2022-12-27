@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import OwlCarousel from "react-owl-carousel";
-import { fetchProducts } from '../../store/Actions/ProductActions';
+import { fetchProducts } from '../../../store/actions/ProductActions';
 import { useEffect } from 'react';
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";

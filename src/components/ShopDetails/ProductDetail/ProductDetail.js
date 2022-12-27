@@ -3,7 +3,7 @@ import './ProductDetail.css'
 import axios from 'axios';
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
-import {removeSelectedProduct,selectedProduct} from '../../store/Actions/ProductActions'
+import {removeSelectedProduct,selectedProduct} from '../../../store/actions/ProductActions'
 import Rating from './Rating';
 
 
