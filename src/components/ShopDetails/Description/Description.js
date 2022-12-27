@@ -1,6 +1,7 @@
 import React from 'react'
 import './Description.css';
-import ProductCarousel from './ProductCarousel';
+import ProductCarousel from '../ProductCarousel/ProductCarousel'
+
 
 const Description = () => {
   return (
@@ -120,9 +121,8 @@ const Description = () => {
                 </div>
             </div>
         </div>
-        
+        <ProductCarousel/>
     </div>
-    <ProductCarousel/>
     </>
   )
 }

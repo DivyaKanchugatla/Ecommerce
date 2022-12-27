@@ -1,3 +1,4 @@
+import React from 'react';
 import './OurShoppingHeader.css'
 
 const OurShop = () => {

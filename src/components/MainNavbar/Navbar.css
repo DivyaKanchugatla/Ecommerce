@@ -50,5 +50,19 @@
         width: 1050px;
     }
 }
+
+.categoriesdropdown {
+    height: 65px;
+    margin-top: -1px;
+    padding: 0 30px;
+    background-color: #d19c97;
+  }
+  .categoriesdropdown:hover{
+    background-color: #d19c97;
+  }
+  .navoverplay {
+    width: calc(100% - 30px);
+    z-index: 1;
+  }
     
 
