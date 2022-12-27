@@ -70,10 +70,10 @@ const Navbar = () => {
                                 <a href="#k" className="nav-link dropdown-toggle items" data-toggle="dropdown" aria-expanded="false">Pages</a>
                                 <div className="dropdown-menu rounded-0 m-0">
                                     <Link to="/Shopingcart" className="dropdown-item items">Shopping Cart</Link>
-                                    <a href="checkout.html" className="dropdown-item items">Checkout</a>
+                                    <Link to="/checkout" className="dropdown-item items">Checkout</Link>
                                 </div>
                             </div>
-                            <a href="contact.html" className="nav-item nav-link items">Contact</a>
+                            <Link to="/contact" className="nav-item nav-link items">Contact</Link>
                         </div>
                         <div className="navbar-nav ml-auto py-0">
                             <a href="kd" className="nav-item nav-link items">Login</a>
