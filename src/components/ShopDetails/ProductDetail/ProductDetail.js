@@ -196,8 +196,8 @@ const ProductDetail = () => {
                   </svg>
                 </div>
                 <div className="add-icon-button-container d-flex flex-row justify-content-center text-center p-2">
-                  <button className=" shopdetail-addtocart-button p-2 text-center">
-                    <i className="fa fa-shopping-cart shopdetail-addtocart" />{" "}
+                  <button className=" shopdetail-addtocart-button p-2 text-center" onclick={dispatch({type:ADD_CART,payload:product})}>
+                    <i className="fa fa-shopping-cart shopdetail-addtocart" />
                     Add To Cart
                   </button>
                 </div>
