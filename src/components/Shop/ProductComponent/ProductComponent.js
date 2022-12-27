@@ -1,10 +1,11 @@
 import React from 'react'
  import { useEffect } from 'react';
  import { useSelector,useDispatch } from 'react-redux';
- import {fetchProducts} from '../../../store/Actions/ProductActions'
+ import {fetchProducts} from '../../../store/actions/ProductActions'
  import './ProductComponent.css'
  import Filters from '../Filters/Filters';
  import SearchBar from '../SearchBar/SearchBar';
+ import { Link } from 'react-router-dom';
 
  const ProductComponent = () => {
  
@@ -44,7 +45,9 @@ import React from 'react'
                                  </div>
                              </div>
                              <div className="card-footer d-flex justify-content-between bg-light border">
+                             <Link to={`/product/${id}`} style={{textDecoratio:"none"}} className="linkText">
                                <i className="fas fa-eye mr-1 fas-color"></i><span className='' style={{color:"black"}} >View Detail</span>
+                                </Link> 
                                  <a href="kd" className="btn btn-sm text-dark p-0"><i className="fas fa-shopping-cart mr-1 fas-color"></i>Add To Cart</a>
                              </div>
                          </div>

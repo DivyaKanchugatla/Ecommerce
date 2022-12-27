@@ -1,9 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { Link,useLocation } from 'react-router-dom';
 import Carousel from './Carousel';
 import './Navbar.css'
 
 const Navbar = () => {
+    const products=useSelector((state)=>state.allProducts.products)
+    const productId = products.map(product=>{
+        return product.id;
+    })
+    console.log(productId[0])
+    const location=useLocation()
   return (
     <>
     { /* MainNavbar starts from here */}
@@ -16,7 +23,7 @@ const Navbar = () => {
                     <h6 className="m-4 text-dark heading-text">Categories</h6>
                     <i className="fa fa-angle-down text-dark"></i>
                 </a>
-                <nav className="navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 collapse show" id="navbar-vertical">
+                <nav className="navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 collapse show navoverplay" id="navbar-vertical">
                     <div className="navbar-nav w-100 overflow-hidden" style={{height: "497px"}}>
                         <div className="nav-item dropdown">
                             <a href="#k" className="nav-link  d-flex align-items-center justify-content-between" data-toggle="dropdown" aria-expanded="false"   style={{height: "50px" , marginTop: "-1px", padding: "0 30px"}}><span className='m-4'>Dresses </span><i className="fa fa-angle-down float-right mt-1"></i></a>
@@ -57,16 +64,16 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse justify-content-between d-lg-block" id="navbarCollapse">
                         <div className="navbar-nav mr-auto py-0">
                             <Link to="/" className="nav-item nav-link items">Home</Link>
-                            <a href="shop.html" className="nav-item nav-link items">Shop</a>
-                            <Link to="/Shopdetails" className="nav-item nav-link items">Shop Detail</Link>
+                            <Link to="/shop" className="nav-item nav-link items">Shop</Link>
+                            <Link to="/product/1" className="nav-item nav-link items">Shop Detail</Link>
                             <div className="nav-item dropdown">
                                 <a href="#k" className="nav-link dropdown-toggle items" data-toggle="dropdown" aria-expanded="false">Pages</a>
                                 <div className="dropdown-menu rounded-0 m-0">
                                     <Link to="/Shopingcart" className="dropdown-item items">Shopping Cart</Link>
-                                    <a href="checkout.html" className="dropdown-item items">Checkout</a>
+                                    <Link to="/checkout" className="dropdown-item items">Checkout</Link>
                                 </div>
                             </div>
-                            <a href="contact.html" className="nav-item nav-link items">Contact</a>
+                            <Link to="/contact" className="nav-item nav-link items">Contact</Link>
                         </div>
                         <div className="navbar-nav ml-auto py-0">
                             <a href="kd" className="nav-item nav-link items">Login</a>
@@ -76,8 +83,8 @@ const Navbar = () => {
                 </nav>
                 {/* Home Navbar ends here */}
  {/* carousel starts from here */}
-                     {/* {location.pathname==="/" && <Carousel/>}  */}
-                     <Carousel/>
+                     {location.pathname==="/" && <Carousel/>} 
+                     {/* <Carousel/> */}
                      {/* carousel ends here */}
                 </div>
             </div>
@@ -89,3 +96,4 @@ const Navbar = () => {
 }
 
 export default Navbar;
+

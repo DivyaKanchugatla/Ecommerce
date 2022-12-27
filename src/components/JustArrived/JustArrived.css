@@ -28,6 +28,8 @@
 }
 .view-button {
   color: black;
+  border:none;
+  text-decoration: none;
 }
 
 .view-button:hover {
