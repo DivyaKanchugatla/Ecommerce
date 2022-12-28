@@ -41,7 +41,9 @@ const ProductCarousel = () => {
 },[dispatch])
   return (
     <>
-    
+        <div className="trandy-heading-container">
+      <h2 className="decorated mb-4"><span>You May Also Like</span></h2>
+      </div>
         <div className="container-fluid pt-5">
         <div className="row">
        <OwlCarousel {...options}>
