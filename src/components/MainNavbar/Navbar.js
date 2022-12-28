@@ -451,7 +451,3 @@ const Navbar = () => {
 
 export default Navbar;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> mergingbranch
