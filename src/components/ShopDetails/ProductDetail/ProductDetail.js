@@ -6,17 +6,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import {removeSelectedProduct,selectedProduct} from '../../../store/actions/ProductActions'
 import Rating from './Rating';
 import { ADD_CART } from '../../../store/actions/CartActions';
-import {  DECREASE_QUANTITY,INCREASE_QUANTITY } from '../../../store/actions/CartActions';
 
 
 const ProductDetail = () => {
-   let items = useSelector((state)=>state._cardProduct)
     let product = useSelector((state) => state.product);
     const {productId}=useParams();
     const dispatch = useDispatch();
     console.log(product);
-    const {title,image,description,price,rating,id}=product;
-    let key = id;
+    const {title,image,description,price,rating}=product;
     const fetchProductDetail = async (id) =>{
         const response = await axios.get(`https://fakestoreapi.com/products/${id}`)
         .catch((err) => {

@@ -177,7 +177,7 @@ const Navbar = () => {
                       </Link>
                     </div>
                   </div>
-                  <Link to="/contact" className="nav-item nav-link items">
+                  <Link to="/contactus" className="nav-item nav-link items">
                     Contact
                   </Link>
                 </div>
