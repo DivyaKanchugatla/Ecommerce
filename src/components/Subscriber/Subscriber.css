@@ -17,6 +17,7 @@
    .subscriber-container{
     width: 100vw ! important;
      height: 396px !important;
+  
    }
  }
  @media screen and (min-width:1024px){
@@ -31,4 +32,5 @@
  }
  .subscriber-container{
   width: 100vw;
+  box-sizing: border-box;
  }
