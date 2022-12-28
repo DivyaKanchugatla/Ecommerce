@@ -30,6 +30,7 @@ const Navbar = () => {
   const location = useLocation();
   return (
     <>
+    
       {/* MainNavbar starts from here */}
     
       <div className="container-fluid mb-5">
