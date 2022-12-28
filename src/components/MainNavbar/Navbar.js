@@ -31,6 +31,7 @@ const Navbar = () => {
   return (
     <>
       {/* MainNavbar starts from here */}
+    
       <div className="container-fluid mb-5">
         {/* MainNavbar row starts from here */}
         <div className="row border-top px-xl-5">
@@ -193,6 +194,7 @@ const Navbar = () => {
                             <a href="kd" className="nav-item nav-link items">Register</a>
                         </div>
                     </div>
+                    
                 </nav>
                 {/* Home Navbar ends here */}
  {/* carousel starts from here */}
@@ -200,11 +202,13 @@ const Navbar = () => {
                      {/* <Carousel/> */}
                      {/* {location.pathname==="/" && <Carousel/>}  */}
                      {/* carousel ends here */}
+                    
                 </div>
             </div>
              {/* MainNavbar row ends here */}
         </div>
          {/* MainNavbar ends here */}
+        
     </>
   );
 };
