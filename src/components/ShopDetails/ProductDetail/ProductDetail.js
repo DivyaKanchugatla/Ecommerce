@@ -13,7 +13,6 @@ const ProductDetail = () => {
    let items = useSelector((state)=>state._cardProduct)
     let product = useSelector((state) => state.product);
     const {productId}=useParams();
-    
     const dispatch = useDispatch();
     console.log(product);
     const {title,image,description,price,rating,id}=product;
