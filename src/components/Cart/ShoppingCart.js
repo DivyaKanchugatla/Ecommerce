@@ -14,7 +14,7 @@ const ShopingCart = () => {
 
   let TotalCart = 0;
   items.Carts.forEach(function (item) {
-    TotalCart += item.quantity * item.price;
+    TotalCart += Math.round(item.quantity * item.price);
   });
 
   return (
@@ -78,7 +78,7 @@ const ShopingCart = () => {
                       </div>
                     </td>
                     <td className="text-center border">
-                      ${item.price * item.quantity}
+                      ${Math.round(item.price * item.quantity)}
                     </td>
 
                     <td className="border text-center fs-4">
@@ -121,13 +121,13 @@ const ShopingCart = () => {
                 </div>
                 <div className="d-flex justify-content-between">
                   <h6 className="font-weight-medium">Shipping</h6>
-                  <h6 className="font-weight-medium">$10</h6>
+                  <h6 className="font-weight-medium">Free</h6>
                 </div>
               </div>
               <div className="card-footer border-secondary bg-transparent">
                 <div className="d-flex justify-content-between mt-2">
                   <h5 className="font-weight-bold">Total</h5>
-                  <h5 className="font-weight-bold">${TotalCart + 10}</h5>
+                  <h5 className="font-weight-bold">${TotalCart}</h5>
                 </div>
                 <button className="shopping-cart-proceed-to-checkout-button box-shadow">
                   Proceed To Checkout
