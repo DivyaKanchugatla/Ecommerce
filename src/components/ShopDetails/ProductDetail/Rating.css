@@ -1,8 +1,8 @@
-svg {
+.rating-color {
     color: #ffc107;
     cursor: pointer;
 }
 
-svg:hover {
+.rating-color:hover {
     color: #fd7e14;
 }

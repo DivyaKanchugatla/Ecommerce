@@ -1,7 +1,7 @@
 import React from 'react'
-import PageHeader from './PageHeader'
-import Description from './Description'
-import ProductDetail from './ProductDetail'
+import PageHeader from './PageHeader/PageHeader'
+import Description from './Description/Description'
+import ProductDetail from './ProductDetail/ProductDetail'
 const ShopDetail = () => {
   return (
     <>

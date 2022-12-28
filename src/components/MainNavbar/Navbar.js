@@ -123,112 +123,54 @@ const Navbar = () => {
           </div>
           {/* categories dropdown ends here */}
 
-          {/* Home Navbar and carousel code starts from here */}
-          <div className="col-lg-9">
-            <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-              {/*To display Eshopper Anchor tag for mobile devices*/}
-              <a href="kd" className="text-decoration-none d-block d-lg-none">
-                <h1 className="m-0 display-5 font-weight-semi-bold">
-                  <span className="E-text font-weight-bold border px-3 mr-1">
-                    E
-                  </span>
-                  <span className="heading">Shopper</span>
-                </h1>
-              </a>
-              {/*Eshopper Anchor tag ends here*/}
-              <button
-                type="button"
-                className="navbar-toggler"
-                data-toggle="collapse"
-                data-target="#navbarCollapse"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              {/* Home Navbar starts from here */}
-              <div
-                className="collapse navbar-collapse justify-content-between d-lg-block"
-                id="navbarCollapse"
-              >
-                <div className="navbar-nav mr-auto py-0">
-                  <Link to="/" className="nav-item nav-link items">
-                    Home
-                  </Link>
-                  <Link to="/shop" className="nav-item nav-link items">
-                    Shop
-                  </Link>
-                  <Link to="/product/1" className="nav-item nav-link items">
-                    Shop Detail
-                  </Link>
-                  <div className="nav-item dropdown">
-                    <a
-                      href="#k"
-                      className="nav-link dropdown-toggle items"
-                      data-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Pages
+              {/* Home Navbar and carousel code starts from here */}
+            <div className="col-lg-9">
+                <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                     {/*To display Eshopper Anchor tag for mobile devices*/}
+                    <a href="kd" className="text-decoration-none d-block d-lg-none">
+                        <h1 className="m-0 display-5 font-weight-semi-bold"><span className="E-text font-weight-bold border px-3 mr-1">E</span><span className="heading">Shopper</span></h1>
                     </a>
-                    <div className="dropdown-menu rounded-0 m-0">
-                      <Link to="/Shopingcart" className="dropdown-item items">
-                        Shopping Cart
-                      </Link>
-                      <Link to="/checkout" className="dropdown-item items">
-                        Checkout
-                      </Link>
+                    {/*Eshopper Anchor tag ends here*/}
+                    <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                     {/* Home Navbar starts from here */}
+                    <div className="collapse navbar-collapse justify-content-between d-lg-block" id="navbarCollapse">
+                        <div className="navbar-nav mr-auto py-0">
+                            <Link to="/" className="nav-item nav-link items">Home</Link>
+                            <Link to="/shop" className="nav-item nav-link items">Shop</Link>
+                            <Link to="/product/1" className="nav-item nav-link items">Shop Detail</Link>
+                           
+                            <div className="nav-item dropdown">
+                                <a href="#k" className="nav-link dropdown-toggle items" data-toggle="dropdown" aria-expanded="false">Pages</a>
+                                <div className="dropdown-menu rounded-0 m-0">
+                                    <Link to="/Shopingcart" className="dropdown-item items">Shopping Cart</Link>
+                                    <a href="checkout.html" className="dropdown-item items">Checkout</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" className="nav-item nav-link items">Contact</a>
+                        </div>
+                        <div className="navbar-nav ml-auto py-0">
+                            <a href="kd" className="nav-item nav-link items">Login</a>
+                            <a href="kd" className="nav-item nav-link items">Register</a>
+                        </div>
                     </div>
-                  </div>
-                  <Link to="/contact" className="nav-item nav-link items">
-                    Contact
-                  </Link>
+                </nav>
+                {/* Home Navbar ends here */}
+ {/* carousel starts from here */}
+                     {location.pathname==="/" && <Carousel/>} 
+                     {/* <Carousel/> */}
+                     {/* {location.pathname==="/" && <Carousel/>}  */}
+                     {/* carousel ends here */}
                 </div>
-                {isLogined ? (
-                  <div className="navbar-nav cartCheck py-0">
-                    <p className="font-weight-bold nav-item nav-link items">
-                      {userName}
-                    </p>
-                    <p
-                      onClick={() => setIslogined(false)}
-                      className="loginButton font-weight-bold border-none nav-item nav-link items"
-                    >
-                      Logout
-                    </p>
-                  </div>
-                ) : (
-                  <div className="navbar-nav cartCheck py-0">
-                    <p
-                      onClick={() => setLoginmodal(true)}
-                      className="loginButton font-weight-bold border-none nav-item nav-link items"
-                    >
-                      Login
-                    </p>
-                    <p  className="font-weight-bold nav-item nav-link items">
-                      Register
-                    </p>
-                  </div>
-                )}
-              </div>
-            </nav>
-            <div>
-              {loginModal && (
-                <Login
-                  logOutShow={logoutButtonShow}
-                  modalClose={loginHandlermodal}
-                  userDetailsGet={userDetailshandler}
-                />
-              )}
             </div>
-            {/* Home Navbar ends here */}
-            {/* carousel starts from here */}
-            {location.pathname === "/" && <Carousel />}
-            {/* <Carousel/> */}
-            {/* carousel ends here */}
-          </div>
+             {/* MainNavbar row ends here */}
         </div>
-        {/* MainNavbar row ends here */}
-      </div>
-      {/* MainNavbar ends here */}
+         {/* MainNavbar ends here */}
     </>
   );
 };
 
+<<<<<<< HEAD
 export default Navbar;
+
