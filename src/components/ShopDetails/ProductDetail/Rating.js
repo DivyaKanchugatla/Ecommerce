@@ -15,7 +15,7 @@ const Rating = ({rating}) => {
      )
   });
   return (
-    <div className='svg'>
+    <div className='rating-color'>
     {ratingStar}
     </div>
   )
