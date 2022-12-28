@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import Carousel from "./Carousel";
-import "./Navbar.css";
 import Login from "../LoginPage/Login";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [loginModal, setLoginmodal] = useState(false);
@@ -61,7 +61,7 @@ const Navbar = () => {
               >
                 <div className="nav-item dropdown">
                   <a
-                    href="#k"
+                    href="/"
                     className="nav-link  d-flex align-items-center justify-content-between"
                     data-toggle="dropdown"
                     aria-expanded="false"
@@ -78,43 +78,43 @@ const Navbar = () => {
                     className="dropdown-menu position-absolute border-0 rounded-0 w-100 m-0"
                     style={{ backgroundColor: "#EDF1FF" }}
                   >
-                    <a href="kd" className="dropdown-item">
+                    <a href="/" className="dropdown-item">
                       Men's Dresses
                     </a>
-                    <a href="kd" className="dropdown-item">
+                    <a href="/" className="dropdown-item">
                       Women's Dresses
                     </a>
-                    <a href="kd" className="dropdown-item">
+                    <a href="/" className="dropdown-item">
                       Baby's Dresses
                     </a>
                   </div>
                 </div>
                 <div style={{ paddingLeft: "42px" }}>
-                  <a href="kd" className="nav-item nav-link text-color">
+                  <a href="/" className="nav-item nav-link text-color">
                     Shirts
                   </a>
-                  <a href="kd" className="nav-item nav-link text-color">
+                  <a href="/" className="nav-item nav-link text-color">
                     Jeans
                   </a>
-                  <a href="kd" className="nav-item nav-link text-color">
+                  <a href="/" className="nav-item nav-link text-color">
                     Swimwear
                   </a>
-                  <a href="kd" className="nav-item nav-link text-color">
+                  <a href="/" className="nav-item nav-link text-color">
                     Sleepwear
                   </a>
-                  <a href="kd" className="nav-item nav-link text-color">
+                  <a href="/" className="nav-item nav-link text-color">
                     Sportswear
                   </a>
-                  <a href="kd" className="nav-item nav-link text-color">
+                  <a href="/" className="nav-item nav-link text-color">
                     Jumpsuits
                   </a>
-                  <a href="kd" className="nav-item nav-link text-color">
+                  <a href="/" className="nav-item nav-link text-color">
                     Blazers
                   </a>
-                  <a href="kd" className="nav-item nav-link text-color">
+                  <a href="/" className="nav-item nav-link text-color">
                     Jackets
                   </a>
-                  <a href="kd" className="nav-item nav-link text-color">
+                  <a href="/" className="nav-item nav-link text-color">
                     Shoes
                   </a>
                 </div>
@@ -123,12 +123,50 @@ const Navbar = () => {
           </div>
           {/* categories dropdown ends here */}
 
-              {/* Home Navbar and carousel code starts from here */}
-            <div className="col-lg-9">
-                <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-                     {/*To display Eshopper Anchor tag for mobile devices*/}
-                    <a href="kd" className="text-decoration-none d-block d-lg-none">
-                        <h1 className="m-0 display-5 font-weight-semi-bold"><span className="E-text font-weight-bold border px-3 mr-1">E</span><span className="heading">Shopper</span></h1>
+          {/* Home Navbar and carousel code starts from here */}
+          <div className="col-lg-9">
+            <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+              {/*To display Eshopper Anchor tag for mobile devices*/}
+              <a href="/" className="text-decoration-none d-block d-lg-none">
+                <h1 className="m-0 display-5 font-weight-semi-bold">
+                  <span className="E-text font-weight-bold border px-3 mr-1">
+                    E
+                  </span>
+                  <span className="heading">Shopper</span>
+                </h1>
+              </a>
+              {/*Eshopper Anchor tag ends here*/}
+              <button
+                type="button"
+                className="navbar-toggler"
+                data-toggle="collapse"
+                data-target="#navbarCollapse"
+              >
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              {/* Home Navbar starts from here */}
+              <div
+                className="collapse navbar-collapse justify-content-between d-lg-block"
+                id="navbarCollapse"
+              >
+                <div className="navbar-nav mr-auto py-0">
+                  <Link to="/" className="nav-item nav-link items">
+                    Home
+                  </Link>
+                  <Link to="/shop" className="nav-item nav-link items">
+                    Shop
+                  </Link>
+                  <Link to="/product/1" className="nav-item nav-link items">
+                    Shop Detail
+                  </Link>
+                  <div className="nav-item dropdown">
+                    <a
+                      href="/"
+                      className="nav-link dropdown-toggle items"
+                      data-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Pages
                     </a>
                     {/*Eshopper Anchor tag ends here*/}
                     <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
