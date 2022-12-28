@@ -171,6 +171,6 @@ const Navbar = () => {
   );
 };
 
-<<<<<<< HEAD
+
 export default Navbar;
 
