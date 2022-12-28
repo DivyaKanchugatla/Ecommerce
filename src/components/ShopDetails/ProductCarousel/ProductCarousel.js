@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import OwlCarousel from "react-owl-carousel";
-import { fetchProducts } from '../../store/Actions/ProductActions';
+import { fetchProducts } from '../../../store/actions/ProductActions';
 import { useEffect } from 'react';
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -41,7 +41,9 @@ const ProductCarousel = () => {
 },[dispatch])
   return (
     <>
-    
+        <div className="trandy-heading-container">
+      <h2 className="decorated mb-4"><span>You May Also Like</span></h2>
+      </div>
         <div className="container-fluid pt-5">
         <div className="row">
        <OwlCarousel {...options}>

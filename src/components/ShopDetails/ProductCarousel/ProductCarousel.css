@@ -33,3 +33,31 @@
  .carousel-container{
   width:300px;
  }
+ .just-heading-container {
+  width: 100%;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.decorated{
+  overflow: hidden;
+  text-align: center;
+}
+.decorated > span{
+ position: relative;
+ display: inline-block;
+}
+.decorated > span:before, .decorated > span:after{
+ content: '';
+ position: absolute;
+ top: 50%;
+ border-bottom: 2px solid;
+ width: 50px;
+ margin: 0 20px;
+}
+.decorated > span:before{
+ right: 100%;
+}
+.decorated > span:after{
+ left: 100%;
+}
