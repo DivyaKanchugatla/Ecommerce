@@ -6,10 +6,6 @@
 .fas-color{
     color:  #D19C97;
 }
-
-.linkText:link {
-  text-decoration: none;
-}
 .img-styling {
     padding: 20px;
     transition: transform 0.2s;
@@ -37,17 +33,31 @@
  .carousel-container{
   width:300px;
  }
- .view-button {
-  color: black;
-  border: none !important; 
-  background-color: white !important;
+ .just-heading-container {
+  width: 100%;
+  align-items: center;
+  margin-top: 40px;
 }
-.view-button:hover {
-  color: #d19c97 !important;
-  text-decoration: none;
+
+.decorated{
+  overflow: hidden;
+  text-align: center;
 }
-.view-button:focus,:active{
-   box-shadow:none;
-   border:none !important;
-   text-decoration: none;
-  }
+.decorated > span{
+ position: relative;
+ display: inline-block;
+}
+.decorated > span:before, .decorated > span:after{
+ content: '';
+ position: absolute;
+ top: 50%;
+ border-bottom: 2px solid;
+ width: 50px;
+ margin: 0 20px;
+}
+.decorated > span:before{
+ right: 100%;
+}
+.decorated > span:after{
+ left: 100%;
+}

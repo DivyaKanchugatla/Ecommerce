@@ -1,0 +1,20 @@
+.ShopDetail-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDF1FF;
+    margin-bottom: 50px;
+}
+.ShopDetail-heading{
+    color: #D19C97 !important;
+    text-decoration: none;
+    margin: 5px;
+}
+.ShopDetail-heading:hover{
+    text-decoration: underline;
+    color: #D19C97 !important;
+}
+.ShopDetail-paragraph{
+    margin: 5px;
+}
