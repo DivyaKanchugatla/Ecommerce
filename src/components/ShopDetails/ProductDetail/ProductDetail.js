@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import {removeSelectedProduct,selectedProduct} from '../../../store/actions/ProductActions'
 import Rating from './Rating';
-import { ADD_CART } from '../../../store/actions/CartActions';
+import { AddCart } from '../../../store/actions/CartActions';
 
 
 const ProductDetail = () => {
@@ -181,7 +181,7 @@ const ProductDetail = () => {
                   >
                     <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
                   </svg>
-                  <p class="d-inline-block count-value">0</p>
+                  <p className="d-inline-block count-value">0</p>
                 
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -192,7 +192,7 @@ const ProductDetail = () => {
                   </svg>
                 </div>
                 <div className="add-icon-button-container d-flex flex-row justify-content-center text-center p-2">
-                  <button className=" shopdetail-addtocart-button p-2 text-center" onclick={dispatch({type:ADD_CART,payload:product})}>
+                  <button className=" shopdetail-addtocart-button p-2 text-center" onClick={()=>dispatch(AddCart(product))}>
                     <i className="fa fa-shopping-cart shopdetail-addtocart" />
                     Add To Cart
                   </button>
