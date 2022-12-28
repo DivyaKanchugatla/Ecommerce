@@ -1,0 +1,8 @@
+svg {
+    color: #ffc107;
+    cursor: pointer;
+}
+
+svg:hover {
+    color: #fd7e14;
+}
