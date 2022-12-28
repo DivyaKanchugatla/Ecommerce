@@ -17,7 +17,7 @@ const App = () => {
       <TopNavbar/>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home/>}/>
         <Route path="/Shopingcart" element={<ShopingCart/>}/>
         <Route path="/shop" element={<Shops/>}/>
         <Route path="/product/:productId" element={<ShopDetail/>}/>
@@ -31,6 +31,7 @@ const App = () => {
 }
 
 export default App;
+
 
 
 
