@@ -16,7 +16,7 @@ const Home = () => {
       <Trandy />
       <Subscriber />
       <JustArrived />
-      <OwlDemo/>
+      <OwlDemo/> 
     </div>
   );
 };
