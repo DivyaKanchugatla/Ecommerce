@@ -26,7 +26,7 @@ const ProductDetail = () => {
        return()=>{
         dispatch(removeSelectedProduct());
        };
-    });
+    },[productId]);
   return (
     <>
       <div className="ui grid container">
@@ -203,16 +203,16 @@ const ProductDetail = () => {
                   Share on:
                 </p>
                 <div className="d-inline-flex">
-                  <a className="text-dark px-2" href="kd">
+                  <a className="text-dark px-2" href="/">
                     <i className="fab fa-facebook-f" />
                   </a>
-                  <a className="text-dark px-2" href="kd">
+                  <a className="text-dark px-2" href="/">
                     <i className="fab fa-twitter" />
                   </a>
-                  <a className="text-dark px-2" href="kd">
+                  <a className="text-dark px-2" href="/">
                     <i className="fab fa-linkedin-in" />
                   </a>
-                  <a className="text-dark px-2" href="kd">
+                  <a className="text-dark px-2" href="/">
                     <i className="fab fa-pinterest" />
                   </a>
                 </div>

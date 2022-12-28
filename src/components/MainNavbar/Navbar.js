@@ -39,7 +39,7 @@ const Navbar = () => {
             <a
               className="btn shadow-none d-flex align-items-center justify-content-between text-white w-100 categoriesdropdown"
               data-toggle="collapse"
-              href="/"
+              href="#navbar-vertical"
               style={{
                 height: "65px",
                 backgroundColor: "#D19C97",
