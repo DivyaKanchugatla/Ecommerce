@@ -1,0 +1,8 @@
+.rating-color {
+    color: #ffc107;
+    cursor: pointer;
+}
+
+.rating-color:hover {
+    color: #fd7e14;
+}
