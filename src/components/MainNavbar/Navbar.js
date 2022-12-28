@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import Carousel from "./Carousel";
-import "./Navbar.css";
 import Login from "../LoginPage/Login";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [loginModal, setLoginmodal] = useState(false);
