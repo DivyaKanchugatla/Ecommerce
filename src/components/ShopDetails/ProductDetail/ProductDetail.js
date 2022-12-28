@@ -10,7 +10,6 @@ import Rating from './Rating';
 const ProductDetail = () => {
     let product = useSelector((state) => state.product);
     const {productId}=useParams();
-    
     const dispatch = useDispatch();
     console.log(product);
     const {title,image,description,price,rating}=product;
