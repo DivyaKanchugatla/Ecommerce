@@ -87,7 +87,6 @@ const Navbar = () => {
                      {location.pathname==="/" && <Carousel/>} 
                      {/* <Carousel/> */}
                      {/* {location.pathname==="/" && <Carousel/>}  */}
-                     <Carousel/>
                      {/* carousel ends here */}
                 </div>
             </div>

@@ -8,8 +8,17 @@ import ShopingCart from './components/Cart/ShoppingCart';
 
 const App = () => {
   return (
-   <>
-    
-    </>
+    <div>
+    <BrowserRouter>
+    <TopNavbar/>
+    <Navbar/>
+    <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/Shopingcart" element={<ShopingCart/>}/>
+    </Routes>
+    </BrowserRouter>
+    <Footer />
+  </div>
   )
 }
+export default App
