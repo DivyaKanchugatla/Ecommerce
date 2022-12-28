@@ -78,7 +78,7 @@ const ShopingCart = () => {
                       </div>
                     </td>
                     <td className="text-center border">
-                      ${item.price * item.quantity}
+                      ${Math.round(item.price * item.quantity,2)}
                     </td>
 
                     <td className="border text-center fs-4">
