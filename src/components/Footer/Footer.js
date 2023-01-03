@@ -15,7 +15,7 @@ const Footer = () => {
          <div className="container-fluid bg-footer text-dark mt-5 pt-5">
         <div className="row mr-3 ml-3 pt-5">
             <div className="col-lg-4 col-md-12 mb-5 ">
-                <a href="shopper" className="footer-e-shop-head-container text-decoration-none">
+                <a href="/" className="footer-e-shop-head-container text-decoration-none">
                     <h1 className="mb-4 Shopper-header"><span className="E-heading">E</span>Shopper</h1>
                 </a>
                 <p className='para'>Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum no sit erat lorem et magna ipsum dolore amet erat.</p>

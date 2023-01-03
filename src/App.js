@@ -9,6 +9,7 @@ import Shops from "./components/Shop/Shops";
 import ShopDetail from './components/ShopDetails/ShopDetail'
 import Newcontactus from './components/Contactus/Newcontactus'
 import Checkout from './components/Checkout/Checkout'
+import './App.css'
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
       <TopNavbar/>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home/>}/>
         <Route path="/Shopingcart" element={<ShopingCart/>}/>
         <Route path="/shop" element={<Shops/>}/>
         <Route path="/product/:productId" element={<ShopDetail/>}/>
@@ -28,7 +29,8 @@ const App = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default App;
+
 

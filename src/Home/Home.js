@@ -10,13 +10,13 @@ import OwlDemo from "../components/Footer/OwlDemo";
 const Home = () => {
   return (
     <div>
-      <Feature />
+       <Feature />
       <ProductsSection />
       <Offersection />
       <Trandy />
       <Subscriber />
       <JustArrived />
-      <OwlDemo/>
+      <OwlDemo/> 
     </div>
   );
 };
