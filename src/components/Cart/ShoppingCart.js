@@ -165,6 +165,7 @@ const ShopingCart = () => {
           </div>
         </div>
       </div>
+      
     </>
   );
 };
