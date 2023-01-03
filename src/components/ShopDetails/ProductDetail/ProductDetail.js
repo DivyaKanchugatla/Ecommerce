@@ -23,12 +23,7 @@ const ProductDetail = () => {
       }
     },[productId,dispatch])
     
-    // useEffect(() => {
-    //     if(productId && productId !== "") fetchProductDetail(productId);
-    //    return()=>{
-    //     dispatch(removeSelectedProduct());
-    //    };
-    // },[productId]);
+    
   return (
     <>
       <div className="ui grid container">
