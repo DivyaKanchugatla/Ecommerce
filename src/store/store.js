@@ -19,5 +19,6 @@ const persistedReducer = persistReducer(persistConfig, reducers);
 const store = createStore(persistedReducer,composeWithDevTools(middleware))
 const persistor = persistStore(store);
 export default store;
+export {persistor}
 
 
