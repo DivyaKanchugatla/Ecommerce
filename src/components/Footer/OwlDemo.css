@@ -1,16 +1,13 @@
-title
-{
-        margin-bottom: 10px;
-        padding: 10px;
+title  
+{  
+        margin-bottom: 10px;  
+        padding:10px  
 }  
+
 .picture-container{
-        
-        object-fit: cover;
-        align-items: cover;
-        background-color: white;
+        height: 220px;
+        padding: 30px;
         border: 0.5px solid #EDF1FF;
         margin: 15px;
-        padding: 50px;
-        box-sizing: border-box;
-        
-}   
+        overflow: hidden;
+}
