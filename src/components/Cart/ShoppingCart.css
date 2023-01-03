@@ -1,65 +1,56 @@
-.shopping-cart-table{
-    width: 98%;
+.shopping-cart-table {
+  width: 98%;
 }
 
-.shopping-cart-table-image{
-    width:'35px';
-    height:'35px';
-    object-fit: cover;
+.shopping-cart-table-image {
+  width: "35px";
+  height: "35px";
+  object-fit: cover;
 }
 
-.shop-details-cart-sumary-card{
-    background-color: #edf1ff;
+.shop-details-cart-sumary-card {
+  background-color: #edf1ff;
 }
 
-.shopping-cart-proceed-to-checkout-button{
-    color: black;
-    background-color: #d19c97;
-    width: 95%;
-    border-width: 0px;
-    height:50px;
-    
+.shopping-cart-proceed-to-checkout-button {
+  color: black;
+  background-color: #d19c97;
+  width: 95%;
+  border-width: 0px;
+  height: 50px;
 }
-.shopping-cart-proceed-to-checkout-button:hover{
-    color: #ffffff;
-    background-color: #d19c97;
-    cursor: pointer;
-   
+.shopping-cart-proceed-to-checkout-button:hover {
+  color: #ffffff;
+  background-color: #d19c97;
+  cursor: pointer;
 }
-.shopping-cart-proceed-to-checkout-button:focus
-,:active{
-   
-    box-shadow:none;
-   
-  }
-
-
-  .shopping-cart-add-icon{
-    height: 30px;
-    width: 30px;
-    background-color: #d19c97;
-    color: #ffffff;
-     padding: 5px;
-    
-}
-.shoping-cart-count-value{
-    color:lightslategray;
-    text-align: center;
-    height: 30px;
-    background-color:#edf1ff;
-    padding-bottom: 5px;
-    width:40px;
-    
+.shopping-cart-proceed-to-checkout-button:focus,
+:active {
+  box-shadow: none;
 }
 
-.shopping-cart-add-icon:hover{
+.shopping-cart-add-icon {
+  height: 30px;
+  width: 30px;
+  background-color: #d19c97;
+  color: #ffffff;
+  padding: 5px;
+}
+.shoping-cart-count-value {
+  color: lightslategray;
+  text-align: center;
+  height: 30px;
+  background-color: #edf1ff;
+  padding-bottom: 5px;
+  width: 40px;
+}
+
+/* .shopping-cart-add-icon:hover{
     color: #ffffff !important;
     cursor:  pointer !important;
     fill: #ffffff;
-    
-}
-.remove-icon:hover{
-    fill: #ffffff;
-    cursor: pointer;
-    
+} */
+.remove-icon:hover {
+  fill: #ffffff;
+  cursor: pointer;
 }
