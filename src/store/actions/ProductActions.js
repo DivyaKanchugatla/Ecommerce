@@ -1,5 +1,6 @@
 import { ActionTypes } from "./ActionTypes";
 import FakeStoreApi from "../../api/FakeStoreApi";
+// import axios from "axios";
 
 
  export const fetchProducts = () =>  async (dispatch) => {
@@ -7,6 +8,19 @@ import FakeStoreApi from "../../api/FakeStoreApi";
          dispatch({type:ActionTypes.FETCH_PRODUCTS,payload: response.data })
     
  };
+
+ export const getSingleProduct=(id)=>{
+  return async (dispatch)=>{
+    try {
+      const response= await FakeStoreApi.get(`/products/${id}`)
+    const singleProduct=await response.data
+    dispatch(selectedProduct(singleProduct))
+    } catch (error) {
+      const errMsg=error.message
+      dispatch(errMsg)
+    }
+  }
+ }
 
  export const setProducts = (products) => {
      return{

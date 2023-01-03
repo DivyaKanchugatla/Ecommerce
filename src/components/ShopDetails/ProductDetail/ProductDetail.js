@@ -1,11 +1,12 @@
 import React ,{useEffect} from 'react'
 import './ProductDetail.css'
-import axios from 'axios';
+
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
-import {removeSelectedProduct,selectedProduct} from '../../../store/actions/ProductActions'
+// import {removeSelectedProduct,selectedProduct,s} from '../../../store/actions/ProductActions'
 import Rating from './Rating';
-import { AddCart } from '../../../store/actions/CartActions';
+import { getSingleProduct, removeSelectedProduct } from '../../../store/actions/ProductActions';
+import { ADD_CART } from '../../../store/actions/CartActions';
 
 
 const ProductDetail = () => {
@@ -14,19 +15,20 @@ const ProductDetail = () => {
     const dispatch = useDispatch();
     console.log(product);
     const {title,image,description,price,rating}=product;
-    const fetchProductDetail = async (id) =>{
-        const response = await axios.get(`https://fakestoreapi.com/products/${id}`)
-        .catch((err) => {
-            console.log("Err: ",err);
-        });
-        dispatch(selectedProduct(response.data));
-    }
-    useEffect(() => {
-        if(productId && productId !== "") fetchProductDetail(productId);
-       return()=>{
-        dispatch(removeSelectedProduct());
-       };
-    },[productId]);
+
+    useEffect(()=>{
+      dispatch(getSingleProduct(productId))
+      return()=>{
+        dispatch(removeSelectedProduct())
+      }
+    },[productId,dispatch])
+    
+    // useEffect(() => {
+    //     if(productId && productId !== "") fetchProductDetail(productId);
+    //    return()=>{
+    //     dispatch(removeSelectedProduct());
+    //    };
+    // },[productId]);
   return (
     <>
       <div className="ui grid container">
@@ -192,7 +194,7 @@ const ProductDetail = () => {
                   </svg>
                 </div>
                 <div className="add-icon-button-container d-flex flex-row justify-content-center text-center p-2">
-                  <button className=" shopdetail-addtocart-button p-2 text-center" onClick={()=>dispatch(AddCart(product))}>
+                  <button className=" shopdetail-addtocart-button p-2 text-center" onClick={()=>dispatch({type:ADD_CART,payload:product})}>
                     <i className="fa fa-shopping-cart shopdetail-addtocart" />
                     Add To Cart
                   </button>
@@ -353,3 +355,4 @@ const ProductDetail = () => {
 };
 
 export default ProductDetail;
+
