@@ -56,8 +56,10 @@
     color: #ffffff !important;
     cursor:  pointer !important;
     fill: #ffffff;
+    
 }
 .remove-icon:hover{
     fill: #ffffff;
     cursor: pointer;
+    
 }

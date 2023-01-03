@@ -9,6 +9,7 @@ import Shops from "./components/Shop/Shops";
 import ShopDetail from './components/ShopDetails/ShopDetail'
 import Newcontactus from './components/Contactus/Newcontactus'
 import Checkout from './components/Checkout/Checkout'
+import './App.css'
 
 const App = () => {
   return (
