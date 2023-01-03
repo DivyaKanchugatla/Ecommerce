@@ -56,7 +56,6 @@
         width: 1050px;
     }
 }
-
 .categoriesdropdown {
     height: 65px;
     margin-top: -1px;
@@ -73,6 +72,5 @@
     z-index: 1 !important;
     position: absolute;
     background-color: white;
-  }
-    
+  }   
 

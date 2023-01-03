@@ -158,7 +158,6 @@
 }
 
 ::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgb(124, 117, 117);
   font-size: 16px;
 }

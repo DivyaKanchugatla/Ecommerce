@@ -188,7 +188,7 @@ const Navbar = () => {
                     </p>
                     <p
                       onClick={() => setIslogined(false)}
-                      className="loginButton font-weight-bold border-none nav-item nav-link items"
+                      className="loginButton border-none nav-item nav-link items"
                     >
                       Logout
                     </p>
@@ -197,11 +197,11 @@ const Navbar = () => {
                   <div className="navbar-nav cartCheck py-0">
                     <p
                       onClick={() => setLoginmodal(true)}
-                      className="loginButton font-weight-bold border-none nav-item nav-link items"
+                      className="loginButton border-none nav-item nav-link items"
                     >
                       Login
                     </p>
-                    <p  className="font-weight-bold nav-item nav-link items">
+                    <p  className="nav-item nav-link items">
                       Register
                     </p>
                   </div>
