@@ -14,8 +14,32 @@ const ShopingCart = () => {
 
   let TotalCart = 0;
   items.Carts.forEach(function (item) {
-    TotalCart += item.quantity * item.price;
+    TotalCart += Math.round(item.quantity * item.price);
   });
+
+  const TableHeadings = [
+    {
+      id:0,
+      name:'Products',
+
+    },
+    {
+      id:1,
+      name:'Price',
+      },
+      {
+        id:2,
+        name:'Qunatity'
+      },
+      {
+        id:3,
+        name:'Total'
+      },
+      {
+        id:4,
+        name:'Remove'
+      }
+  ]
 
   return (
     <>
@@ -25,12 +49,13 @@ const ShopingCart = () => {
           <div className="col-lg-8 table-responsive mb-5">
             <table className="border shopping-cart-table">
               <thead className="text-center">
-                <tr style={{ backgroundColor: "#edf1ff" }}>
-                  <th className="fs-4 fw-bold p-2">Products</th>
-                  <th className="fs-4 fw-bold p-2">Price</th>
-                  <th className="fs-4 fw-bold p-2">Quantity</th>
-                  <th className="fs-4 fw-bold p-2">Total</th>
-                  <th className="fs-4 fw-bold p-2">Remove</th>
+                <tr style={{ backgroundColor: "#edf1ff"}}>
+                 
+                  {TableHeadings.map((item,id)=>{
+                    return(
+                      <th className="fs-4 fw-bold p-2" key={id}>{item.name}</th>
+                    )
+                  })}
                 </tr>
               </thead>
               <tbody className="align-middle">
@@ -65,6 +90,7 @@ const ShopingCart = () => {
                         <p className="d-inline-block shoping-cart-count-value">
                           {item.quantity}
                         </p>
+                        
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 448 512"
@@ -75,10 +101,11 @@ const ShopingCart = () => {
                         >
                           <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
                         </svg>
+                        
                       </div>
                     </td>
                     <td className="text-center border">
-                      ${item.price * item.quantity}
+                      ${Math.round(item.price * item.quantity)}
                     </td>
 
                     <td className="border text-center fs-4">
@@ -117,17 +144,17 @@ const ShopingCart = () => {
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3 pt-1">
                   <h6 className="font-weight-medium">Subtotal</h6>
-                  <h6 className="font-weight-medium">${TotalCart}</h6>
+                  <h6 className="font-weight-medium">${Math.round(TotalCart,2)}</h6>
                 </div>
                 <div className="d-flex justify-content-between">
                   <h6 className="font-weight-medium">Shipping</h6>
-                  <h6 className="font-weight-medium">$10</h6>
+                  <h6 className="font-weight-medium">Free</h6>
                 </div>
               </div>
               <div className="card-footer border-secondary bg-transparent">
                 <div className="d-flex justify-content-between mt-2">
                   <h5 className="font-weight-bold">Total</h5>
-                  <h5 className="font-weight-bold">${TotalCart + 10}</h5>
+                  <h5 className="font-weight-bold">${Math.round(TotalCart + 10,2)}</h5>
                 </div>
                 <button className="shopping-cart-proceed-to-checkout-button box-shadow">
                   Proceed To Checkout
