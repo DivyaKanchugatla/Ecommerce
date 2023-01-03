@@ -9,13 +9,13 @@ import storage from 'redux-persist/lib/storage';
 
 const middleware = applyMiddleware(thunk,logger)
 const persistConfig = {
-    key: 'authType',
+    key: 'persist-key',
     storage: storage,
     // whitelist: ['authType']  which reducer want to store
   };
-  const pReducer = persistReducer(persistConfig, reducers);
+  const persistedReducer = persistReducer(persistConfig, reducers);
   
-const store = createStore(pReducer,composeWithDevTools(middleware))
+const store = createStore(persistedReducer,composeWithDevTools(middleware))
 const persistor = persistStore(store);
 
 export default store;
