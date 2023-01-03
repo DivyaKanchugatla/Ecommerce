@@ -10,7 +10,7 @@ function Checkout() {
           <h2 className="checkout-heading">CHECKOUT</h2>
           <div className="checkout-heading-caption">
             <p>
-                <a className="checkout-heading-link" href="@">Home</a>  
+                <a className="checkout-heading-link" href="/">Home</a>  
             </p>
             <p className="dashhh">-</p>
             <p className="chechout-checkout">Checkout</p>
