@@ -142,4 +142,3 @@ const ShopingCart = () => {
 };
 
 export default ShopingCart;
-
