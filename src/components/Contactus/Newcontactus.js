@@ -15,7 +15,7 @@ const Newcontactus = () => {
         </div>
 
         
-      <div class="container-fluid pt-5 contactus-second-container">
+      <div class="container-fluid pt-5 contactus-second-container mt-5">
         <div class="text-center mb-4">
             <h2 class="section-title px-5 decorated"><span class="px-2">Contact For Any Queries</span></h2>
         </div>
