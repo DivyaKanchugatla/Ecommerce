@@ -10,3 +10,4 @@ const middleware = applyMiddleware(thunk,logger)
 
 const store = createStore(reducers,composeWithDevTools(middleware))
 export default store;
+
