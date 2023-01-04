@@ -13,11 +13,11 @@ const TopNavbar = () => {
              {/*code for faq,help,support anchor tags starts from here*/}
             <div className="col-lg-6 d-none d-lg-block justify-content-start align-items-start">
             <div className="d-inline-flex align-items-start justify-content-start">
-                    <a className="text-dark text-decoration-none" href="kd">FAQs</a>
+                    <a className="text-dark text-decoration-none" href="/">FAQs</a>
                     <span className="text-muted px-2">|</span>
-                    <a className="text-dark text-decoration-none" href="kd">Help</a>
+                    <a className="text-dark text-decoration-none" href="/">Help</a>
                     <span className="text-muted px-2">|</span>
-                    <a className="text-dark text-decoration-none" href="kd">Support</a>
+                    <a className="text-dark text-decoration-none" href="/">Support</a>
                </div> 
             </div>
               {/*code for faq,help,support anchor tags ends here*/}
@@ -25,19 +25,19 @@ const TopNavbar = () => {
              {/*code for fb,twitter,insta,youtube icons starts from here*/}
             <div className="col-lg-6 text-center text-lg-right">
                 <div className="d-inline-flex align-items-center">
-                    <a className="text-dark px-2" href="kda>">
+                    <a className="text-dark px-2" href="https://www.facebook.com" rel="noreferrer" target="_blank">
                         <i className="fab fa-facebook-f"></i>
                     </a>
-                    <a className="text-dark px-2" href="kd">
+                    <a className="text-dark px-2" href="https://twitter.com/" rel="noreferrer" target="_blank">
                         <i className="fab fa-twitter"></i>
                     </a>
-                    <a className="text-dark px-2" href="kd">
+                    <a className="text-dark px-2" href="https://www.linkedin.com" rel="noreferrer" target="_blank">
                         <i className="fab fa-linkedin-in"></i>
                     </a>
-                    <a className="text-dark px-2" href="kd">
+                    <a className="text-dark px-2" href="https://www.instagram.com" rel="noreferrer" target="_blank">
                         <i className="fab fa-instagram"></i>
                     </a>
-                    <a className="text-dark pl-2" href="kd">
+                    <a className="text-dark pl-2" href="https://www.youtube.com" rel="noreferrer" target="_blank">
                         <i className="fab fa-youtube"></i>
                     </a>
                 </div>
@@ -50,7 +50,7 @@ const TopNavbar = () => {
         <div className="row align-items-center py-3 px-xl-5">
              {/*code for Eshopper anchor tag starts from here*/}
             <div className="col-lg-3 d-none d-lg-block">
-                <a href="kd" className="text-decoration-none" style={{color:"black"}}>
+                <a href="/" className="text-decoration-none" style={{color:"black"}}>
                     <h1 className="m-0 font-weight-semi-bold"><span className="icon-color font-weight-bold px-2 border mr-1">E</span><span className="shop-heading font-weight-bold">Shopper</span></h1>
                 </a>
             </div>
@@ -76,11 +76,11 @@ const TopNavbar = () => {
              {/*code for cart and heart icons starts from here*/}
             <div className="col-lg-3 col-6 text-right">
 
-                <a href="kd" className="btn border mr-3">
+                <a href="/" className="btn border mr-3">
                     <i className="fas fa-heart icon-color"></i>
                     <span className="badge">0</span>
                 </a>
-                <a href="kd" className="btn border mr-3">
+                <a href="/" className="btn border mr-3">
                     <i className="fas fa-shopping-cart icon-color"></i>
                     <span className="badge">{itemsInCart}</span>
                 </a>

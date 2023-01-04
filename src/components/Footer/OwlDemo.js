@@ -1,16 +1,42 @@
-import React, { Component } from "react";
+import React from "react";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import imagesData from "../../assets/OwlDemoImages/OwlDemoImages";
 import "./OwlDemo.css";
-export class OwlDemo extends Component {
-  render() {
+
+const options = {
+  margin: 30,
+  responsiveClass: true,
+  dots: false,
+  autoplay: true,
+  navText: ["Prev", "Next"],
+  smartSpeed: 1000,
+  responsive: {
+    0: {
+      items: 2,
+    },
+    
+    594: {
+      items: 2,
+    },
+    768: {
+      items: 3,
+    },
+    992: {
+      items: 4,
+    },
+    1200:{
+        items:5
+    }
+  },
+};
+
+const OwlDemo = () => {
+  
     return (
-      <div>
-        <div className="container-fluid">
-          <div className="row title" style={{ marginBottom: "20px" }}></div>
-        </div>
-        <div className="container-fluid m-3">
+      <>
+        {/* <div className="container-fluid m-3">
           <div className="row">
             <div className="d-none  d-lg-block">
               <OwlCarousel items={6} margin={3} autoplay={true}>
@@ -239,10 +265,31 @@ export class OwlDemo extends Component {
               </OwlCarousel>
             </div>
           </div>
+        </div> */}
+         <div className="container-fluid pt-5">
+        <div className="row">
+       <OwlCarousel {...options}>
+       {imagesData.map((img,index) => {                 
+          return (
+                <div className="col-lg-3 col-md-6 col-sm-12 pb-1"  key={index}> 
+                 <div className="card border-0 mb-4">               
+                        <div className="picture-container">
+                          <img
+                                className="owlCarousel-img"
+                                alt="pic1"
+                                src={img}
+                             />
+                        </div>
+                        </div>                                        
+                    </div>
+                 );
+                })}
+       </OwlCarousel>
+                </div>
         </div>
-      </div>
+      </>
     );
   }
-}
+
 
 export default OwlDemo;
