@@ -41,6 +41,11 @@
   background-color: #d19c97;
   transition: all 0.2s;
 }
+@media screen and (max-width:576px) {
+  .contact-button{
+    width: 50%;
+  }
+}
 .contactus-first-container{
     height: 400px !important; 
 }
