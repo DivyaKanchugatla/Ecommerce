@@ -1,7 +1,5 @@
 .colorful-heading {
-    
     font-weight: 600;
-    
     font-size: 28px;
     text-align: start;
 }
@@ -14,10 +12,6 @@
     width: 30px !important;
     accent-color: #232323;
 }
-/* input[type='radio'] {
-    accent-color: #232323;
-} */
-
 .shopdetail-addtocart-button {
     background-color:#D19C97 ;
     border: none;

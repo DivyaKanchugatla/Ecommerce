@@ -25,19 +25,19 @@ const TopNavbar = () => {
              {/*code for fb,twitter,insta,youtube icons starts from here*/}
             <div className="col-lg-6 text-center text-lg-right">
                 <div className="d-inline-flex align-items-center">
-                    <a className="text-dark px-2" href="/">
+                    <a className="text-dark px-2" href="https://www.facebook.com" rel="noreferrer" target="_blank">
                         <i className="fab fa-facebook-f"></i>
                     </a>
-                    <a className="text-dark px-2" href="/">
+                    <a className="text-dark px-2" href="https://twitter.com/" rel="noreferrer" target="_blank">
                         <i className="fab fa-twitter"></i>
                     </a>
-                    <a className="text-dark px-2" href="/">
+                    <a className="text-dark px-2" href="https://www.linkedin.com" rel="noreferrer" target="_blank">
                         <i className="fab fa-linkedin-in"></i>
                     </a>
-                    <a className="text-dark px-2" href="/">
+                    <a className="text-dark px-2" href="https://www.instagram.com" rel="noreferrer" target="_blank">
                         <i className="fab fa-instagram"></i>
                     </a>
-                    <a className="text-dark pl-2" href="/">
+                    <a className="text-dark pl-2" href="https://www.youtube.com" rel="noreferrer" target="_blank">
                         <i className="fab fa-youtube"></i>
                     </a>
                 </div>
