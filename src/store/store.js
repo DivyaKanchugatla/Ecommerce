@@ -6,14 +6,15 @@ import thunk from 'redux-thunk';
 import { logger } from 'redux-logger';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
- 
 
-const middleware = applyMiddleware(thunk,logger)
 const persistConfig = {
     key: 'persist-key',
-    storage: storage,
-    // whitelist: ['authType']  which reducer want to store
-  };
+    storage
+   
+  }
+
+const middleware = applyMiddleware(thunk,logger)
+
   const persistedReducer = persistReducer(persistConfig, reducers);
   
 const store = createStore(persistedReducer,composeWithDevTools(middleware))

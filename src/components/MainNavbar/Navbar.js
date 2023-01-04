@@ -201,7 +201,7 @@ const Navbar = () => {
                     >
                       Login
                     </p>
-                    <p  className="font-weight-bold nav-item nav-link items">
+                    <p  className="nav-item nav-link items">
                       Register
                     </p>
                   </div>
