@@ -7,9 +7,11 @@ import Subscriber from "../components/Subscriber/Subscriber";
 import JustArrived from "./../components/JustArrived/JustArrived";
 import OwlDemo from "../components/Footer/OwlDemo";
 
+
 const Home = () => {
   return (
     <div>
+
        <Feature />
       <ProductsSection />
       <Offersection />
