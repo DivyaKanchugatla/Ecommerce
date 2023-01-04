@@ -3,7 +3,7 @@ import './ProductDetail.css'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import Rating from './Rating';
-import { getSingleProduct, removeSelectedProduct } from '../../../store/actions/ProductActions';
+import { getSingleProduct,removeSelectedProduct } from '../../../store/actions/ProductActions';
 import { ADD_CART } from '../../../store/actions/CartActions';
 
 
