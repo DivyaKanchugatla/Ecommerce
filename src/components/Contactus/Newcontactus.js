@@ -4,7 +4,7 @@ import './Newcontactus.css'
 
 const Newcontactus = () => {
   return (
-    <div class="contact-us-page mb-5 mt-5">
+    <div class="contact-us-page pt-0 mb-5 ">
         <div class="d-flex flex-column bg-secondary align-items-center justify-content-center contactus-first-container" >
             <h1 class="contact-us-heading text-uppercase mb-3">Contact Us</h1>
             <div class="d-inline-flex">
@@ -41,8 +41,7 @@ const Newcontactus = () => {
                             <p class="help-block text-danger"></p>
                         </div>
                         <div>
-                            <button class="contact-button py-2 px-4" type="submit" id="sendMessageButton">Send
-                                Message</button>
+                            <button class="contact-button py-2 px-4" type="submit" id="sendMessageButton">Send Message</button>
                         </div>
                     </form>
                 </div>
