@@ -6,7 +6,7 @@ const socialIcons = [
     {link:"https://www.facebook.com",icon:"fab fa-facebook-f"},
     {link:"https://twitter.com",icon:"fab fa-twitter"},
     {link:"https://www.linkedin.com",icon:"fab fa-linkedin-in"},
-    {link:"https://www.instagram.com",icon:"fab fa-instgram"},
+    {link:"https://www.instagram.com",icon:"fab fa-instagram"},
     {link:"https://www.youtube.com",icon:"fab fa-youtube"},
   ]
   
@@ -57,8 +57,7 @@ const TopNavbar = () => {
              {/*code for Eshopper anchor tag ends here*/}
 
              {/*code for searching input starts from here*/}
-            <div className="col-lg-6 col-6 text-left">
-               
+            <div className="col-lg-6 col-6 text-left">              
                 <form action="">
                     <div className="input-group">
                         <input type="text" className="form-control" placeholder="Search for products"/>
@@ -68,14 +67,12 @@ const TopNavbar = () => {
                             </span>
                         </div>
                     </div>
-                </form>
-                
+                </form>               
             </div>
             {/*code for searching input ends here*/}
 
              {/*code for cart and heart icons starts from here*/}
             <div className="col-lg-3 col-6 text-right">
-
                 <a href="/" className="btn border mr-3">
                     <i className="fas fa-heart icon-color"></i>
                     <span className="badge">0</span>
