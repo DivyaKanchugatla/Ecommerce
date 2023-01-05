@@ -2,6 +2,14 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import './TopNavbar.css'
 
+const socialIcons = [
+    {link:"https://www.facebook.com",icon:"fab fa-facebook-f"},
+    {link:"https://twitter.com",icon:"fab fa-twitter"},
+    {link:"https://www.linkedin.com",icon:"fab fa-linkedin-in"},
+    {link:"https://www.instagram.com",icon:"fab fa-instgram"},
+    {link:"https://www.youtube.com",icon:"fab fa-youtube"},
+  ]
+  
 const TopNavbar = () => {
     const itemsInCart=useSelector((state)=>state._cardProduct.numberCart)
   return (
@@ -25,21 +33,13 @@ const TopNavbar = () => {
              {/*code for fb,twitter,insta,youtube icons starts from here*/}
             <div className="col-lg-6 text-center text-lg-right">
                 <div className="d-inline-flex align-items-center">
-                    <a className="text-dark px-2" href="https://www.facebook.com" rel="noreferrer" target="_blank">
-                        <i className="fab fa-facebook-f"></i>
-                    </a>
-                    <a className="text-dark px-2" href="https://twitter.com/" rel="noreferrer" target="_blank">
-                        <i className="fab fa-twitter"></i>
-                    </a>
-                    <a className="text-dark px-2" href="https://www.linkedin.com" rel="noreferrer" target="_blank">
-                        <i className="fab fa-linkedin-in"></i>
-                    </a>
-                    <a className="text-dark px-2" href="https://www.instagram.com" rel="noreferrer" target="_blank">
-                        <i className="fab fa-instagram"></i>
-                    </a>
-                    <a className="text-dark pl-2" href="https://www.youtube.com" rel="noreferrer" target="_blank">
-                        <i className="fab fa-youtube"></i>
-                    </a>
+                    {socialIcons.map((item,index)=>{
+                        return(
+                            <a className="text-dark px-2" key={index} href={item.link} rel="noreferrer" target="_blank">
+                            <i className={item.icon}></i>
+                        </a>
+                        )
+                    })}                    
                 </div>
             </div>
             {/*code for fb,twitter,insta,youtube icons ends here*/}

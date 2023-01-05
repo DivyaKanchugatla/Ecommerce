@@ -220,7 +220,6 @@ const Navbar = () => {
             {/* Home Navbar ends here */}
             {/* carousel starts from here */}
             {location.pathname === "/" && <Carousel />}
-            {/* <Carousel/> */}
             {/* carousel ends here */}
           </div>
         </div>
