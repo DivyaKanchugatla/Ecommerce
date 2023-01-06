@@ -135,6 +135,7 @@ const ShopingCart = () => {
                 ))}
               </tbody>
             </table>
+            {items.numberCart===0 && <p className="empty-cart">your cart is empty</p>}
           </div>
           <div className="col-lg-4">
             <div className="card border  mb-5">
@@ -154,9 +155,9 @@ const ShopingCart = () => {
               <div className="card-footer border-secondary bg-transparent">
                 <div className="d-flex justify-content-between mt-2">
                   <h5 className="font-weight-bold">Total</h5>
-                  <h5 className="font-weight-bold">${Math.round(TotalCart + 10,2)}</h5>
+                  <h5 className="font-weight-bold">${Math.round(TotalCart ,2)}</h5>
                 </div>
-                <button className="shopping-cart-proceed-to-checkout-button box-shadow">
+                <button className="shopping-cart-proceed-to-checkout-button">
                   Proceed To Checkout
                 </button>
               </div>
