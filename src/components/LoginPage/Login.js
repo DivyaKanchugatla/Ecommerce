@@ -176,6 +176,6 @@ console.log(userData)
         </div>
       </section>
     </div>
-  );
-};
-export default Login;
+  )
+}
+export default Login
