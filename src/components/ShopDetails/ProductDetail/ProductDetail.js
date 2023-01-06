@@ -142,7 +142,7 @@ const ProductDetail = () => {
           </div>
         ) : (
           <div className="spinner-container">
-            <SpinnerCircular size={100} style={{ color: "#fd7e14" }} />
+            <SpinnerCircular size={100} style={{ color: "blue" }} />
           </div>
           )}
       </div>
