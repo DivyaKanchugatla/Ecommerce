@@ -5,6 +5,13 @@ import Carousel from "./Carousel";
 import Login from "../LoginPage/Login";
 import "./Navbar.css";
 
+const Dresses = [
+ { dress:"Men's Dresses"},{dress:"Women's Dresses"}, {dress:"Baby's Dresses"}
+]
+const categoryItems = [
+  {category:"Shirts"},{category:"Jeans"},{category:"Swimwear"},{category:"Sleepwear"},{category:"Sportswear"},{category:"Jumpsuits"},{category:"Blazers"},{category:"Jackets"},{category:"Shoes"}
+]
+
 const Navbar = () => {
   const [loginModal, setLoginmodal] = useState(false);
   const [isLogined, setIslogined] = useState(false);
@@ -74,6 +81,18 @@ const Navbar = () => {
                     <span className="m-4">Dresses </span>
                     <i className="fa fa-angle-down float-right mt-1"></i>
                   </a>
+                      <div
+                      className="dropdown-menu position-absolute border-0 rounded-0 w-100 m-0"
+                      style={{ backgroundColor: "#EDF1FF" }}
+                    >
+                       {Dresses.map((item,index)=>{
+                    return(
+                      <a href="/" className="dropdown-item" key={index}>
+                        {item.dress}
+                      </a>                   
+                    )
+                  })}
+                   </div>
                   <div
                     className="dropdown-menu position-absolute border-0 rounded-0 w-100 m-0"
                     style={{ backgroundColor: "#EDF1FF" }}
@@ -90,33 +109,13 @@ const Navbar = () => {
                   </div>
                 </div>
                 <div style={{ paddingLeft: "42px" }}>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Shirts
+                  {categoryItems.map((item,index)=>{
+                    return(
+                      <a href="/" className="nav-item nav-link text-color">
+                    {item.category}
                   </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Jeans
-                  </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Swimwear
-                  </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Sleepwear
-                  </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Sportswear
-                  </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Jumpsuits
-                  </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Blazers
-                  </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Jackets
-                  </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Shoes
-                  </a>
+                    )
+                  })}                  
                 </div>
               </div>
             </nav>
@@ -188,7 +187,7 @@ const Navbar = () => {
                     </p>
                     <p
                       onClick={() => setIslogined(false)}
-                      className="loginButton font-weight-bold border-none nav-item nav-link items"
+                      className="loginButton border-none nav-item nav-link items"
                     >
                       Logout
                     </p>
@@ -197,11 +196,11 @@ const Navbar = () => {
                   <div className="navbar-nav cartCheck py-0">
                     <p
                       onClick={() => setLoginmodal(true)}
-                      className="loginButton font-weight-bold border-none nav-item nav-link items"
+                      className="loginButton border-none nav-item nav-link items"
                     >
                       Login
                     </p>
-                    <p  className="font-weight-bold nav-item nav-link items">
+                    <p  className="nav-item nav-link items">
                       Register
                     </p>
                   </div>
@@ -218,10 +217,7 @@ const Navbar = () => {
               )}
             </div>
             {/* Home Navbar ends here */}
-            {/* carousel starts from here */}
             {location.pathname === "/" && <Carousel />}
-            {/* <Carousel/> */}
-            {/* carousel ends here */}
           </div>
         </div>
         {/* MainNavbar row ends here */}

@@ -1,11 +1,11 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import OwlCarousel from "react-owl-carousel";
-import { fetchProducts } from '../../../store/actions/ProductActions';
-import { useEffect } from 'react';
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { fetchProducts } from '../../../store/actions/ProductActions';
 import './ProductCarousel.css'
+
 const options = {
     margin: 10,
     responsiveClass: true,
@@ -32,27 +32,26 @@ const options = {
       }
     },
   };
+
 const ProductCarousel = () => {
+  const dispatch=useDispatch();
     const products=useSelector((state)=>state.allProducts.products)
-    const dispatch=useDispatch();
- 
+     
   useEffect(()=>{
     dispatch(fetchProducts());
 },[dispatch])
+
   return (
     <>
-        <div className="trandy-heading-container">
+      <div className="trandy-heading-container">
       <h2 className="decorated mb-4"><span>You May Also Like</span></h2>
       </div>
-        <div className="container-fluid pt-5">
-        <div className="row">
+      <div className="container-fluid pt-5">
+      <div className="row">
        <OwlCarousel {...options}>
-        {/* <div className='d-flex'> */}
        {products.map((product,index) => {
                  const { title,image,price} = product; 
-                 console.log(product)
           return (
-
                 <div className="col-lg-3 col-md-6 col-sm-12 pb-1"  key={index}>
                         <div className="card border-0 mb-4 carousel-container">
                             <div className="card-header p-0 product-img border bg-transparent overflow-hidden position-relative">
@@ -65,19 +64,15 @@ const ProductCarousel = () => {
                                 </div>
                             </div>
                             <div className="card-footer d-flex justify-content-between bg-light border">
-                            
-                                <a href="k" className="btn btn-sm text-dark p-0"><i className="fas fa-eye mr-1 fas-color"></i>View Detail</a>
-                                
-                                <a href="kd" className="btn btn-sm text-dark p-0"><i className="fas fa-shopping-cart mr-1 fas-color"></i>Add To Cart</a>
+                             <a href="k" className="btn btn-sm text-dark p-0"><i className="fas fa-eye mr-1 fas-color"></i>View Detail</a>                                
+                              <a href="kd" className="btn btn-sm text-dark p-0"><i className="fas fa-shopping-cart mr-1 fas-color"></i>Add To Cart</a>
                             </div>
-                        </div>
-                    
+                        </div>                   
                     </div>
                  );
                 })}
-                 {/* </div> */}
-       </OwlCarousel>
-                </div>
+        </OwlCarousel>
+          </div>
         </div>
     </>
   )
