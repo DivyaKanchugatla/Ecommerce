@@ -18,13 +18,16 @@ const colors = [
   {color:"Black"}, {color:"White"}, {color:"Red"}, {color:"Blue"}, {color:"Green"},
 ]
 const socialIcons = [
-  {link:"https://www.facebook.com",icon:"fab fa-facebook-f"},
+  {link:"https://www.facebook.com/Maybinsefu1/",icon:"fab fa-facebook-f"},
   {link:"https://www.twitter.com",icon:"fab fa-twitter"},
-  {link:"https://www.linkedin.com",icon:"fab fa-linkedin-in"},
+  {link:"https://www.linkedin.com/authwall?trk=gf&trkInfo=AQHKrOz2HSDNtwAAAYWCuvZorIoAmjWmSMp7eL4ZwwQjl8FzyHKfD7XNG2ThkEMh4HGi_b8ddLqUiWmDNoiioww-oJzKacNCwD5Deue137TcFteOVzciIPVYwzGLs57zcwG4oZk=&original_referer=https://63b63c607d93c40eccfdb126--endearing-puffpuff-1605ac.netlify.app/&sessionRedirect=https%3A%2F%2Fin.linkedin.com%2Fcompany%2Fmsys-technologies",icon:"fab fa-linkedin-in"},
   {link:"https://www.pinterest.com",icon:"fab fa-pinterest"},
 ]
 
 const ProductDetail = () => {
+ 
+
+
   const dispatch = useDispatch();
   const {productId}=useParams();
     let {product,loading} = useSelector((state) => state.productDetail);
