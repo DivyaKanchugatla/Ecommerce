@@ -47,7 +47,7 @@ const ProductCarousel = () => {
         <div className="container-fluid pt-5">
         <div className="row">
        <OwlCarousel {...options}>
-       {products.map((product,index) => {
+       {products?.map((product,index) => {
                  const { title,image,price} = product; 
                  console.log(product)
           return (
