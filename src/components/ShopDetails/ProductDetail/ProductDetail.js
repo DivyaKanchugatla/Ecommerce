@@ -135,7 +135,7 @@ const ProductDetail = () => {
                 <div className="d-inline-flex">
                   {socialIcons.map((item,index)=>{
                     return(
-                      <a className="text-dark px-2" href={item.link} target="_blank" rel="noreferrer">
+                      <a className="text-dark px-2" href={item.link} target="_blank" rel="noreferrer" key={index}>
                       <i className={item.icon} />
                     </a>
                     )
