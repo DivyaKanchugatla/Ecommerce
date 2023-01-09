@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Carousel from "./Carousel";
 import Login from "../LoginPage/Login";
+import { DefaultConstants } from "../../constants/constants";
 import "./Navbar.css";
 
 const Dresses = [
- { dress:"Men's Dresses"},{dress:"Women's Dresses"}, {dress:"Baby's Dresses"}
+ { dress:DefaultConstants.MENSDRESSES},{dress:DefaultConstants.WOMENSDRESSES}, {dress:DefaultConstants.BABAYSDRESSES}
 ]
 const categoryItems = [
-  {category:"Shirts"},{category:"Jeans"},{category:"Swimwear"},{category:"Sleepwear"},{category:"Sportswear"},{category:"Jumpsuits"},{category:"Blazers"},{category:"Jackets"},{category:"Shoes"}
+  {category:DefaultConstants.SHIRTS},{category:DefaultConstants.JEANS},{category:DefaultConstants.SWIMWEAR},{category:DefaultConstants.SLEEPWEAR},{category:DefaultConstants.SPORTSWEAR},{category:DefaultConstants.SWIMWEAR},{category:DefaultConstants.BLAZERS},{category:DefaultConstants.JACKETS},{category:DefaultConstants.SHOES}
 ]
 
 //Done by Kanchugatla Divya
@@ -50,7 +51,7 @@ const Navbar = () => {
                 ariaExpanded: "true",
               }}
             >
-              <h6 className="m-4 text-dark heading-text">Categories</h6>
+              <h6 className="m-4 text-dark heading-text">{DefaultConstants.CATEGORIES}</h6>
               <i className="fa fa-angle-down text-dark"></i>
             </a>
             <nav
@@ -73,7 +74,7 @@ const Navbar = () => {
                       padding: "0 30px",
                     }}
                   >
-                    <span className="m-4">Dresses </span>
+                    <span className="m-4">{DefaultConstants.DRESSES}</span>
                     <i className="fa fa-angle-down float-right mt-1"></i>
                   </a>
                       <div
@@ -92,15 +93,13 @@ const Navbar = () => {
                     className="dropdown-menu position-absolute border-0 rounded-0 w-100 m-0"
                     style={{ backgroundColor: "#EDF1FF" }}
                   >
-                    <a href="/" className="dropdown-item">
-                      Men's Dresses
-                    </a>
-                    <a href="/" className="dropdown-item">
-                      Women's Dresses
-                    </a>
-                    <a href="/" className="dropdown-item">
-                      Baby's Dresses
-                    </a>
+                    {Dresses.map((item,index)=>{
+                      return(
+                        <a href="/" className="dropdown-item" key={index}>
+                        {item.dress}
+                      </a> 
+                      )
+                    })}
                   </div>
                 </div>
                 <div style={{ paddingLeft: "42px" }}>
@@ -124,9 +123,9 @@ const Navbar = () => {
               <a href="/" className="text-decoration-none d-block d-lg-none">
                 <h1 className="m-0 display-5 font-weight-semi-bold">
                   <span className="E-text font-weight-bold border px-3 mr-1">
-                    E
+                    {DefaultConstants.E}
                   </span>
-                  <span className="heading">Shopper</span>
+                  <span className="heading">{DefaultConstants.SHOPPER}</span>
                 </h1>
               </a>
               {/*Eshopper Anchor tag ends here*/}
@@ -145,13 +144,13 @@ const Navbar = () => {
               >
                 <div className="navbar-nav mr-auto py-0">
                   <Link to="/" className="nav-item nav-link items">
-                    Home
+                    {DefaultConstants.HOME}
                   </Link>
                   <Link to="/shop" className="nav-item nav-link items">
-                    Shop
+                    {DefaultConstants.SHOP}
                   </Link>
                   <Link to="/product/1" className="nav-item nav-link items">
-                    Shop Detail
+                    {DefaultConstants.SHOPDETAIL}
                   </Link>
                   <div className="nav-item dropdown">
                     <a
@@ -160,19 +159,19 @@ const Navbar = () => {
                       data-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      Pages
+                     {DefaultConstants.PAGES}
                     </a>
                     <div className="dropdown-menu rounded-0 m-0">
                       <Link to="/Shopingcart" className="dropdown-item items">
-                        Shopping Cart
+                       {DefaultConstants.SHOPPINGCART}
                       </Link>
                       <Link to="/checkout" className="dropdown-item items">
-                        Checkout
+                       {DefaultConstants.CHECKOUT}
                       </Link>
                     </div>
                   </div>
                   <Link to="/contactus" className="nav-item nav-link items">
-                    Contact
+                   {DefaultConstants.CONTACT}
                   </Link>
                 </div>
                 {isLogined ? (
@@ -184,7 +183,7 @@ const Navbar = () => {
                       onClick={() => setIslogined(false)}
                       className="loginButton border-none nav-item nav-link items"
                     >
-                      Logout
+                      {DefaultConstants.LOGOUT}
                     </p>
                   </div>
                 ) : (
@@ -193,10 +192,10 @@ const Navbar = () => {
                       onClick={() => setLoginmodal(true)}
                       className="loginButton border-none nav-item nav-link items"
                     >
-                      Login
+                      {DefaultConstants.LOGIN}
                     </p>
                     <p  className="nav-item nav-link items">
-                      Register
+                      {DefaultConstants.REGISTER}
                     </p>
                   </div>
                 )}

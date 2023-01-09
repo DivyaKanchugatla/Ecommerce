@@ -4,6 +4,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import { fetchProducts } from '../../../store/actions/ProductActions';
+import { DefaultConstants } from '../../../constants/constants';
 import './ProductCarousel.css'
 
 const options = {
@@ -49,7 +50,7 @@ const ProductCarousel = () => {
     <>
       <div className="trandy-heading-container">
       {/* Heading */}
-      <h2 className="decorated mb-4"><span>You May Also Like</span></h2>
+      <h2 className="decorated mb-4"><span>{DefaultConstants.YOUMAYALSOLIKE}</span></h2>
       </div>
       <div className="container-fluid pt-5">
       <div className="row">

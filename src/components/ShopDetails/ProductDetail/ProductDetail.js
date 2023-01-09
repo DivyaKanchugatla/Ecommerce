@@ -5,17 +5,18 @@ import { SpinnerCircular } from "spinners-react";
 import Rating from './Rating';
 import { getSingleProduct } from '../../../store/actions/ProductDetailActions';
 import { ADD_CART } from '../../../store/actions/CartActions';
+import { DefaultConstants } from '../../../constants/constants';
 import './ProductDetail.css'
 
 const sizes = [  
-    {id:"size-1", size:"XS"},
-    {id:"size-2", size:"S"},
-    {id:"size-3", size:"M"},
-    {id:"size-4", size:"L"},
-    {id:"size-5", size:"XL"},
+    {id:"size-1", size:DefaultConstants.XS},
+    {id:"size-2", size:DefaultConstants.S},
+    {id:"size-3", size:DefaultConstants.M},
+    {id:"size-4", size:DefaultConstants.L},
+    {id:"size-5", size:DefaultConstants.XL},
 ]
 const colors = [
-  {color:"Black"}, {color:"White"}, {color:"Red"}, {color:"Blue"}, {color:"Green"},
+  {color:DefaultConstants.BLACK}, {color:DefaultConstants.WHITE}, {color:DefaultConstants.RED}, {color:DefaultConstants.BLUE}, {color:DefaultConstants.GREEN},
 ]
 const socialIcons = [
   {link:"https://www.facebook.com/Maybinsefu1/",icon:"fab fa-facebook-f"},
