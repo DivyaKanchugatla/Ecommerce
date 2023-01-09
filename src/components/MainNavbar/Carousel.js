@@ -1,5 +1,6 @@
 import React from 'react'
 
+//Done by Kanchugatla Divya
 const Carousel = () => {
   return (
     <>

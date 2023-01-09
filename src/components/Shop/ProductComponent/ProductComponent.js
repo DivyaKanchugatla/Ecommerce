@@ -30,7 +30,7 @@ import React from 'react'
                  <div className="col-12 pb-1">
                <SearchBar/>
              </div>
-                 {products.map((product,index) => {
+                 {products?.map((product,index) => {
                   const { id,title,image,price} = product; 
            return (
                  <div className="col-lg-4 col-md-6 col-sm-12 pb-1"  key={index}>

@@ -1,11 +1,12 @@
 import React from 'react'
 import './PageHeader.css'
 
+//Done by Kanchugatla Divya
 const PageHeader = () => {
   return (
     <>
         <div className="container-fluid">
-          <div className='row'>
+        <div className='row'>
         <div className="ShopDetail-container" style={{minHeight:"300px"}}>
             <h1 className="font-weight-semi-bold text-uppercase mb-3">Shop Detail</h1>
             <div className="d-inline-flex">
