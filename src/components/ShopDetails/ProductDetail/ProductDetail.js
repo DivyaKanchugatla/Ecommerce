@@ -128,7 +128,7 @@ const [count,setCount]=useState(1);
                 >
                   <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
                 </svg>
-                <p className="d-inline-block count-value">0</p>
+                <p className="d-inline-block count-value">{count}</p>
               
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
