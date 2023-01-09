@@ -1,10 +1,8 @@
 import React from 'react'
 import { DefaultConstants } from '../../constants/constants'
-
 import './Feature.css'
 
-
-
+//Done by kumar swamy
 const Feature = () => {
   return (
   <div className="container-fluid pt-5">
