@@ -4,6 +4,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import { fetchProducts } from '../../../store/actions/ProductActions';
+import { DefaultConstants } from '../../../constants/constants';
 import './ProductCarousel.css'
 
 const options = {
@@ -32,11 +33,15 @@ const options = {
       }
     },
   };
-
+  
+//Done by Kanchugatla Divya
 const ProductCarousel = () => {
   const dispatch=useDispatch();
+
+  //getting the state from redux store
     const products=useSelector((state)=>state.allProducts.products)
-     
+  
+  //action creating
   useEffect(()=>{
     dispatch(fetchProducts());
 },[dispatch])
@@ -44,12 +49,14 @@ const ProductCarousel = () => {
   return (
     <>
       <div className="trandy-heading-container">
-      <h2 className="decorated mb-4"><span>You May Also Like</span></h2>
+      {/* Heading */}
+      <h2 className="decorated mb-4"><span>{DefaultConstants.YOUMAYALSOLIKE}</span></h2>
       </div>
       <div className="container-fluid pt-5">
       <div className="row">
+        {/* Carousel starts from here */}
        <OwlCarousel {...options}>
-       {products.map((product,index) => {
+       {products?.map((product,index) => {
                  const { title,image,price} = product; 
           return (
                 <div className="col-lg-3 col-md-6 col-sm-12 pb-1"  key={index}>
