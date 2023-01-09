@@ -32,7 +32,8 @@ const options = {
       }
     },
   };
-
+  
+//Done by Kanchugatla Divya
 const ProductCarousel = () => {
   const dispatch=useDispatch();
 

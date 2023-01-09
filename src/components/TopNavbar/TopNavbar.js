@@ -9,9 +9,11 @@ const socialIcons = [
     {link:"https://www.instagram.com/msys_technologies/?hl=en",icon:"fab fa-instagram"},
     {link:"https://www.youtube.com/c/MSys-Tech",icon:"fab fa-youtube"},
   ]
-  
-const TopNavbar = () => {
 
+//Done by Kanchugatla Divya
+const TopNavbar = () => {
+    
+    //getting the state from redux store
     const itemsInCart=useSelector((state)=>state._cardProduct.numberCart)
   return (
     <>

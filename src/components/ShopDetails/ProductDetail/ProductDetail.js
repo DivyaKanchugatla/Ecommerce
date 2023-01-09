@@ -24,6 +24,7 @@ const socialIcons = [
   {link:"https://www.pinterest.com",icon:"fab fa-pinterest"},
 ]
 
+//Done by Kanchugatla Divya
 const ProductDetail = () => {
   const dispatch = useDispatch();
 

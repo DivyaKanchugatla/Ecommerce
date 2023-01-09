@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import Carousel from "./Carousel";
 import Login from "../LoginPage/Login";
@@ -12,6 +11,7 @@ const categoryItems = [
   {category:"Shirts"},{category:"Jeans"},{category:"Swimwear"},{category:"Sleepwear"},{category:"Sportswear"},{category:"Jumpsuits"},{category:"Blazers"},{category:"Jackets"},{category:"Shoes"}
 ]
 
+//Done by Kanchugatla Divya
 const Navbar = () => {
   const [loginModal, setLoginmodal] = useState(false);
   const [isLogined, setIslogined] = useState(false);
@@ -29,11 +29,7 @@ const Navbar = () => {
     const nameuser = details[0].name.firstname + details[0].name.lastname;
     setUserName(nameuser);
   };
-   const products = useSelector((state) => state.allProducts.products);
-   const productId = products.map((product) => {
-     return product.id;
-   });
-   console.log(productId[0]);
+   
   const location = useLocation();
   return (
     <>
