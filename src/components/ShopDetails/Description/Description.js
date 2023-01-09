@@ -1,9 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Description.css';
 import { DefaultConstants } from '../../../constants/constants';
+import { useRef,useEffect } from 'react';
+import Rating from '../ProductDetail/Rating';
 
 //Done by Kanchugatla Divya
 const Description = () => {
+    const myName = useRef(null);
+    const myRating = useRef(null);
+    const myReview = useRef(null);
+
+    const [reviewList, setReviewList] = useState([])
+    const submitHandler = (e) => {
+        e.preventDefault();
+        const newReview = {
+            date: new Date().toLocaleDateString(),
+            name: myName.current.value,
+            rating: myRating.current.value,
+            review: myReview.current.value
+        }
+        setReviewList([...reviewList].concat(newReview))
+    }
+    let count = reviewList.length
+    
+    useEffect(()=>{
+        let reviewData=JSON.stringify(reviewList)
+        localStorage.setItem('data', JSON.stringify(reviewData));
+    },[reviewList,count])
     
   return (
     <>
@@ -14,7 +37,7 @@ const Description = () => {
                 <div className="nav nav-tabs justify-content-center border-secondary mb-4">
                     <a className="nav-item nav-link active heading-tabs" data-toggle="tab" href="#tab-pane-1">{DefaultConstants.DESCRIPTION}</a>
                     <a className="nav-item nav-link heading-tabs" data-toggle="tab" href="#tab-pane-2">{DefaultConstants.INFORMATION}</a>
-                    <a className="nav-item nav-link heading-tabs" data-toggle="tab" href="#tab-pane-3">{DefaultConstants.REVIEWS} (0)</a>
+                    <a className="nav-item nav-link heading-tabs" data-toggle="tab" href="#tab-pane-3">{DefaultConstants.REVIEWS} ({count})</a>
                 </div>
                 <div className="tab-content">
                      {/* Description Tab */}
@@ -74,43 +97,45 @@ const Description = () => {
                     <div className="tab-pane fade" id="tab-pane-3">
                         <div className="row">
                             <div className="col-md-6">
-                                <h4 className="mb-4 heading-description">1 review For "Colorful Stylish Shirt"</h4>
-                                <div className="media mb-4">
-                                    <img src="img/user.jpg" alt="" className="img-fluid mr-3 mt-1" style={{width: "45px"}}/>
-                                    <div className="media-body">
-                                        <h6>Divya K<small> - <i>01 Jan 2045</i></small></h6>
-                                        <div className="text-primary mb-2">
-                                            <i className="fas fa-star star-color"></i>
-                                            <i className="fas fa-star star-color"></i>
-                                            <i className="fas fa-star star-color"></i>
-                                            <i className="fas fa-star-half-alt star-color"></i>
-                                            <i className="far fa-star star-color"></i>
+                            <h4 className="mb-4 heading-description">1 review For "Colorful Stylish Shirt"</h4>
+                               {reviewList.map((each,index)=>{                               
+                                return(                                                                       
+                                    <div className="media mb-4" key={index}>
+                                        <img src="https://m.media-amazon.com/images/I/81PEBDVcoOL._SL1500_.jpg" alt="" className="img-fluid mr-3 mt-1" style={{width: "45px"}}/>
+                                        <div className="media-body">
+                                            <h6>{each.name}<small> - <i>{each.date}</i></small></h6>
+                                            <div className="text-primary mb-2">
+                                               <Rating rating={each.rating}/>
+                                            </div>
+                                            <p className="paragraph-description">{each.review}</p>
                                         </div>
-                                        <p className="paragraph-description">Diam amet duo labore stet elitr ea clita ipsum, tempor labore accusam ipsum et no at. Kasd diam tempor rebum magna dolores sed sed eirmod ipsum.</p>
                                     </div>
-                                </div>
+                                )
+                               })}
                             </div>
                             <div className="col-md-6">
                                 <h4 className="mb-4 heading-description">{DefaultConstants.LEAVEREVIEW}</h4>
                                 <small className="paragraph-description">Your email address will not be published. Required fields are marked *</small>
+                               
+                                <form onSubmit={submitHandler}>
                                 <div className="d-flex my-3">
                                     <p className="mb-0 mr-2 paragraph-description">{DefaultConstants.YOURRATING}</p>
                                     <div className="text-primary">
+                                        {/* <i className="far fa-star star-color"></i>
                                         <i className="far fa-star star-color"></i>
                                         <i className="far fa-star star-color"></i>
                                         <i className="far fa-star star-color"></i>
-                                        <i className="far fa-star star-color"></i>
-                                        <i className="far fa-star star-color"></i>
+                                        <i className="far fa-star star-color"></i> */}
+                                        <input type="text" className="form-control" id="name" ref={myRating}/>
                                     </div>
                                 </div>
-                                <form>
                                     <div className="form-group">
                                         <label htmlFor="message" className="paragraph-description">{DefaultConstants.YOURREVIEW}</label>
-                                        <textarea id="message" cols="30" rows="5" className="form-control"></textarea>
+                                        <textarea id="message" cols="30" rows="5" className="form-control" ref={myReview}></textarea>
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="name" className="paragraph-description">{DefaultConstants.YOURNAME}</label>
-                                        <input type="text" className="form-control" id="name"/>
+                                        <input type="text" className="form-control" id="name" ref={myName}/>
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="email" className="paragraph-description">{DefaultConstants.YOUREMAIL}</label>
