@@ -145,7 +145,7 @@ const ShopingCart = () => {
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3 pt-1">
                   <h6 className="font-weight-medium">Subtotal</h6>
-                  <h6 className="font-weight-medium">${Math.round(TotalCart,2)}</h6>
+                  <h6 className="font-weight-medium">${TotalCart.toFixed(2)}</h6>
                 </div>
                 <div className="d-flex justify-content-between">
                   <h6 className="font-weight-medium">Shipping</h6>
@@ -155,7 +155,7 @@ const ShopingCart = () => {
               <div className="card-footer border-secondary bg-transparent">
                 <div className="d-flex justify-content-between mt-2">
                   <h5 className="font-weight-bold">Total</h5>
-                  <h5 className="font-weight-bold">${Math.round(TotalCart ,2)}</h5>
+                  <h5 className="font-weight-bold">${TotalCart.toFixed(2)}</h5>
                 </div>
                 <button className="shopping-cart-proceed-to-checkout-button">
                   Proceed To Checkout

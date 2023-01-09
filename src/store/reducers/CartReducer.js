@@ -22,13 +22,15 @@ import {
         if (state.numberCart === 0) {
           let cart = {
             id: payload.id,
-            quantity: 1,
+            quantity: payload.quantity,
             name: payload.title,
             image: payload.image,
             price: payload.price,
           };
           state.Carts.push(cart);
-        } else {
+        } 
+      
+        else {
           let check = false;
           state.Carts.map((item, key) => {
             if (item.id === payload.id) {
@@ -40,7 +42,7 @@ import {
           if (!check) {
             let _cart = {
               id: payload.id,
-              quantity: 1,
+              quantity: payload.quantity,
               name: payload.title,
               image: payload.image,
               price: payload.price,
