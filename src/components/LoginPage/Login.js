@@ -69,8 +69,9 @@ console.log(userData)
   };
   return (
     <div className="Login-container">
+      
       <section>
-        <div className="exitSection">
+      <div className="exitSection">
           <button onClick={closeModal} className="exitbutton">
             X
           </button>
