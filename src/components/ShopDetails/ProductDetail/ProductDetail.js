@@ -40,7 +40,7 @@ const ProductDetail = () => {
       dispatch(getSingleProduct(productId))
     },[productId,dispatch])
     
-
+const [count,setCount]=useState(1);
      //increase quantiy
   const increaseQuantity = () => {
     setCount((prev) => prev + 1);
@@ -124,7 +124,7 @@ const ProductDetail = () => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
-                  className="add-icon"
+                  className="add-icon" onClick={decreaseQuantity}
                 >
                   <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
                 </svg>
@@ -133,7 +133,7 @@ const ProductDetail = () => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
-                  className="add-icon"
+                  className="add-icon" onClick={increaseQuantity}
                 >
                   <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
                 </svg>
