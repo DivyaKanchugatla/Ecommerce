@@ -28,7 +28,7 @@ const TopNavbar = () => {
                     <span className="text-muted px-2">|</span>
                     <a className="text-dark text-decoration-none" href="/contactus">{DefaultConstants.HELP}</a>
                     <span className="text-muted px-2">|</span>
-                    <a className="text-dark text-decoration-none" href="/contactus">{DefaultConstants.SUPPORT}</a>
+                    <a className="text-dark text-decoration-none" href="/contactus">{DefaultConstants.SUPPORTS}</a>
                </div> 
             </div>
               {/*code for faq,help,support anchor tags ends here*/}
