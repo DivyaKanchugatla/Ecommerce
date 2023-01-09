@@ -8,17 +8,20 @@ const Description = () => {
     <div>
         <div className="row px-xl-5">
             <div className="col">
+      {/* Three tabs (Description,Information,Reviews) */}
                 <div className="nav nav-tabs justify-content-center border-secondary mb-4">
                     <a className="nav-item nav-link active heading-tabs" data-toggle="tab" href="#tab-pane-1">Description</a>
                     <a className="nav-item nav-link heading-tabs" data-toggle="tab" href="#tab-pane-2">Information</a>
                     <a className="nav-item nav-link heading-tabs" data-toggle="tab" href="#tab-pane-3">Reviews (0)</a>
                 </div>
                 <div className="tab-content">
+                     {/* Description Tab */}
                     <div className="tab-pane fade show active" id="tab-pane-1">
                         <h4 className="mb-3 heading-description">Product Description</h4>
                         <p className="paragraph-description">Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
                         <p className="paragraph-description">Dolore magna est eirmod sanctus dolor, amet diam et eirmod et ipsum. Amet dolore tempor consetetur sed lorem dolor sit lorem tempor. Gubergren amet amet labore sadipscing clita clita diam clita. Sea amet et sed ipsum lorem elitr et, amet et labore voluptua sit rebum. Ea erat sed et diam takimata sed justo. Magna takimata justo et amet magna et.</p>
                     </div>
+                    {/* Information Tab */}
                     <div className="tab-pane fade" id="tab-pane-2">
                         <h4 className="mb-3 heading-description">Additional Information</h4>
                         <p className="paragraph-description">Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
@@ -65,6 +68,7 @@ const Description = () => {
                             </div>
                         </div>
                     </div>
+                    {/* Reviews Tab */}
                     <div className="tab-pane fade" id="tab-pane-3">
                         <div className="row">
                             <div className="col-md-6">

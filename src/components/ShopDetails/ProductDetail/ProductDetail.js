@@ -25,14 +25,16 @@ const socialIcons = [
 ]
 
 const ProductDetail = () => {
- 
-
-
   const dispatch = useDispatch();
+
+  // accessing the parameter of the current route
   const {productId}=useParams();
+
+  //getting the state from redux store
     let {product,loading} = useSelector((state) => state.productDetail);
     const {title,image,description,price,rating}=product;
 
+    //action creating
     useEffect(()=>{
       dispatch(getSingleProduct(productId))
     },[productId,dispatch])
@@ -49,6 +51,7 @@ const ProductDetail = () => {
           <div className="col-lg-7 pb-5">
             <h3 className="colorful-heading">{title}</h3>
             <div className="d-flex mb-3">
+              {/* Rating code */}
               <div className="mr-2">
                 <Rating rating={rating?.rate} />
               </div>
@@ -56,6 +59,7 @@ const ProductDetail = () => {
             </div>
             <h3 className="colorful-heading mb-4">${price}</h3>
             <p className="mb-4">{description}</p>
+            {/* Sizes code */}
             <div className="d-flex mb-3">
               <p className="text-dark font-weight-medium mb-0 mr-3">Sizes:</p>
               <form>
@@ -76,6 +80,7 @@ const ProductDetail = () => {
                 })}
               </form>
             </div>
+            {/* Colors code */}
             <div className="d-flex flex-row mb-4">
               <p className="text-dark font-weight-medium mb-0 mr-3">
                 Colors:
@@ -99,6 +104,7 @@ const ProductDetail = () => {
               </form>
             </div>
             <div className="d-flex mb-4 pt-2 center">
+              {/* increasing and decreasing count of item in cart code */}
               <div
                 className="add-icon-button-container d-flex flex-row justify-content-center text-center p-2"
                 style={{ width: "130px" }}
@@ -120,6 +126,7 @@ const ProductDetail = () => {
                   <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
                 </svg>
               </div>
+              {/* Adding items to cart */}
               <div className="add-icon-button-container d-flex flex-row justify-content-center text-center p-2">
                 <button className=" shopdetail-addtocart-button p-2 text-center" onClick={()=>dispatch({type:ADD_CART,payload:product})}>
                   <i className="fa fa-shopping-cart shopdetail-addtocart" />
@@ -127,6 +134,7 @@ const ProductDetail = () => {
                 </button>
               </div>
             </div>
+            {/* social icons code */}
             <div className="d-flex pt-2">
               <p className="text-dark font-weight-medium mb-0 mr-2">
                 Share on:
@@ -143,7 +151,9 @@ const ProductDetail = () => {
             </div>
           </div>
           </div>
-        ) : (
+        ) : 
+        // spinner code
+        (
           <div className="spinner-container">
             <SpinnerCircular size={100} style={{ color: "blue" }} />
           </div>

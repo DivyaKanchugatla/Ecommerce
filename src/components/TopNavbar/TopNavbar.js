@@ -11,12 +11,12 @@ const socialIcons = [
   ]
   
 const TopNavbar = () => {
+
     const itemsInCart=useSelector((state)=>state._cardProduct.numberCart)
   return (
     <>
         {/* TopNavbar starts from here*/}
-        <div className="container-fluid">
-        {/*In TopNavbar first row starts from here*/}  
+        <div className="container-fluid">  
         <div className="row py-2 px-xl-5" style={{backgroundColor:"#EDF1FF"}}>
              {/*code for faq,help,support anchor tags starts from here*/}
             <div className="col-lg-6 d-none d-lg-block justify-content-start align-items-start">
@@ -44,9 +44,6 @@ const TopNavbar = () => {
             </div>
             {/*code for fb,twitter,insta,youtube icons ends here*/}
         </div>
-        {/* In TopNavbar first row ends here*/}
-
-        {/* In TopNavbar second row starts from here*/}
         <div className="row align-items-center py-3 px-xl-5">
              {/*code for Eshopper anchor tag starts from here*/}
             <div className="col-lg-3 d-none d-lg-block">
@@ -84,9 +81,7 @@ const TopNavbar = () => {
             </div>
             {/*code for cart and heart icons ends here*/}
         </div>
-        {/* TopNavbar second row ends here*/}
     </div>
-    {/* TopNavbar ends here*/}
     </>
   )
 }

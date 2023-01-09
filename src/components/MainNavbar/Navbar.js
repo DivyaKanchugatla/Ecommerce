@@ -39,7 +39,6 @@ const Navbar = () => {
     <>
       {/* MainNavbar starts from here */}
       <div className="container-fluid mb-5">
-        {/* MainNavbar row starts from here */}
         <div className="row border-top px-xl-5">
           {/* categories dropdown starts from here */}
           <div className="col-lg-3 d-none d-lg-block">
@@ -217,12 +216,12 @@ const Navbar = () => {
               )}
             </div>
             {/* Home Navbar ends here */}
+
+            {/* This is coursel code */}
             {location.pathname === "/" && <Carousel />}
           </div>
         </div>
-        {/* MainNavbar row ends here */}
       </div>
-      {/* MainNavbar ends here */}
     </>
   );
 };
