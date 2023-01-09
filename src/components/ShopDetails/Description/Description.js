@@ -73,7 +73,7 @@ const Description = () => {
                     <div className="tab-pane fade" id="tab-pane-3">
                         <div className="row">
                             <div className="col-md-6">
-                                <h4 className="mb-4 heading-description">1 review htmlFor "Colorful Stylish Shirt"</h4>
+                                <h4 className="mb-4 heading-description">1 review For "Colorful Stylish Shirt"</h4>
                                 <div className="media mb-4">
                                     <img src="img/user.jpg" alt="" className="img-fluid mr-3 mt-1" style={{width: "45px"}}/>
                                     <div className="media-body">
