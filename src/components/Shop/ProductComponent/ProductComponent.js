@@ -49,7 +49,7 @@ import React from 'react'
                              <Link to={`/product/${id}`} style={{textDecoratio:"none"}} className="linkText">
                                <i className="fas fa-eye mr-1 fas-color"></i><span className='' style={{color:"black"}} >View Detail</span>
                                 </Link> 
-                                <button onClick={()=>dispatch({type:ADD_CART,payload:product})} className="text-dark p-0 view-button"><i className="fas fa-shopping-cart mr-1 fas-color"></i><span className = "view-button">Add To Cart</span></button>
+                                <button onClick={()=>dispatch({type:ADD_CART,payload:{...product,quantity:1}})} className="text-dark p-0 view-button"><i className="fas fa-shopping-cart mr-1 fas-color"></i><span className = "view-button">Add To Cart</span></button>
                              </div>
                          </div>
                      </div>

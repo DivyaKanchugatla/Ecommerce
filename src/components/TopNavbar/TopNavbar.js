@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux'
 import './TopNavbar.css'
 
 const socialIcons = [
-    {link:"https://www.facebook.com",icon:"fab fa-facebook-f"},
+    {link:"https://www.facebook.com/Maybinsefu1/",icon:"fab fa-facebook-f"},
     {link:"https://twitter.com",icon:"fab fa-twitter"},
-    {link:"https://www.linkedin.com",icon:"fab fa-linkedin-in"},
-    {link:"https://www.instagram.com",icon:"fab fa-instagram"},
-    {link:"https://www.youtube.com",icon:"fab fa-youtube"},
+    {link:"https://www.linkedin.com/authwall?trk=gf&trkInfo=AQHKrOz2HSDNtwAAAYWCuvZorIoAmjWmSMp7eL4ZwwQjl8FzyHKfD7XNG2ThkEMh4HGi_b8ddLqUiWmDNoiioww-oJzKacNCwD5Deue137TcFteOVzciIPVYwzGLs57zcwG4oZk=&original_referer=https://63b63c607d93c40eccfdb126--endearing-puffpuff-1605ac.netlify.app/&sessionRedirect=https%3A%2F%2Fin.linkedin.com%2Fcompany%2Fmsys-technologies",icon:"fab fa-linkedin-in"},
+    {link:"https://www.instagram.com/msys_technologies/?hl=en",icon:"fab fa-instagram"},
+    {link:"https://www.youtube.com/c/MSys-Tech",icon:"fab fa-youtube"},
   ]
   
 const TopNavbar = () => {
@@ -21,11 +21,11 @@ const TopNavbar = () => {
              {/*code for faq,help,support anchor tags starts from here*/}
             <div className="col-lg-6 d-none d-lg-block justify-content-start align-items-start">
             <div className="d-inline-flex align-items-start justify-content-start">
-                    <a className="text-dark text-decoration-none" href="/">FAQs</a>
+                    <a className="text-dark text-decoration-none" href="/contactus">FAQs</a>
                     <span className="text-muted px-2">|</span>
-                    <a className="text-dark text-decoration-none" href="/">Help</a>
+                    <a className="text-dark text-decoration-none" href="/contactus">Help</a>
                     <span className="text-muted px-2">|</span>
-                    <a className="text-dark text-decoration-none" href="/">Support</a>
+                    <a className="text-dark text-decoration-none" href="/contactus">Support</a>
                </div> 
             </div>
               {/*code for faq,help,support anchor tags ends here*/}
@@ -77,7 +77,7 @@ const TopNavbar = () => {
                     <i className="fas fa-heart icon-color"></i>
                     <span className="badge">0</span>
                 </a>
-                <a href="/" className="btn border mr-3">
+                <a href="/Shopingcart" className="btn border mr-3">
                     <i className="fas fa-shopping-cart icon-color"></i>
                     <span className="badge">{itemsInCart}</span>
                 </a>

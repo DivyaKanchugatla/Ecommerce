@@ -1,4 +1,4 @@
-import React ,{useEffect} from 'react'
+import React ,{useEffect,useState} from 'react'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import Rating from './Rating';
@@ -29,6 +29,9 @@ const ProductDetail = () => {
     let product = useSelector((state) => state.product);
     const {title,image,description,price,rating}=product;
 
+    //qauantiy increase
+  const [count, setCount] = useState(1);
+
     useEffect(()=>{
       dispatch(getSingleProduct(productId))
       return()=>{
@@ -36,6 +39,17 @@ const ProductDetail = () => {
       }
     },[productId,dispatch])
     
+
+     //increase quantiy
+  const increaseQuantity = () => {
+    setCount((prev) => prev + 1);
+  };
+  //decrease Quntity
+  const decreaseQuantity = () => {
+    if (count > 1) {
+      setCount((prev) => prev - 1);
+    }
+  };
     
   return (
     <>
@@ -108,21 +122,23 @@ const ProductDetail = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
                     className="add-icon"
+                    onClick={decreaseQuantity}
                   >
                     <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
                   </svg>
-                  <p className="d-inline-block count-value">0</p>
+                  <p className="d-inline-block count-value">{count}</p>
                 
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
                     className="add-icon"
+                    onClick={increaseQuantity}
                   >
                     <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
                   </svg>
                 </div>
                 <div className="add-icon-button-container d-flex flex-row justify-content-center text-center p-2">
-                  <button className=" shopdetail-addtocart-button p-2 text-center" onClick={()=>dispatch({type:ADD_CART,payload:product})}>
+                  <button className=" shopdetail-addtocart-button p-2 text-center" onClick={()=>dispatch({type:ADD_CART,payload:{...product,quantity:count}})}>
                     <i className="fa fa-shopping-cart shopdetail-addtocart" />
                     Add To Cart
                   </button>

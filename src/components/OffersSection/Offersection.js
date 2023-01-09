@@ -5,7 +5,7 @@ const Offersection = () => {
   return (
     
     <div className='container-fluid pt-3 mt-3 mb-3'>
-            <div className='row'>
+            <div className='row px-xl-5'>
                 <div className='col-md-6'>
                     <div className='small-container  d-flex flex-row justify-content-between mb-2'>
                         <div>
