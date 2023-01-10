@@ -93,12 +93,12 @@ const Login = (props) => {
     <div className="Login-container">
       
       <section>
-      <div className="exitSection">
+      <div className="exitSection ">
           <button onClick={closeModal} className="exitbutton">
             X
           </button>
         </div>
-        <div className="Login-contentbx">
+        <div className="Login-contentbx order-0 w-sm-100 flex-fill">
           <div>
             <form onSubmit={onSubmitHandler}>
               <div className="Login-input-icons">

@@ -146,7 +146,12 @@ section .imgbx{
 }
 @media screen and (max-width:576px) { 
   section{
-    height: 100% !important;
+    height: 75% !important;
+    width: 95% !important;
+   
+  }
+  .social-text{
+    font-size: 15px;
   }
   section .Login-contentbx{
   height: 100% !important;
@@ -155,7 +160,7 @@ section .imgbx{
   }
   .social-btn{
     height: 45px!important;
-    width:100% !important;
+    width:95% !important;
   }
   .Login-btn{
     background-color: #4886FF;
@@ -166,6 +171,22 @@ section .imgbx{
   .remember input{
     height: 10px !important;
     
+  }
+  .exitbutton{
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    width: 5px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .Login-input-icons {
+    width: 90%; 
+  }
+  .remember{
+    width: 90%;
+  }
+  .hr-lines{
+    width: 90%;
   }
  
 }
