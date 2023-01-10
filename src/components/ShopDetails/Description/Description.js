@@ -21,12 +21,16 @@ const Description = () => {
         }
         setReviewList([...reviewList].concat(newReview))
     }
-    let count = reviewList.length
+    
     
      useEffect(()=>{
          let reviewData=JSON.stringify(reviewList)
          localStorage.setItem('data', reviewData);
-     },[reviewList,count])
+     },[reviewList])
+
+    const saved = localStorage.getItem("data")
+    const storedItem = JSON.parse(saved);
+    let count = storedItem.length
     
   return (
     <>
@@ -98,7 +102,7 @@ const Description = () => {
                         <div className="row">
                             <div className="col-md-6">
                             <h4 className="mb-4 heading-description">1 review For "Colorful Stylish Shirt"</h4>
-                               {reviewList.map((each,index)=>{                               
+                               {storedItem.map((each,index)=>{                               
                                 return(                                                                       
                                     <div className="media mb-4" key={index}>
                                         <img src="https://m.media-amazon.com/images/I/81PEBDVcoOL._SL1500_.jpg" alt="" className="img-fluid mr-3 mt-1" style={{width: "45px"}}/>
