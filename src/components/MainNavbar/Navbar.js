@@ -16,6 +16,9 @@ const Navbar = () => {
   const [loginModal, setLoginmodal] = useState(false);
   const [isLogined, setIslogined] = useState(false);
   const [userName, setUserName] = useState("");
+ 
+
+  
 
   const loginHandlermodal = (value) => {
     setLoginmodal(value);
