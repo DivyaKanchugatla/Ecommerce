@@ -1,0 +1,23 @@
+.Modal_container_signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: none;
+    left: 0;
+    top: 0;
+    z-index: 120;
+  
+  }
+  
+  /*login buuton for login account*/
+  .login_button{
+      border-width:0px ;
+      background-color: rgb(211, 221, 224);
+      border-radius: 10px;
+      color: blue;
+      
+    }
