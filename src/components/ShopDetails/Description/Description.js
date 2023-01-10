@@ -23,10 +23,10 @@ const Description = () => {
     }
     let count = reviewList.length
     
-    useEffect(()=>{
-        let reviewData=JSON.stringify(reviewList)
-        localStorage.setItem('data', JSON.stringify(reviewData));
-    },[reviewList,count])
+     useEffect(()=>{
+         let reviewData=JSON.stringify(reviewList)
+         localStorage.setItem('data', reviewData);
+     },[reviewList,count])
     
   return (
     <>
