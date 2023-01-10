@@ -9,8 +9,6 @@ import {
   //Done by kumar swamy
   
   const initialProduct = {
-    // numbercart is for showing the total number of items in the cart
-    
     // Carts array is used for storing items,deleting,increasing quantity,decresing quantity
     Carts: [],
   };
@@ -20,7 +18,7 @@ import {
     switch (type) {
      
       case ADD_CART:
-        // in this case we are checking numberCart. if numberCart is zero we are pushing item into Carts array
+        // in this case we are checking carts array length if Carts array length is zero we are pushing item into Carts array
         if (state.Carts.length === 0) {
             let cart = {
             id: payload.id,
@@ -59,7 +57,7 @@ import {
           ...state,
         };
       case INCREASE_QUANTITY:
-        // in this quantity increased and numberCart is increased
+        // in this quantity increased 
         
         state.Carts[payload].quantity++;
   
