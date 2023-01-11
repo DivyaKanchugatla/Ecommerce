@@ -28,49 +28,29 @@ const Filters = () => {
         {price:"L", avail:"145"},
         {price:"XL", avail:"168"}
     ]
+    const filterFunc = (items,head) => 
+
+        <div className='border-bottom mb-4 pb-4'>
+        <h5 className="font-weight-semi-bold mb-4 filter-heading">{head}</h5>
+                        {items.map((item) => (
+                            <div className='d-flex justify-content-between mb-2'>
+                                <div>
+                                    <input type="checkbox" className="" id="price-all" />
+                                    <label className="pl-2" htmlFor="price-all">{item.price}</label>
+                                </div>
+                                <span className="border font-weight-normal badge-span">{item.avail}</span>
+                            </div>
+                        ))}
+         
+        
+        </div>               
 
   return (
        
-           <>
-               <div className="border-bottom mb-4 pb-4">
-                    <h5 className="font-weight-semi-bold mb-4 filter-heading">Filter by price</h5>
-                        {priceArray.map((item) => (
-                            <div className='d-flex justify-content-between mb-2'>
-                                <div>
-                                    <input type="checkbox" className="" id="price-all" />
-                                    <label className="pl-2" htmlFor="price-all">{item.price}</label>
-                                </div>
-                                <span className="border font-weight-normal badge-span">{item.avail}</span>
-                            </div>
-                        ))}
-                </div>
-               
-                <div className="border-bottom mb-4 pb-4">
-                    <h5 className="font-weight-semi-bold mb-4 filter-heading">Filter by color</h5>
-                    {colorArray.map((item) => (
-                        <div className='d-flex justify-content-between mb-2'>
-                            <div>
-                                <input type="checkbox" className="" id="price-all" />
-                                <label className="pl-2" htmlFor="price-all">{item.price}</label>
-                            </div>
-                            <span className="border font-weight-normal badge-span">{item.avail}</span>
-                        </div>
-                    ))}
-                </div>   
-
-                <div className="border-bottom mb-4 pb-4">
-                    <h5 className="font-weight-semi-bold mb-4 filter-heading">Filter by color</h5>
-                        {sizeArray.map((item) => (
-                            <div className='d-flex justify-content-between mb-2'>
-                                <div>
-                                    <input type="checkbox" className="" id="price-all" />
-                                    <label className="pl-2" htmlFor="price-all">{item.price}</label>
-                                </div>
-                                <span className="border font-weight-normal badge-span">{item.avail}</span>
-                            </div>
-                        ))}
-                </div>            
-                    
+    <>
+        {filterFunc(priceArray,"Filter By Price")}
+        {filterFunc(colorArray,"Filter By Color")}
+        {filterFunc(sizeArray,"Filter By Size")}
     </>      
   )}
   export default Filters;
