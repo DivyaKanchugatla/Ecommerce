@@ -5,6 +5,13 @@ FREESHIPPING:'Free Shipping',
 RETURNPOLICY:'14-Day Return',
 SUPPORT:'24/7 Support',
 
+//offerSection-constants
+
+TWENTYPERCENTAGEOFFTHEALLOPDER:'20% OFF THE ALL ORDER',
+SHOPNOW:'Shop Now',
+SPRINGCOLLECTION:'Spring Collection',
+WINTERCOLLECTION:'Winter Collection',
+
 
 // productsSection-constants
 FIFTEENPRODUCTS:'15 Products',
