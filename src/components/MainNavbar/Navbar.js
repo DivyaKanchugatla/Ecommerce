@@ -2,7 +2,8 @@ import React, { useState,useSelector } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Carousel from "./Carousel";
 import Login from "../LoginPage/Login";
-import { DefaultConstants } from "../../constants/constants";
+import SignUp from "../LoginPage/SignUp";
+import DefaultConstants from "../../constants/constants"
 import "./Navbar.css";
 
 const Dresses = [
@@ -17,10 +18,10 @@ const Navbar = () => {
   const [loginModal, setLoginmodal] = useState(false);
   const [isLogined, setIslogined] = useState(false);
   const [userName, setUserName] = useState("");
- 
-
-  
-
+  const [registerModal,setRegisterModal]=useState(false)
+   //check the cuurent location
+   const location=useLocation()
+   //this for open login modal
   const loginHandlermodal = (value) => {
     setLoginmodal(value);
   };
@@ -29,16 +30,33 @@ const Navbar = () => {
   const logoutButtonShow = (value) => {
     setIslogined(value);
   };
+  //user Details hanlder
   const userDetailshandler = (details) => {
-    const nameuser = details[0].name.firstname + details[0].name.lastname;
+    const nameuser = details[0].firstName + details[0].lastName;
     setUserName(nameuser);
+    console.log(nameuser)
+    console.log(details)
   };
-   const products = useSelector((state) => state.allProducts.products);
-  const productId = products?.map((product) => {
-     return product.id;
-   });
-   console.log(productId[0]);
-  const location = useLocation();
+  //register modal
+  const signupHandlermodal=(value)=>{
+    setRegisterModal(value)
+  }
+  //create account handler when click signup here
+  const createAccountHanlder=(value)=>{
+    setRegisterModal(value)
+  }
+
+  //login modal show after user register succesfully registered
+  const loginModalShowAfterRegister=(value)=>{
+    setLoginmodal(value)
+  }
+
+  const products = useSelector((state) => state.allProducts.products);
+  const productId = products.map((product) => {
+    return product.id;
+  });
+  console.log(productId[0]);
+  
   return (
     <>
       {/* MainNavbar starts from here */}
@@ -201,8 +219,8 @@ const Navbar = () => {
                     >
                       {DefaultConstants.LOGIN}
                     </p>
-                    <p  className="nav-item nav-link items">
-                      {DefaultConstants.REGISTER}
+                    <p onClick={()=>setRegisterModal(true)} className="nav-item nav-link items">
+                      Register
                     </p>
                   </div>
                 )}
@@ -214,6 +232,16 @@ const Navbar = () => {
                   logOutShow={logoutButtonShow}
                   modalClose={loginHandlermodal}
                   userDetailsGet={userDetailshandler}
+                  createAccount={createAccountHanlder}
+                />
+              )}
+            </div>
+            {/* register modal */}
+            <div>
+              {registerModal && (
+                <SignUp
+                  modalClose={signupHandlermodal}
+                  loginModalOpen={loginModalShowAfterRegister}
                 />
               )}
             </div>

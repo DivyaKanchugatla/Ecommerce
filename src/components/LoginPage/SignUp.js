@@ -1,104 +1,75 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useRef, useState } from "react";
 import { FacebookLoginButton } from "react-social-login-buttons";
 import { TwitterLoginButton } from "react-social-login-buttons";
 import { GoogleLoginButton } from "react-social-login-buttons";
-import "./Login.css";
+import "./SignUp.css";
 
-const Login = (props) => {
-  const [userDetails, setUserDetails] = useState([]);
-
-   //error in login and succefully
+const SignUp = (props) => {
+  const [errerMessage, SeterrerMessage] = useState("");
   const [error, setError] = useState(false);
-  const [message, setMessage] = useState("");
-    //successfully login
-  const [loginState, setLoginState] = useState(false);
- //singup page for clicking not account singnup
-  const registerPageOpenHandler=()=>{
-  props.createAccount(true)
-  props.modalClose(false);
+  const userNameRef = useRef();
+  const passWordRef = useRef();
+  const conformPassRef = useRef();
 
-}
-
-//login intergration with dummyjson data
-  const fetchData = async () => {
-    const response = await fetch("https://dummyjson.com/users");
-    if (!response.ok) {
-      throw new Error("Data coud not be fetched!");
-    } else {
-      return response.json();
-    }
+  //login section show already user have a account
+  const loginModalShow = () => {
+    props.loginModalOpen(true);
+    props.modalClose(false);
   };
-  useEffect(() => {
-    fetchData()
-      .then((res) => {
-        setUserDetails(res.users); //get the userDate
-      })
-      .catch((e) => {
-        console.log(e.message);
-      });
-  }, []);
 
-  //using ref read the dat user entires
-  const usernameRef = useRef();
-  const passwordRef = useRef();
-
-  //submit the data
+  //signup handler
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    const username = usernameRef.current.value;
-    const password = passwordRef.current.value;
-
-    const userData = {
-      username,
-      password,
-    };
-     //checking the user enter details or not
-    if (username === "" || password === "") {
-       setError(true);
-       setMessage("Enter Username and Password Correctly")
+    //get user enter name and password
+    const username = userNameRef.current.value;
+    const password = passWordRef.current.value;
+    const confrimpass = conformPassRef.current.value;
+    //checking the conditions details
+    if (username === "") {
+      setError(true);
+      SeterrerMessage("userName Required");
     } else if (password.length < 8) {
       setError(true);
-       setMessage("password must be above 8 characters")
+      SeterrerMessage("Password must be 8 charcters");
+    } else if (password !== confrimpass) {
+      setError(true);
+      SeterrerMessage("Password must be same as above password");
     } else {
-      const data = userDetails.find(
-        (person) =>
-          person.username === userData.username &&
-          person.password === userData.password
-      );
-      if (!data) {
-        setError(true);
-        setMessage("invalid login"); //if invalid details entered
-      } else {
-        setError(false);
-        setLoginState(true); //if no error in login show login message
-        //this for showing the succesfuuly message and close the modal
-        setTimeout(() => {
-          props.modalClose(false);
-          props.logOutShow(true);
-          //using filter get the logiend user details
+      setError(false);
+      //POST request using axios inside useEffect React hook
+      fetch("https://dummyjson.com/users/add", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username,
+          password,
+          /* other user data */
+        }),
+      })
+        .then((res) => res.json())
+        .then(console.log);
+      alert("Succssfully register");
 
-          const name = userDetails.filter(
-            (person) => person.username === userData.username
-          );
-          props.userDetailsGet(name);
-        }, 2000);
-      }
+      props.modalClose(false);
+      props.loginModalOpen(true);
+
+      // fetch("https://dummyjson.com/users/")
+      //   .then((res) => res.json())
+      //   .then((data) => console.log(data));
     }
   };
-
   const closeModal = () => {
     props.modalClose(false);
   };
   return (
-    <div className="Login-container">
-      
-      <section>
-      <div className="exitSection ">
+    <div className="Modal_container_signup">
+     <section>
+      <div className="exitSection">
           <button onClick={closeModal} className="exitbutton">
             X
           </button>
         </div>
-        <div className="Login-contentbx order-0 w-sm-100 flex-fill">
+        <div className="Login-contentbx">
           <div>
             <form onSubmit={onSubmitHandler}>
               <div className="Login-input-icons">
@@ -121,7 +92,7 @@ const Login = (props) => {
                 <input
                   className="Login-input-field"
                   type={"text"}
-                  ref={usernameRef}
+                  ref={userNameRef}
                   placeholder="Username"
                 ></input>
               </div>
@@ -142,15 +113,38 @@ const Login = (props) => {
                   className="Login-input-field"
                   type={"password"}
                   placeholder="password"
-                  ref={passwordRef}
-                >
-                 
+                  ref={passWordRef}
+                >  
+                </input>
+              </div>
+              <div className="Login-input-icons">
+                <i className="Login-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="23"
+                    height="23"
+                    fill="currentColor"
+                    className="bi bi-key-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                  </svg>
+                </i>
+                <input
+                  className="Login-input-field"
+                  type={"password"}
+                  placeholder="Confirm password"
+                  ref={conformPassRef}
+                >  
                 </input>
               </div>
               <div>
-              {error && <p className="ErrorMessage">{message}</p>}
-              {loginState && (
-                <p className="successfullymessage">Succssfully Login</p>
+              {error ? (
+                <p
+                  style={{ color: "red", fontSize: "20px" }}
+                >{`*${errerMessage}`}</p>
+              ) : (
+                ""
               )}
             </div>
               <div className="remember">
@@ -159,18 +153,17 @@ const Login = (props) => {
                   <input type={"checkbox"} placeholder="UserName"></input>{" "}
                   RememberMe
                 </label>
-                <button type="submit" className="Login-btn">LOGIN</button>
+                <button type="submit" className="Login-btn">SIGNUP</button>
               </div>
             </form>
-            <div className="remember">
-              <p onClick={registerPageOpenHandler}>
-                Register now
-              </p>
-              <p>
-                <a className="forgotpassword" href="/">
-                  Forgot password?
-                </a>
-              </p>
+            <div className="modal-footer d-flex justify-content-center">
+              <div className="signup-section">
+                Already a member ?{" "}
+                <button onClick={loginModalShow} className="login_button">
+                  Login
+                </button>
+                .
+              </div>
             </div>
             <p className="hr-lines"> OR </p>
             <div>
@@ -178,19 +171,19 @@ const Login = (props) => {
                 className="social-btn"
                 onClick={() => alert("Hello")}
               >
-                <span className="social-text">LOGIN WITH FACEBOOK</span>
+                <span className="social-text">SIGNIN WITH FACEBOOK</span>
               </FacebookLoginButton>
               <TwitterLoginButton
                 className="social-btn"
                 onClick={() => alert("Hello")}
               >
-                <span className="social-text">LOGIN WITH TWITTER</span>
+                <span className="social-text">SIGNIN WITH TWITTER</span>
               </TwitterLoginButton>
               <GoogleLoginButton
                 className="social-btn"
                 onClick={() => alert("Hello")}
               >
-                <span className="social-text">LOGIN WITH GOOGLE</span>
+                <span className="social-text">SIGNIN WITH GOOGLE</span>
               </GoogleLoginButton>
             </div>
           </div>
@@ -204,6 +197,7 @@ const Login = (props) => {
         </div>
       </section>
     </div>
-  )
-}
-export default Login
+  );
+};
+
+export default SignUp;
