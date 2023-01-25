@@ -1,6 +1,8 @@
 import React from 'react'
+import { DefaultConstants } from '../../constants/constants'
 import './Offersection.css'
 
+//done by kumar swamy
 const Offersection = () => {
   return (
     
@@ -12,18 +14,18 @@ const Offersection = () => {
                         <img className='offer-section-girl-image-1' alt="girlpic" src='https://technext.github.io/eshopper/img/offer-1.png'/>
                         </div>
                         <div className='pr-3  pt-3 text-center'>
-                            <h4 className='offer-section-description  fs-5 fw-normal'>20% OFF THE ALL ORDER</h4>
-                            <h1 className='fs-4 fw-bold'>Spring Collection</h1>
-                            <button className='btn btn-sm fs-6 fst-normal shop-now-button'>Shop Now</button>
+                            <h4 className='offer-section-description  fs-5 fw-normal'>{DefaultConstants.TWENTYPERCENTAGEOFFTHEALLOPDER}</h4>
+                            <h1 className='fs-4 fw-bold'>{DefaultConstants.SPRINGCOLLECTION}</h1>
+                            <button className='btn btn-sm fs-6 fst-normal shop-now-button'>{DefaultConstants.SHOPNOW}</button>
                         </div>
                     </div>  
                 </div>
                 <div className='col-md-6'>
                     <div className='small-container mb-2  d-flex flex-row justify-content-between'>
                         <div className='p-2 pt-2 justify-content-start'>
-                            <h4 className='offer-section-description fs-5 fw-normal'>20% OFF THE ALL ORDER</h4>
-                            <h1 className='fs-4 fw-bold'>Winter Collection</h1>
-                            <button className='btn btn-sm fs-6 fst-normal shop-now-button'>Shop Now</button>
+                            <h4 className='offer-section-description fs-5 fw-normal'>{DefaultConstants.TWENTYPERCENTAGEOFFTHEALLOPDER}</h4>
+                            <h1 className='fs-4 fw-bold'>{DefaultConstants.WINTERCOLLECTION}</h1>
+                            <button className='btn btn-sm fs-6 fst-normal shop-now-button'>{DefaultConstants.SHOPNOW}</button>
                         </div>
                         <img className='offer-section-girl-image' alt="girlpic" src='https://technext.github.io/eshopper/img/offer-2.png' />
                         </div>  

@@ -1,5 +1,5 @@
 import {
-    GET_NUMBER_CART,
+  
     ADD_CART,
     DECREASE_QUANTITY,
     INCREASE_QUANTITY,
@@ -9,8 +9,6 @@ import {
   //Done by kumar swamy
   
   const initialProduct = {
-    // numbercart is for showing the total number of items in the cart
-    numberCart: 0,
     // Carts array is used for storing items,deleting,increasing quantity,decresing quantity
     Carts: [],
   };
@@ -18,14 +16,10 @@ import {
   function cartReducer(state = initialProduct, action) {
     const { type, payload } = action;
     switch (type) {
-      case GET_NUMBER_CART:
-        // this action is used for getting the total number of items in the cart
-        return {
-          ...state,
-        };
+     
       case ADD_CART:
-        // in this case we are checking numberCart. if numberCart is zero we are pushing item into Carts array
-        if (state.numberCart === 0) {
+        // in this case we are checking carts array length if Carts array length is zero we are pushing item into Carts array
+        if (state.Carts.length === 0) {
             let cart = {
             id: payload.id,
             quantity: payload.quantity,
@@ -61,11 +55,10 @@ import {
         }
         return {
           ...state,
-          numberCart: state.numberCart + 1,
         };
       case INCREASE_QUANTITY:
-        // in this quantity increased and numberCart is increased
-        state.numberCart++;
+        // in this quantity increased 
+        
         state.Carts[payload].quantity++;
   
         return {
@@ -75,7 +68,6 @@ import {
         // if quantity is greter than we are decresing quantity
         let quantity = state.Carts[payload].quantity;
         if (quantity > 1) {
-          state.numberCart--;
           state.Carts[payload].quantity--;
         }
   
@@ -83,11 +75,10 @@ import {
           ...state,
         };
       case DELETE_CART:
-        let quantity_ = state.Carts[payload].quantity;
+        
         //here decresing the numberCart and removing the item from Carts array using the filter method.
         return {
           ...state,
-          numberCart: state.numberCart - quantity_,
           Carts: state.Carts.filter((item) => {
             return item.id !== state.Carts[payload].id;
           }),

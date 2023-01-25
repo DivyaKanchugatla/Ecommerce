@@ -142,7 +142,7 @@ const ShopingCart = () => {
                 ))}
               </tbody>
             </table>
-            {items.numberCart===0 && <p className="empty-cart">{DefaultConstants.EMPTYCART}</p>}
+            {items.Carts.length===0 && <p className="empty-cart">{DefaultConstants.EMPTYCART}</p>}
           </div>
           <div className="col-lg-4">
             <div className="card border  mb-5">
