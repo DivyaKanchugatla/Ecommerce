@@ -8,6 +8,7 @@ import {
   INCREASE_QUANTITY,
 } from "../../store/actions/CartActions";
 import OurShop from "./OurShoppingHeader";
+import { Constants } from "../../constants/constants";
 import "./ShoppingCart.css";
 
 const ShopingCart = () => {
@@ -147,31 +148,32 @@ const ShopingCart = () => {
           <div className="col-lg-4">
             <div className="card border  mb-5">
               <div className="card-header shop-details-cart-sumary-card border-0 text-center">
-                <h4 className="font-weight-semi-bold m-0">{DefaultConstants.CARTSUMMARY}</h4>
+                <h4 className="font-weight-semi-bold m-0">{Constants.CARTSUMMARY}</h4>
               </div>
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3 pt-1">
-                  <h6 className="font-weight-medium">{DefaultConstants.SUBTOTAL}</h6>
-                  <h6 className="font-weight-medium">${TotalCart.toFixed(2)}</h6>
+                  <h6 className="font-weight-medium">{Constants.SUBTOTAL}</h6>
+                  <h6 className="font-weight-medium">${Math.round(TotalCart,2)}</h6>
                 </div>
                 <div className="d-flex justify-content-between">
-                  <h6 className="font-weight-medium">{DefaultConstants.SHIPPING}</h6>
-                  <h6 className="font-weight-medium">{DefaultConstants.FREE}</h6>
+                  <h6 className="font-weight-medium">{Constants.SHIPPING}</h6>
+                  <h6 className="font-weight-medium">{Constants.FREE}</h6>
                 </div>
               </div>
               <div className="card-footer border-secondary bg-transparent">
                 <div className="d-flex justify-content-between mt-2">
-                  <h5 className="font-weight-bold">{DefaultConstants.TOTAL}</h5>
-                  <h5 className="font-weight-bold">${TotalCart.toFixed(2)}</h5>
+                  <h5 className="font-weight-bold">{Constants.TOTAL}</h5>
+                  <h5 className="font-weight-bold">${Math.round(TotalCart + 10,2)}</h5>
                 </div>
-                <button className="shopping-cart-proceed-to-checkout-button" onClick={procedToCheckOutHandler}>
-                  {DefaultConstants.PROCEEDTOCHECKOUT}
+                <button className="shopping-cart-proceed-to-checkout-button box-shadow">
+                  {Constants.PROCEEDTOCHECKOUT}
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+      
     </>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useSelector } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Carousel from "./Carousel";
 import Login from "../LoginPage/Login";
@@ -33,7 +33,11 @@ const Navbar = () => {
     const nameuser = details[0].name.firstname + details[0].name.lastname;
     setUserName(nameuser);
   };
-   
+   const products = useSelector((state) => state.allProducts.products);
+  const productId = products?.map((product) => {
+     return product.id;
+   });
+   console.log(productId[0]);
   const location = useLocation();
   return (
     <>

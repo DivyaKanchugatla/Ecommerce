@@ -1,4 +1,4 @@
-import React from 'react'
+ import React from 'react'
  import { useEffect } from 'react';
  import { useSelector,useDispatch } from 'react-redux';
  import {fetchProducts} from '../../../store/actions/ProductActions'
@@ -7,7 +7,6 @@ import React from 'react'
  import SearchBar from '../SearchBar/SearchBar';
  import { Link } from 'react-router-dom';
  import { ADD_CART } from '../../../store/actions/CartActions';
-
  const ProductComponent = () => {
  
    const dispatch = useDispatch();
