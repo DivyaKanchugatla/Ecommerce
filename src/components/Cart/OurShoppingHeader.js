@@ -1,5 +1,5 @@
 import React from 'react';
-import { DefaultConstants } from '../../constants/constants';
+import DefaultConstants from "../../constants/constants"
 import './OurShoppingHeader.css'
 
 const OurShop = () => {

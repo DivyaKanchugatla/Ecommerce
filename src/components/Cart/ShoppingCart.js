@@ -8,7 +8,7 @@ import {
   INCREASE_QUANTITY,
 } from "../../store/actions/CartActions";
 import OurShop from "./OurShoppingHeader";
-import { Constants } from "../../constants/constants";
+import  Constants  from "../../constants/constants";
 import "./ShoppingCart.css";
 
 const ShopingCart = () => {

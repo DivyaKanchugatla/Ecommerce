@@ -1,4 +1,4 @@
-export const Constants = {
+const Constants = {
     CARTSUMMARY:'Cart Summary',
     SUBTOTAL:'Subtotal',
     SHIPPING:'Shipping',
@@ -6,3 +6,4 @@ export const Constants = {
     TOTAL:"Total",
     PROCEEDTOCHECKOUT:'Proceed To Checkout'
 }
+export default Constants;
