@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import './TopNavbar.css'
+import { DefaultConstants } from '../../constants/constants'
 
 const socialIcons = [
     {link:"https://www.facebook.com/Maybinsefu1/",icon:"fab fa-facebook-f"},
@@ -9,7 +10,8 @@ const socialIcons = [
     {link:"https://www.instagram.com/msys_technologies/?hl=en",icon:"fab fa-instagram"},
     {link:"https://www.youtube.com/c/MSys-Tech",icon:"fab fa-youtube"},
   ]
-  
+
+//Done by Kanchugatla Divya
 const TopNavbar = () => {
     const itemsInCart=useSelector((state)=>state._cardProduct)
 
@@ -21,17 +23,16 @@ const TopNavbar = () => {
   return (
     <>
         {/* TopNavbar starts from here*/}
-        <div className="container-fluid">
-        {/*In TopNavbar first row starts from here*/}  
+        <div className="container-fluid">  
         <div className="row py-2 px-xl-5" style={{backgroundColor:"#EDF1FF"}}>
              {/*code for faq,help,support anchor tags starts from here*/}
             <div className="col-lg-6 d-none d-lg-block justify-content-start align-items-start">
             <div className="d-inline-flex align-items-start justify-content-start">
-                    <a className="text-dark text-decoration-none" href="/contactus">FAQs</a>
+                    <a className="text-dark text-decoration-none" href="/contactus">{DefaultConstants.FAQ}</a>
                     <span className="text-muted px-2">|</span>
-                    <a className="text-dark text-decoration-none" href="/contactus">Help</a>
+                    <a className="text-dark text-decoration-none" href="/contactus">{DefaultConstants.HELP}</a>
                     <span className="text-muted px-2">|</span>
-                    <a className="text-dark text-decoration-none" href="/contactus">Support</a>
+                    <a className="text-dark text-decoration-none" href="/contactus">{DefaultConstants.SUPPORTS}</a>
                </div> 
             </div>
               {/*code for faq,help,support anchor tags ends here*/}
@@ -50,14 +51,11 @@ const TopNavbar = () => {
             </div>
             {/*code for fb,twitter,insta,youtube icons ends here*/}
         </div>
-        {/* In TopNavbar first row ends here*/}
-
-        {/* In TopNavbar second row starts from here*/}
         <div className="row align-items-center py-3 px-xl-5">
              {/*code for Eshopper anchor tag starts from here*/}
             <div className="col-lg-3 d-none d-lg-block">
                 <a href="/" className="text-decoration-none" style={{color:"black"}}>
-                    <h1 className="m-0 font-weight-semi-bold"><span className="icon-color font-weight-bold px-2 border mr-1">E</span><span className="shop-heading font-weight-bold">Shopper</span></h1>
+                    <h1 className="m-0 font-weight-semi-bold"><span className="icon-color font-weight-bold px-2 border mr-1">{DefaultConstants.E}</span><span className="shop-heading font-weight-bold">{DefaultConstants.SHOPPER}</span></h1>
                 </a>
             </div>
              {/*code for Eshopper anchor tag ends here*/}
@@ -90,9 +88,7 @@ const TopNavbar = () => {
             </div>
             {/*code for cart and heart icons ends here*/}
         </div>
-        {/* TopNavbar second row ends here*/}
     </div>
-    {/* TopNavbar ends here*/}
     </>
   )
 }
