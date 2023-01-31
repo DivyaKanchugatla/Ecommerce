@@ -1,14 +1,31 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import Carousel from "./Carousel";
 import Login from "../LoginPage/Login";
+import { useSelector } from "react-redux";
+import { DefaultConstants } from "../../constants/constants";
+import SignUp from '../LoginPage/SignUp'
 import "./Navbar.css";
 
+const Dresses = [
+ { dress:DefaultConstants.MENSDRESSES},{dress:DefaultConstants.WOMENSDRESSES}, {dress:DefaultConstants.BABAYSDRESSES}
+]
+const categoryItems = [
+  {category:DefaultConstants.SHIRTS},{category:DefaultConstants.JEANS},{category:DefaultConstants.SWIMWEAR},{category:DefaultConstants.SLEEPWEAR},{category:DefaultConstants.SPORTSWEAR},{category:DefaultConstants.SWIMWEAR},{category:DefaultConstants.BLAZERS},{category:DefaultConstants.JACKETS},{category:DefaultConstants.SHOES}
+]
+
+//Done by Kanchugatla Divya
 const Navbar = () => {
   const [loginModal, setLoginmodal] = useState(false);
   const [isLogined, setIslogined] = useState(false);
   const [userName, setUserName] = useState("");
+  const [registerModal,setRegisterModal]=useState(false)
+   //check the cuurent location
+   const location=useLocation()
+   //this for open login modal
+ 
+
+  
 
   const loginHandlermodal = (value) => {
     setLoginmodal(value);
@@ -18,21 +35,45 @@ const Navbar = () => {
   const logoutButtonShow = (value) => {
     setIslogined(value);
   };
+  //user Details hanlder
   const userDetailshandler = (details) => {
-    const nameuser = details[0].name.firstname + details[0].name.lastname;
+    const nameuser = details[0].firstName + details[0].lastName;
     setUserName(nameuser);
+    console.log(nameuser)
+    console.log(details)
   };
    const products = useSelector((state) => state.allProducts.products);
   const productId = products?.map((product) => {
      return product.id;
    });
    console.log(productId[0]);
-  const location = useLocation();
+  
+   
+  
+  //register modal
+  const signupHandlermodal=(value)=>{
+    setRegisterModal(value)
+  }
+  //create account handler when click signup here
+  const createAccountHanlder=(value)=>{
+    setRegisterModal(value)
+  }
+
+  //login modal show after user register succesfully registered
+  const loginModalShowAfterRegister=(value)=>{
+    setLoginmodal(value)
+  }
+
+  // const products = useSelector((state) => state.allProducts.products);
+  // const productId = products?.map((product) => {
+  //   return product.id;
+  // });
+  // console.log(productId[0]);
+  
   return (
     <>
       {/* MainNavbar starts from here */}
       <div className="container-fluid mb-5">
-        {/* MainNavbar row starts from here */}
         <div className="row border-top px-xl-5">
           {/* categories dropdown starts from here */}
           <div className="col-lg-3 d-none d-lg-block">
@@ -48,7 +89,7 @@ const Navbar = () => {
                 ariaExpanded: "true",
               }}
             >
-              <h6 className="m-4 text-dark heading-text">Categories</h6>
+              <h6 className="m-4 text-dark heading-text">{DefaultConstants.CATEGORIES}</h6>
               <i className="fa fa-angle-down text-dark"></i>
             </a>
             <nav
@@ -71,52 +112,42 @@ const Navbar = () => {
                       padding: "0 30px",
                     }}
                   >
-                    <span className="m-4">Dresses </span>
+                    <span className="m-4">{DefaultConstants.DRESSES}</span>
                     <i className="fa fa-angle-down float-right mt-1"></i>
                   </a>
+                      <div
+                      className="dropdown-menu position-absolute border-0 rounded-0 w-100 m-0"
+                      style={{ backgroundColor: "#EDF1FF" }}
+                    >
+                       {Dresses.map((item,index)=>{
+                    return(
+                      <a href="/" className="dropdown-item" key={index}>
+                        {item.dress}
+                      </a>                   
+                    )
+                  })}
+                   </div>
                   <div
                     className="dropdown-menu position-absolute border-0 rounded-0 w-100 m-0"
                     style={{ backgroundColor: "#EDF1FF" }}
                   >
-                    <a href="/" className="dropdown-item">
-                      Men's Dresses
-                    </a>
-                    <a href="/" className="dropdown-item">
-                      Women's Dresses
-                    </a>
-                    <a href="/" className="dropdown-item">
-                      Baby's Dresses
-                    </a>
+                    {Dresses.map((item,index)=>{
+                      return(
+                        <a href="/" className="dropdown-item" key={index}>
+                        {item.dress}
+                      </a> 
+                      )
+                    })}
                   </div>
                 </div>
                 <div style={{ paddingLeft: "42px" }}>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Shirts
+                  {categoryItems.map((item,index)=>{
+                    return(
+                      <a href="/" className="nav-item nav-link text-color" key={index}>
+                    {item.category}
                   </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Jeans
-                  </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Swimwear
-                  </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Sleepwear
-                  </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Sportswear
-                  </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Jumpsuits
-                  </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Blazers
-                  </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Jackets
-                  </a>
-                  <a href="/" className="nav-item nav-link text-color">
-                    Shoes
-                  </a>
+                    )
+                  })}                  
                 </div>
               </div>
             </nav>
@@ -130,9 +161,9 @@ const Navbar = () => {
               <a href="/" className="text-decoration-none d-block d-lg-none">
                 <h1 className="m-0 display-5 font-weight-semi-bold">
                   <span className="E-text font-weight-bold border px-3 mr-1">
-                    E
+                    {DefaultConstants.E}
                   </span>
-                  <span className="heading">Shopper</span>
+                  <span className="heading">{DefaultConstants.SHOPPER}</span>
                 </h1>
               </a>
               {/*Eshopper Anchor tag ends here*/}
@@ -151,13 +182,13 @@ const Navbar = () => {
               >
                 <div className="navbar-nav mr-auto py-0">
                   <Link to="/" className="nav-item nav-link items">
-                    Home
+                    {DefaultConstants.HOME}
                   </Link>
                   <Link to="/shop" className="nav-item nav-link items">
-                    Shop
+                    {DefaultConstants.SHOP}
                   </Link>
                   <Link to="/product/1" className="nav-item nav-link items">
-                    Shop Detail
+                    {DefaultConstants.SHOPDETAIL}
                   </Link>
                   <div className="nav-item dropdown">
                     <a
@@ -166,19 +197,19 @@ const Navbar = () => {
                       data-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      Pages
+                     {DefaultConstants.PAGES}
                     </a>
                     <div className="dropdown-menu rounded-0 m-0">
                       <Link to="/Shopingcart" className="dropdown-item items">
-                        Shopping Cart
+                       {DefaultConstants.SHOPPINGCART}
                       </Link>
                       <Link to="/checkout" className="dropdown-item items">
-                        Checkout
+                       {DefaultConstants.CHECKOUT}
                       </Link>
                     </div>
                   </div>
                   <Link to="/contactus" className="nav-item nav-link items">
-                    Contact
+                   {DefaultConstants.CONTACT}
                   </Link>
                 </div>
                 {isLogined ? (
@@ -190,7 +221,7 @@ const Navbar = () => {
                       onClick={() => setIslogined(false)}
                       className="loginButton border-none nav-item nav-link items"
                     >
-                      Logout
+                      {DefaultConstants.LOGOUT}
                     </p>
                   </div>
                 ) : (
@@ -199,9 +230,9 @@ const Navbar = () => {
                       onClick={() => setLoginmodal(true)}
                       className="loginButton border-none nav-item nav-link items"
                     >
-                      Login
+                      {DefaultConstants.LOGIN}
                     </p>
-                    <p  className="nav-item nav-link items">
+                    <p onClick={()=>setRegisterModal(true)} className="nav-item nav-link items">
                       Register
                     </p>
                   </div>
@@ -214,19 +245,26 @@ const Navbar = () => {
                   logOutShow={logoutButtonShow}
                   modalClose={loginHandlermodal}
                   userDetailsGet={userDetailshandler}
+                  createAccount={createAccountHanlder}
+                />
+              )}
+            </div>
+            {/* register modal */}
+            <div>
+              {registerModal && (
+                <SignUp
+                  modalClose={signupHandlermodal}
+                  loginModalOpen={loginModalShowAfterRegister}
                 />
               )}
             </div>
             {/* Home Navbar ends here */}
-            {/* carousel starts from here */}
+
+            {/* This is coursel code */}
             {location.pathname === "/" && <Carousel />}
-            {/* <Carousel/> */}
-            {/* carousel ends here */}
           </div>
         </div>
-        {/* MainNavbar row ends here */}
       </div>
-      {/* MainNavbar ends here */}
     </>
   );
 };

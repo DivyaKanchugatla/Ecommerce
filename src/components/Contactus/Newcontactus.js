@@ -38,7 +38,7 @@ const Newcontactus = () => {
             <div class="col-lg-7 mb-5">
                 <div class="contact-form">
                     <div id="success"></div>
-                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                    <form name="sentMessage" id="contactForm" noValidate="noValidate">
                         <div class="control-group">
                             <input type="text" class="form-control contactus-input" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
                             <p class="help-block text-danger"></p>

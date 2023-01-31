@@ -9,7 +9,9 @@ import Shops from "./components/Shop/Shops";
 import ShopDetail from './components/ShopDetails/ShopDetail'
 import Newcontactus from './components/Contactus/Newcontactus'
 import Checkout from './components/Checkout/Checkout'
+import BackToTopButton from './components/BackToTopButton'
 import './App.css'
+
 
 const App = () => {
   return (
@@ -26,6 +28,7 @@ const App = () => {
         <Route path="/contactus" element={<Newcontactus/>}/>
       </Routes>
       </BrowserRouter>
+      <BackToTopButton></BackToTopButton>
       <Footer />
     </div>
   );
