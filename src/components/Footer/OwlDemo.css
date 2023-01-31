@@ -8,13 +8,13 @@
         object-fit: cover;
         align-items: center;
       }
-      .vendorImageContainer {
+      .vendorPicturesContainer {
         background-color: white;
         border: 1px solid rgb(147, 146, 146);
         margin: 8px;
         
       }
-      .vendorContainer {
+      .PicturesContainer {
         padding: 48px;
         box-sizing: border-box;
       }

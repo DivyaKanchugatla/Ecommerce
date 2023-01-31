@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import Carousel from "./Carousel";
 import Login from "../LoginPage/Login";
 import { DefaultConstants } from "../../constants/constants";
-import SignUp from "../LoginPage/SignUp";
+import SignUp from '../LoginPage/SignUp'
 import "./Navbar.css";
 
 const Dresses = [
