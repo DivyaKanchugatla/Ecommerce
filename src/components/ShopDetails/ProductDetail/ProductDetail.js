@@ -141,7 +141,7 @@ const [count,setCount]=useState(1);
               </div>
               {/* Adding items to cart */}
               <div className="add-icon-button-container d-flex flex-row justify-content-center text-center p-2">
-                <button className=" shopdetail-addtocart-button p-2 text-center" onClick={()=>dispatch({type:ADD_CART,payload:product})}>
+                <button className=" shopdetail-addtocart-button text-center" onClick={()=>dispatch({type:ADD_CART,payload:product})}>
                   <i className="fa fa-shopping-cart shopdetail-addtocart" />
                   Add To Cart
                 </button>
