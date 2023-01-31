@@ -62,14 +62,14 @@ const SignUp = (props) => {
     props.modalClose(false);
   };
   return (
-    <div className="Modal_container_signup">
+    <div className="Modal_container_signup Login-container">
      <section>
       <div className="exitSection">
           <button onClick={closeModal} className="exitbutton">
             X
           </button>
         </div>
-        <div className="Login-contentbx">
+        <div className="Login-contentbx order-0 w-sm-100 flex-fill">
           <div>
             <form onSubmit={onSubmitHandler}>
               <div className="Login-input-icons">
@@ -162,7 +162,6 @@ const SignUp = (props) => {
                 <button onClick={loginModalShow} className="login_button">
                   Login
                 </button>
-                .
               </div>
             </div>
             <p className="hr-lines"> OR </p>
