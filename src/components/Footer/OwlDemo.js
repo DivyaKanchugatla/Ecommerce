@@ -26,7 +26,7 @@ const options = {
     },
   },
 };
-const imagesData = [
+const PicturesData = [
   "https://technext.github.io/eshopper/img/vendor-1.jpg",
   "https://technext.github.io/eshopper/img/vendor-2.jpg",
   "https://technext.github.io/eshopper/img/vendor-3.jpg",
@@ -42,10 +42,10 @@ const imagesData = [
 ];
 const OwlDemo = () => {
   return (
-    <div className="container-fluid vendorContainer">
+    <div className="container-fluid PicturesContainer">
       <OwlCarousel {...options}>
-        {imagesData.map((item, index) => (
-          <div key={index} className="vendorImageContainer">
+        {PicturesData.map((item, index) => (
+          <div key={index} className="vendorPicturesContainer">
             <img className="img" src={item} alt="" />
           </div>
         ))}

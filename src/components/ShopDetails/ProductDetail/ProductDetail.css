@@ -13,11 +13,12 @@
     accent-color: #232323;
 }
 .shopdetail-addtocart-button {
-    background-color:#D19C97 ;
+    background-color: #D19C97;
     border: none;
-    height: 30px;
+    height: 30px; 
     width: 150px !important;
     padding: 5px !important;
+    font-size: 12px;
 }
 .shopdetail-addtocart-button:hover{
     color: white;
