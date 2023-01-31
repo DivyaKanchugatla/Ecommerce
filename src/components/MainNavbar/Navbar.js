@@ -53,11 +53,11 @@ const Navbar = () => {
     setLoginmodal(value)
   }
 
-  const products = useSelector((state) => state.allProducts.products);
-  const productId = products.map((product) => {
-    return product.id;
-  });
-  console.log(productId[0]);
+  // const products = useSelector((state) => state.allProducts.products);
+  // const productId = products?.map((product) => {
+  //   return product.id;
+  // });
+  // console.log(productId[0]);
   
   return (
     <>
