@@ -19,57 +19,57 @@ const Newcontactus = () => {
    
 
   return (
-    <div class="contact-us-page pt-0 mb-5 ">
-        <div class="d-flex flex-column bg-secondary align-items-center justify-content-center contactus-first-container" >
-            <h1 class="contact-us-heading text-uppercase mb-3">Contact Us</h1>
-            <div class="d-inline-flex">
-                <p class="m-0 contact-us-home"><a href="/">Home</a></p>
-                <p class="m-0 contact-us-contact px-2">-</p>
-                <p class="m-0 contact-us-contact">Contact</p>
+    <div className="contact-us-page pt-0 mb-5 ">
+        <div className="d-flex flex-column bg-secondary align-items-center justify-content-center contactus-first-container" >
+            <h1 className="contact-us-heading text-uppercase mb-3">Contact Us</h1>
+            <div className="d-inline-flex">
+                <p className="m-0 contact-us-home"><a href="/">Home</a></p>
+                <p className="m-0 contact-us-contact px-2">-</p>
+                <p className="m-0 contact-us-contact">Contact</p>
             </div>
         </div>
 
         
-      <div class="container-fluid pt-5 contactus-second-container mt-5">
-        <div class="text-center mb-4">
-            <h2 class="section-title px-5 decorated"><span class="px-2">Contact For Any Queries</span></h2>
+      <div className="container-fluid pt-5 contactus-second-container mt-5">
+        <div className="text-center mb-4">
+            <h2 className="section-title px-5 decorated"><span class="px-2">Contact For Any Queries</span></h2>
         </div>
-        <div class="row px-xl-5">
-            <div class="col-lg-7 mb-5">
-                <div class="contact-form">
+        <div className="row px-xl-5">
+            <div className="col-lg-7 mb-5">
+                <div className="contact-form">
                     <div id="success"></div>
                     <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                        <div class="control-group">
+                        <div className="control-group">
                             <input type="text" class="form-control contactus-input" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                            <p class="help-block text-danger"></p>
+                            <p className="help-block text-danger"></p>
                         </div>
-                        <div class="control-group">
+                        <div className="control-group">
                             <input type="email" class="form-control contactus-input" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" aria-invalid="false" />
-                            <p class="help-block text-danger"></p>
+                            <p className="help-block text-danger"></p>
                         </div>
-                        <div class="control-group">
+                        <div className="control-group">
                             <input type="text" class="form-control contactus-input" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject"/>
-                            <p class="help-block text-danger"></p>
+                            <p className="help-block text-danger"></p>
                         </div>
-                        <div class="control-group">
-                            <textarea class="form-control contactus-input" rows="6" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                            <p class="help-block text-danger"></p>
+                        <div className="control-group">
+                            <textarea className="form-control contactus-input" rows="6" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                            <p className="help-block text-danger"></p>
                         </div>
                         <div>
-                            <button class="contact-button py-2 px-4" type="submit" id="sendMessageButton">Send Message</button>
+                            <button className="contact-button py-2 px-4" type="submit" id="sendMessageButton">Send Message</button>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="col-lg-5 mb-5">
-                <h5 class="font-weight-semi-bold mb-3">Get In Touch</h5>
+            <div className="col-lg-5 mb-5">
+                <h5 className="font-weight-semi-bold mb-3">Get In Touch</h5>
                 <p className='contact-para'>Justo sed diam ut sed amet duo amet lorem amet stet sea ipsum, sed duo amet et. Est elitr dolor elitr erat sit sit. Dolor diam et erat clita ipsum justo sed.</p>
-                <div class="d-flex flex-column mb-3">
-                    <h5 class="font-weight-semi-bold mb-3">Store 1</h5>
+                <div className="d-flex flex-column mb-3">
+                    <h5 className="font-weight-semi-bold mb-3">Store 1</h5>
                     {renderIcons()}
                 </div>
-                <div class="d-flex flex-column">
-                    <h5 class="font-weight-semi-bold mb-3">Store 2</h5>
+                <div className="d-flex flex-column">
+                    <h5 className="font-weight-semi-bold mb-3">Store 2</h5>
                     {renderIcons()}
                 </div>
             </div>
