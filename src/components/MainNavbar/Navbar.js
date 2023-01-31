@@ -22,6 +22,10 @@ const Navbar = () => {
    //check the cuurent location
    const location=useLocation()
    //this for open login modal
+ 
+
+  
+
   const loginHandlermodal = (value) => {
     setLoginmodal(value);
   };
