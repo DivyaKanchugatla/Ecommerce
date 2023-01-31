@@ -1,4 +1,4 @@
-import { render,screen,cleanup,fireEvent } from '@testing-library/react';
+import { render,screen,cleanup } from '@testing-library/react';
 import PageHeader from '../components/ShopDetails/PageHeader/PageHeader';
 import Description from '../components/ShopDetails/Description/Description';
 // mock.jest("axios")
