@@ -1,0 +1,36 @@
+.section-title > span{
+  position: relative;
+  display: inline-block;
+ }
+ .section-title > span:before, .section-title > span:after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  border-bottom: 3px solid black;
+  width: 50px;
+  margin: 0 10px;
+ }
+ .section-title > span:before{
+  right: 100%;
+ }
+ @media screen and (min-width:768px){
+   .subscriber-container{
+    width: 100vw ! important;
+     height: 396px !important;
+  
+   }
+ }
+ @media screen and (min-width:1024px){
+   .subscriber-container{
+     width: 100vw ! important;
+   }
+ }
+ @media screen and (max-width:320px){
+   .subscriber-container{
+     width: 100vw ! important;
+   }
+ }
+ .subscriber-container{
+  width: 100vw;
+  box-sizing: border-box;
+ }

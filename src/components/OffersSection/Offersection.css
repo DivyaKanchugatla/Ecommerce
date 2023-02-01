@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.small-container{
+    background-color:#edf1ff;
+    font-family: 'poppins';
+   background-size: cover;
+   }
+
+
+
+.text-cont-right{
+    text-align: right;
+}
+
+.offer-section-girl-image{
+    width:160px;
+    
+}
+
+.offer-section-girl-image-1{
+    
+    width:124px;
+}
+
+.shop-now-button{
+    background-color: transparent;
+    color: #D19C97;
+    border: 1px solid  #D19C97;
+  
+
+    transition: all 0.3s;
+
+}
+.shop-now-button:focus{
+    outline: none !important;
+}
+
+.shop-now-button:hover{
+    background-color: #D19C97;
+    color: black;
+    outline: none !important;
+    border:none;
+    
+    
+}
+.btn:focus,.btn:active {
+    box-shadow: none;
+    
+ }
+
+
+.offer-section-description{
+    color: #D19C97;
+    padding-right: 10px;
+    
+}
+
+

@@ -1,0 +1,20 @@
+.filter-heading{
+    font-weight: 700;
+}
+input[type=checkbox] {
+    accent-color:  #D19C97 !important;
+    color: white;
+    width:17px;
+    height:17px;
+  }
+  input[type=checkbox]:checked:before {
+    color: white !important;
+}
+input[type=checkbox]:checked:after{
+  color: white !important;
+}
+.badge-span{
+    color:black;
+    padding: 4px;
+    font-size: 13px;
+}
