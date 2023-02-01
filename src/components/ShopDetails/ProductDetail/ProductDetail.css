@@ -3,7 +3,7 @@
     font-size: 28px;
     text-align: start;
 }
-#specifyColor {
+#specifyColor:checked {
     accent-color: #D19C97 !important;
     border: none;
 }

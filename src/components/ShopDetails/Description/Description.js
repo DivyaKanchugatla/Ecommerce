@@ -101,7 +101,7 @@ const Description = () => {
                     <div className="tab-pane fade" id="tab-pane-3">
                         <div className="row">
                             <div className="col-md-6">
-                            <h4 className="mb-4 heading-description">1 review For "Colorful Stylish Shirt"</h4>
+                            <h4 className="mb-4 heading-description">Reviews for this Product</h4>
                                {storedItem?.map((each,index)=>{                               
                                 return(                                                                       
                                     <div className="media mb-4" key={index}>
