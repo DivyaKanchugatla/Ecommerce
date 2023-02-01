@@ -26,10 +26,7 @@
     background-color: transparent;
     color: #D19C97;
     border: 1px solid  #D19C97;
-  
-
     transition: all 0.3s;
-
 }
 .shop-now-button:focus{
     outline: none !important;
@@ -40,8 +37,6 @@
     color: black;
     outline: none !important;
     border:none;
-    
-    
 }
 .btn:focus,.btn:active {
     box-shadow: none;
