@@ -48,7 +48,7 @@ const Filters = () => {
   return (
        
     <>
-        {filterFunc(priceArray,"Filter By Price")}
+        {filterFunc(priceArray, "Filter By Price")}
         {filterFunc(colorArray,"Filter By Color")}
         {filterFunc(sizeArray,"Filter By Size")}
     </>      
