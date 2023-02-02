@@ -1,4 +1,5 @@
 import React from "react";
+import { DefaultConstants } from "../../constants/constants";
 import "./Trandy.css";
 import { Link } from 'react-router-dom';
 import { ADD_CART } from "../../store/actions/CartActions";
@@ -10,7 +11,7 @@ function Trandy() {
   return (
     <>
       <div className="trandy-heading-container">
-      <h2 className="decorated mb-4"><span>Trandy Products</span></h2>
+      <h2 className="decorated mb-4"><span>{DefaultConstants.TRANDYPRODUCTS}</span></h2>
       </div>
       <div className="container-fluid pt-5">
          <div className="row">
@@ -33,10 +34,10 @@ function Trandy() {
                              
                         
                              <Link to={`/product/${id}`} style={{textDecoration:"none"}} className="linkText">
-                               <i className="fas fa-eye mr-1 fas-color"></i><span className='' style={{color:"black"}} >View Detail</span>
+                               <i className="fas fa-eye mr-1 fas-color"></i><span className='' style={{color:"black"}} >{DefaultConstants.VIEWDETAIL}</span>
                                 </Link>
                                 
-                               <button   onClick={()=>dispatch({type:ADD_CART,payload:{...product,quantity:1}})} className="text-dark p-0 view-button"><i className="fas fa-shopping-cart mr-1 fas-color"></i><span className = "view-button">Add To Cart</span></button>
+                               <button   onClick={()=>dispatch({type:ADD_CART,payload:{...product,quantity:1}})} className="text-dark p-0 view-button"><i className="fas fa-shopping-cart mr-1 fas-color"></i><span className = "view-button">{DefaultConstants.ADDTOCART}</span></button>
                              </div>
                          </div>
                      </div>
