@@ -83,7 +83,7 @@ const TopNavbar = () => {
                 </a>
                 <a href="/Shopingcart" className="btn border mr-3">
                     <i className="fas fa-shopping-cart icon-color"></i>
-                    <span className="badge">{parseInt(TotalCartItems)}</span>
+                    <span className="badge">{TotalCartItems}</span>
                 </a>
             </div>
             {/*code for cart and heart icons ends here*/}
