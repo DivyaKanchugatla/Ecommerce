@@ -1,6 +1,6 @@
 import React from 'react'
 import OurShop from '../Shop/OurShop/OurShop'
-import ProductComponent from '../Shop/ProductComponent/ProductComponent'
+import ProductComponent from './ProductComponent/ProductComponent'
 
 const Shops = () => {
   return (

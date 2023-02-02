@@ -13,9 +13,13 @@ const socialIcons = [
 
 //Done by Kanchugatla Divya
 const TopNavbar = () => {
-    
-    //getting the state from redux store
-    const itemsInCart=useSelector((state)=>state._cardProduct.numberCart)
+    const itemsInCart=useSelector((state)=>state._cardProduct)
+
+    let TotalCartItems = 0;
+    itemsInCart.Carts.forEach(function (item) {
+      TotalCartItems += item.quantity;
+    });
+  
   return (
     <>
         {/* TopNavbar starts from here*/}
@@ -79,7 +83,7 @@ const TopNavbar = () => {
                 </a>
                 <a href="/Shopingcart" className="btn border mr-3">
                     <i className="fas fa-shopping-cart icon-color"></i>
-                    <span className="badge">{itemsInCart}</span>
+                    <span className="badge">{TotalCartItems}</span>
                 </a>
             </div>
             {/*code for cart and heart icons ends here*/}

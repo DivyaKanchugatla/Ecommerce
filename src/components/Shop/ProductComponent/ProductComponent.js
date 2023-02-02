@@ -46,7 +46,7 @@ import React from 'react'
                                  </div>
                              </div>
                              <div className="card-footer d-flex justify-content-between bg-light border">
-                             <Link to={`/product/${id}`} style={{textDecoratio:"none"}} className="linkText">
+                             <Link to={`/product/${id}`} style={{textDecoration:"none"}} className="linkText">
                                <i className="fas fa-eye mr-1 fas-color"></i><span className='' style={{color:"black"}} >View Detail</span>
                                 </Link> 
                                 <button onClick={()=>dispatch({type:ADD_CART,payload:{...product,quantity:1}})} className="text-dark p-0 view-button"><i className="fas fa-shopping-cart mr-1 fas-color"></i><span className = "view-button">Add To Cart</span></button>

@@ -5,6 +5,11 @@ import { useRef,useEffect } from 'react';
 import Rating from '../ProductDetail/Rating';
 
 //Done by Kanchugatla Divya
+const List = [{title:" Sit erat duo lorem duo ea consetetur, et eirmod takimata."},
+{title:"Amet kasd gubergren sit sanctus et lorem eos sadipscing at."},
+{title:" Duo amet accusam eirmod nonumy stet et et stet eirmod."},
+{title:"Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy."}
+]
 const Description = () => {
     const myName = useRef(null);
     const myRating = useRef(null);
@@ -39,7 +44,7 @@ const Description = () => {
             <div className="col" data-testid="tabs">
       {/* Three tabs (Description,Information,Reviews) */}
                 <div className="nav nav-tabs justify-content-center border-secondary mb-4">
-                    <a className="nav-item nav-link active heading-tabs" data-toggle="tab" href="#tab-pane-1">{DefaultConstants.DESCRIPTION}</a>
+                    <a className="nav-item nav-link heading-tabs" data-toggle="tab" href="#tab-pane-1">{DefaultConstants.DESCRIPTION}</a>
                     <a className="nav-item nav-link heading-tabs" data-toggle="tab" href="#tab-pane-2">{DefaultConstants.INFORMATION}</a>
                     <a className="nav-item nav-link heading-tabs" data-toggle="tab" href="#tab-pane-3" data-setid="count">{DefaultConstants.REVIEWS} ({count})</a>
                 </div>
@@ -57,42 +62,30 @@ const Description = () => {
                         <div className="row">
                             <div className="col-md-6">
                                 <ul className="list-group list-group-flush">
-                                    <li className="list-group-item px-0 paragraph-description style-undeline">
-                                        Sit erat duo lorem duo ea consetetur, et eirmod takimata.
+                                    {List.map((each,index)=>{
+                                        return(
+                                            <div key={index}>
+                                            <li className="list-group-item px-0 paragraph-description">
+                                        {each.title}
                                     </li> 
-                                    <div className="line"></div>                       
-                                    <li className="list-group-item px-0 paragraph-description">
-                                        Amet kasd gubergren sit sanctus et lorem eos sadipscing at.
-                                    </li>  
-                                    <div className="line"></div>                                   
-                                    <li className="list-group-item px-0 paragraph-description boder-bottom">
-                                        Duo amet accusam eirmod nonumy stet et et stet eirmod.
-                                    </li> 
-                                    <div className="line"></div>                                    
-                                    <li className="list-group-item px-0 paragraph-description">
-                                        Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.
-                                    </li>
-                                    <div className="line"></div>                                    
+                                    <div className="line"></div> 
+                                    </div> 
+                                        )
+                                    })}                                  
                                   </ul> 
                             </div>
                             <div className="col-md-6">
                                 <ul className="list-group list-group-flush">
-                                    <li className="list-group-item px-0 paragraph-description">
-                                        Sit erat duo lorem duo ea consetetur, et eirmod takimata.
-                                    </li>  
-                                    <div className="line"></div>                                  
-                                    <li className="list-group-item px-0 paragraph-description">
-                                        Amet kasd gubergren sit sanctus et lorem eos sadipscing at.
-                                    </li>
-                                    <div className="line"></div>                                    
-                                    <li className="list-group-item px-0 paragraph-description">
-                                        Duo amet accusam eirmod nonumy stet et et stet eirmod.
-                                    </li>  
-                                    <div className="line"></div>                                   
-                                    <li className="list-group-item px-0 paragraph-description">
-                                        Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.
-                                    </li>  
-                                    <div className="line"></div>                                  
+                                {List.map((each,index)=>{
+                                        return(
+                                            <div key={index}>
+                                            <li className="list-group-item px-0 paragraph-description">
+                                        {each.title}
+                                    </li> 
+                                    <div className="line"></div> 
+                                    </div> 
+                                        )
+                                    })}                             
                                   </ul> 
                             </div>
                         </div>
@@ -101,7 +94,7 @@ const Description = () => {
                     <div className="tab-pane fade" id="tab-pane-3">
                         <div className="row">
                             <div className="col-md-6">
-                            <h4 className="mb-4 heading-description">1 review For "Colorful Stylish Shirt"</h4>
+                            <h4 className="mb-4 heading-description">Reviews for this Product</h4>
                                {storedItem?.map((each,index)=>{                               
                                 return(                                                                       
                                     <div className="media mb-4" key={index}>
@@ -125,11 +118,6 @@ const Description = () => {
                                 <div className="d-flex my-3">
                                     <p className="mb-0 mr-2 paragraph-description">{DefaultConstants.YOURRATING}</p>
                                     <div className="text-primary">
-                                        {/* <i className="far fa-star star-color"></i>
-                                        <i className="far fa-star star-color"></i>
-                                        <i className="far fa-star star-color"></i>
-                                        <i className="far fa-star star-color"></i>
-                                        <i className="far fa-star star-color"></i> */}
                                         <input type="text" className="form-control" id="name" ref={myRating}/>
                                     </div>
                                 </div>

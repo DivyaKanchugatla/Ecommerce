@@ -9,14 +9,14 @@ import { DefaultConstants } from '../../../constants/constants';
 import './ProductDetail.css'
 
 const sizes = [  
-    {id:"size-1", size:DefaultConstants.XS},
-    {id:"size-2", size:DefaultConstants.S},
-    {id:"size-3", size:DefaultConstants.M},
-    {id:"size-4", size:DefaultConstants.L},
-    {id:"size-5", size:DefaultConstants.XL},
+    {id:"size-1", size:DefaultConstants.XS,check:true},
+    {id:"size-2", size:DefaultConstants.S,check:false},
+    {id:"size-3", size:DefaultConstants.M,check:false},
+    {id:"size-4", size:DefaultConstants.L,check:false},
+    {id:"size-5", size:DefaultConstants.XL,check:false},
 ]
 const colors = [
-  {color:DefaultConstants.BLACK}, {color:DefaultConstants.WHITE}, {color:DefaultConstants.RED}, {color:DefaultConstants.BLUE}, {color:DefaultConstants.GREEN},
+  {color:DefaultConstants.BLACK,check:false}, {color:DefaultConstants.WHITE,check:false}, {color:DefaultConstants.RED,check:false}, {color:DefaultConstants.BLUE,check:true}, {color:DefaultConstants.GREEN,check:false},
 ]
 const socialIcons = [
   {link:"https://www.facebook.com/Maybinsefu1/",icon:"fab fa-facebook-f"},
@@ -84,6 +84,7 @@ const [count,setCount]=useState(1);
                       className="custom-control-input star"
                       id={item.id}
                       name="size"
+                      defaultChecked={item.check}
                     />
                     <label className="custom-control-label" htmlFor={item.id}>
                       {item.size}
@@ -101,17 +102,18 @@ const [count,setCount]=useState(1);
               <form>
                 {colors.map((item,index)=>{
                   return(
-                    <div className="mr-3" key={index} style={{ display: "inline-block" }}>
-                  <input
-                    type="radio"
-                    className="star"
-                    id="specifyColor"
-                    name="color"
-                  />
-                  <label className="ml-1" htmlFor="specifyColor">
-                    {item.color}
-                  </label>
-                </div>
+                <div className="custom-control custom-radio custom-control-inline" key={index}>
+                    <input
+                      type="radio"
+                      className="custom-control-input star"
+                      id="specifyColor"
+                      name="color"
+                      defaultChecked={item.check}
+                    />
+                    <label className="custom-control-label" htmlFor="specifyColor">
+                      {item.color}
+                    </label>
+                  </div>
                   )
                 })}
               </form>
@@ -129,7 +131,7 @@ const [count,setCount]=useState(1);
                 >
                   <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
                 </svg>
-                <p className="d-inline-block count-value">{count}</p>
+                <p className="d-inline-block count-value">{parseInt(count)}</p>
               
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +143,7 @@ const [count,setCount]=useState(1);
               </div>
               {/* Adding items to cart */}
               <div className="add-icon-button-container d-flex flex-row justify-content-center text-center p-2">
-                <button className=" shopdetail-addtocart-button p-2 text-center" onClick={()=>dispatch({type:ADD_CART,payload:product})}>
+                <button className=" shopdetail-addtocart-button text-center" onClick={()=>dispatch({type:ADD_CART,payload:product})}>
                   <i className="fa fa-shopping-cart shopdetail-addtocart" />
                   Add To Cart
                 </button>
