@@ -1,8 +1,7 @@
 
 export const DefaultConstants = { 
 //shop
-OURSHOP:"OUR SHOP",
-   
+    OURSHOP:"OUR SHOP",
     FILTERBYPRICE:"Filter By Price",
     FILTERBYCOLOR:"Filter By Color",
     FILTERBYSIZE:"Filter By Size",
