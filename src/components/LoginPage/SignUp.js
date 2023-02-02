@@ -62,18 +62,18 @@ const SignUp = (props) => {
     props.modalClose(false);
   };
   return (
-    <div className="Modal_container_signup Login-container">
+    <div className="Modal_container_signup signin-container">
      <section>
       <div className="exitSection">
           <button onClick={closeModal} className="exitbutton">
             X
           </button>
         </div>
-        <div className="Login-contentbx order-0 w-sm-100 flex-fill">
+        <div className="signin-contentbx order-0 w-sm-100 flex-fill">
           <div>
             <form onSubmit={onSubmitHandler}>
-              <div className="Login-input-icons">
-                <i className="Login-icon">
+              <div className="signin-input-icons">
+                <i className="signin-icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="23"
@@ -90,14 +90,14 @@ const SignUp = (props) => {
                   </svg>
                 </i>
                 <input
-                  className="Login-input-field"
+                  className="signin-input-field"
                   type={"text"}
                   ref={userNameRef}
                   placeholder="Username"
                 ></input>
               </div>
-              <div className="Login-input-icons">
-                <i className="Login-icon">
+              <div className="signin-input-icons">
+                <i className="signin-icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="23"
@@ -110,15 +110,15 @@ const SignUp = (props) => {
                   </svg>
                 </i>
                 <input
-                  className="Login-input-field"
+                  className="signin-input-field"
                   type={"password"}
                   placeholder="password"
                   ref={passWordRef}
                 >  
                 </input>
               </div>
-              <div className="Login-input-icons">
-                <i className="Login-icon">
+              <div className="signin-input-icons">
+                <i className="signin-icon">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="23"
@@ -131,7 +131,7 @@ const SignUp = (props) => {
                   </svg>
                 </i>
                 <input
-                  className="Login-input-field"
+                  className="signin-input-field"
                   type={"password"}
                   placeholder="Confirm password"
                   ref={conformPassRef}
@@ -147,13 +147,13 @@ const SignUp = (props) => {
                 ""
               )}
             </div>
-              <div className="remember">
+              <div className="signin-remember">
                 <label>
                   {" "}
                   <input type={"checkbox"} placeholder="UserName"></input>{" "}
                   RememberMe
                 </label>
-                <button type="submit" className="Login-btn">SIGNUP</button>
+                <button type="submit" className="signin-btn">SIGNUP</button>
               </div>
             </form>
             <div className="modal-footer d-flex justify-content-center">
@@ -189,7 +189,7 @@ const SignUp = (props) => {
         </div>
         <div className="imgbx d-none d-md-block">
           <img
-            className="login-image"
+            className="signin-image"
             src="https://cdn.pixabay.com/photo/2019/04/26/07/14/store-4156934_960_720.png"
             alt=""
           />

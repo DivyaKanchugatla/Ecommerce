@@ -12,7 +12,7 @@ const Login = (props) => {
   const [message, setMessage] = useState("");
     //successfully login
   const [loginState, setLoginState] = useState(false);
- //singup page for clicking not account singnup
+ 
   const registerPageOpenHandler=()=>{
   props.createAccount(true)
   props.modalClose(false);

@@ -22,7 +22,7 @@
       
     }
 
-    .Login-container{
+    .signin-container{
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -46,7 +46,7 @@
       width: 70%;
     }
     
-    section .Login-contentbx{
+    section .signin-contentbx{
       display: flex; 
       flex-direction: column;
       justify-content: center;
@@ -73,13 +73,13 @@
       margin-bottom: 20px;
     }
     
-    .remember{
+    .signin-remember{
       display: flex;
       justify-content: space-between !important;
       margin: 5px;
     
     }
-    .remember a{
+    .signin-remember a{
       text-decoration: none;
     
     
@@ -88,7 +88,7 @@
       color: #9d9fa0;
     }
     
-    .Login-btn{
+    .signin-btn{
       background-color: #4886FF;
       color: white;
       width: 80px;
@@ -99,21 +99,21 @@
       width: 50%;
       overflow: hidden; 
     }
-    .login-image{ 
+    .signin-image{ 
       width: 100%;
       height: 100%; 
     }
     
-    .Login-input-icons i {
+    .signin-input-icons i {
       position: absolute;
     }
     
-    .Login-input-icons {
+    .signin-input-icons {
       width: 100%;
       margin-bottom: 10px; 
     }
     
-    .Login-icon {
+    .signin-icon {
       padding: 9px;
       color:  #9d9fa0 !important;
       min-width: 40px;
@@ -121,7 +121,7 @@
       text-align: center;
       
     }
-    .Login-input-field{
+    .signin-input-field{
       margin-bottom: 10px;
       text-align: center;
       width: 100% ;
@@ -177,7 +177,7 @@
       .social-text{
         font-size: 15px;
       }
-      section .Login-contentbx{
+      section .signin-contentbx{
       height: 100% !important;
         width: 100% !important;
       
@@ -186,13 +186,13 @@
         height: 45px!important;
         width:95% !important;
       }
-      .Login-btn{
+      .signin-btn{
         background-color: #4886FF;
         color: white;
         width: 70px !important;
         height: 30px !important;
       }
-      .remember input{
+      .signin-remember input{
         height: 10px !important;
         
       }
@@ -203,10 +203,10 @@
         width: 5px;
         font-family: 'Courier New', Courier, monospace;
       }
-      .Login-input-icons {
+      .signin-input-icons {
         width: 95%; 
       }
-      .remember{
+      .signin-remember{
         width: 90%;
       }
       .hr-lines{
@@ -224,7 +224,7 @@
         height: 95vh;
         width: 95%;
       }
-      section .Login-contentbx{ 
+      section .signin-contentbx{ 
         width: 50% !important;
         height: 100%;
       }
@@ -284,6 +284,9 @@
         position: absolute;
         top: 50%;
         right: 0;
+      }
+      .social-text{
+        font-size: 15px;
       }
       
     }
