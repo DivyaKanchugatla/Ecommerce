@@ -2,6 +2,8 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {fetchProducts} from "../../../store/actions/ProductActions"
+import { DefaultConstants } from '../../../constants/constants';
+import { Link } from 'react-router-dom';
 import './ProductComponent.css'
 
 
@@ -212,7 +214,11 @@ const Testing = () => {
                               </div>
                             </div>
                             <div className="card-footer d-flex justify-content-between bg-light border">
-                              <a href="a" className="btn btn-sm text-dark p-0"><i className="fas fa-eye mr-1 fas-color"></i>View Detail</a>
+                              {/* <a href="a" className="btn btn-sm text-dark p-0"><i className="fas fa-eye mr-1 fas-color"></i>View Detail</a> */}
+                              <Link to={`/product/${each.id}`} style={{textDecoration:"none"}} className="linkText">
+                               <i className="fas fa-eye mr-1 fas-color"></i><span className='' style={{color:"black"}} >{DefaultConstants.VIEWDETAIL}</span>
+                                </Link>
+                                
                               <a href="a" className="btn btn-sm text-dark p-0"><i className="fas fa-shopping-cart mr-1 fas-color"></i>Add To Cart</a>
                             </div>
 
