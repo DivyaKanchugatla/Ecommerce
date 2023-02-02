@@ -171,6 +171,9 @@
     font-size: 15px!important;
     height: 95% !important;
     }
+    .sign-form{
+      width: 60%;
+    }
     @media screen and (max-width:576px) { 
       section{
         height: 85% !important;
@@ -215,6 +218,9 @@
       .hr-lines{
         width: 90%;
       }
+      .sign-form{
+        width: 100% !important;
+      }
      
     }
     @media  screen and (max-width:768px) {
@@ -257,6 +263,9 @@
         position: absolute;
         top: 50%;
         right: 0;
+      }
+      .sign-form{
+        width: 90% !important;
       }
     }
     

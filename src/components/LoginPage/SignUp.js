@@ -70,7 +70,7 @@ const SignUp = (props) => {
           </button>
         </div>
         <div className="signin-contentbx order-0 w-sm-100 flex-fill">
-          <div>
+          <div className="sign-form">
             <form onSubmit={onSubmitHandler}>
               <div className="signin-input-icons">
                 <i className="signin-icon">

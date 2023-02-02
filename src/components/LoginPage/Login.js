@@ -98,7 +98,7 @@ const Login = (props) => {
           </button>
         </div>
         <div className="Login-contentbx order-0 w-sm-100 flex-fill">
-          <div>
+          <div className="login-form">
             <form onSubmit={onSubmitHandler}>
               <div className="Login-input-icons">
                 <i className="Login-icon">

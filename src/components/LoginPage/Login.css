@@ -45,6 +45,8 @@ section .Login-contentbx{
   font-family: 'Courier New', Courier, monospace;
 }
 
+
+
 section .Login-contentbx .formbx .inputbx{ 
   margin-bottom: 20px;
 }
@@ -53,6 +55,7 @@ section .Login-contentbx .formbx .inputbx{
   display: flex;
   justify-content: space-between !important;
   margin: 5px;
+  width: 100%;
 
 }
 .remember a{
@@ -121,6 +124,7 @@ section .imgbx{
   max-width: 500px;
   margin: 10px auto;
   text-align: center;
+  width: 100%;
 }
 .hr-lines:before{
   content:" ";
@@ -147,6 +151,9 @@ section .imgbx{
 .social-btn{
   margin-bottom:10px !important ;
 }
+.login-form{
+  width: 55%;
+}
 @media screen and (max-width:576px) { 
   section{
     height: 75% !important;
@@ -154,7 +161,7 @@ section .imgbx{
    
   }
   .social-text{
-    font-size: 15px;
+    font-size: 15px !important;
   }
   section .Login-contentbx{
   height: 100% !important;
@@ -163,7 +170,7 @@ section .imgbx{
   }
   .social-btn{
     height: 45px!important;
-    width:95% !important;
+    width:100% !important;
   }
   .Login-btn{
     background-color: #4886FF;
@@ -190,6 +197,9 @@ section .imgbx{
   }
   .hr-lines{
     width: 90%;
+  }
+  .login-form{
+    width: 90% !important ;
   }
  
 }
@@ -233,6 +243,9 @@ section .imgbx{
     position: absolute;
     top: 50%;
     right: 0;
+  }
+  .login-form{
+    width: 80% !important;
   }
 }
 
