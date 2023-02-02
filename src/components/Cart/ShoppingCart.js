@@ -8,7 +8,6 @@ import {
   INCREASE_QUANTITY,
 } from "../../store/actions/CartActions";
 import OurShop from "./OurShoppingHeader";
-//import { Constants } from "../../constants/constants";
 import "./ShoppingCart.css";
 
 const ShopingCart = () => {
@@ -51,7 +50,7 @@ const ShopingCart = () => {
 
   return (
     <>
-    <OurShop />
+      <OurShop />
       <div className="container-fluid pt-5">
         <div className="row px-xl-5">
           <div className="col-lg-8 table-responsive mb-5">
@@ -153,16 +152,6 @@ const ShopingCart = () => {
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3 pt-1">
                   <h6 className="font-weight-medium">{DefaultConstants.SUBTOTAL}</h6>
-                  <h6 className="font-weight-medium">${Math.round(TotalCart,2)}</h6>
-                </div>
-                <div className="d-flex justify-content-between">
-                  <h6 className="font-weight-medium">{DefaultConstants.SHIPPING}</h6>
-                  <h6 className="font-weight-medium">{DefaultConstants.FREE}</h6>
-                <h4 className="font-weight-semi-bold m-0">{DefaultConstants.CARTSUMMARY}</h4>
-              </div>
-              <div className="card-body">
-                <div className="d-flex justify-content-between mb-3 pt-1">
-                  <h6 className="font-weight-medium">{DefaultConstants.SUBTOTAL}</h6>
                   <h6 className="font-weight-medium">${TotalCart.toFixed(2)}</h6>
                 </div>
                 <div className="d-flex justify-content-between">
@@ -172,11 +161,6 @@ const ShopingCart = () => {
               </div>
               <div className="card-footer border-secondary bg-transparent">
                 <div className="d-flex justify-content-between mt-2">
-                  <h5 className="font-weight-bold">{DefaultConstants.TOTAL}</h5>
-                  <h5 className="font-weight-bold">${Math.round(TotalCart + 10,2)}</h5>
-                </div>
-                <button className="shopping-cart-proceed-to-checkout-button box-shadow">
-                  {DefaultConstants.PROCEEDTOCHECKOUT}</button>
                   <h5 className="font-weight-bold">{DefaultConstants.TOTAL}</h5>
                   <h5 className="font-weight-bold">${TotalCart.toFixed(2)}</h5>
                 </div>
@@ -188,7 +172,6 @@ const ShopingCart = () => {
           </div>
         </div>
       </div>
-      
     </>
   );
 };
