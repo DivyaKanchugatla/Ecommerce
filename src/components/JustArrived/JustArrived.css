@@ -60,3 +60,7 @@ text-decoration: none;
 .carousel-container{
 width:300px;
 }
+
+.span:hover{
+  background-color:#D19C97;
+}

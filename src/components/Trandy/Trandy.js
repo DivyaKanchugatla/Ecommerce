@@ -3,64 +3,6 @@ import "./Trandy.css";
 import { Link } from 'react-router-dom';
 import { ADD_CART } from "../../store/actions/CartActions";
 import { useDispatch,useSelector } from "react-redux";
-// const data = [
-//   {
-//     id: 31,
-//     image: "https://technext.github.io/eshopper/img/product-1.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-//   {
-//     id: 32,
-//     image: "https://technext.github.io/eshopper/img/product-2.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-//   {
-//     id: 33,
-//     image: "https://technext.github.io/eshopper/img/product-3.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-//   {
-//     id: 34,
-//     image: "https://technext.github.io/eshopper/img/product-4.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-//   {
-//     id: 35,
-//     image: "https://technext.github.io/eshopper/img/product-5.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-//   {
-//     id: 36,
-//     image: "https://technext.github.io/eshopper/img/product-6.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-//   {
-//     id: 37,
-//     image: "https://technext.github.io/eshopper/img/product-7.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-//   {
-//     id: 38,
-//     image: "https://technext.github.io/eshopper/img/product-8.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-// ];
 
 function Trandy() {
   const dispatch=useDispatch()
