@@ -74,10 +74,13 @@ section .imgbx{
  height: 100%;
   width: 50%;
   overflow: hidden; 
+  
+ 
 }
 .login-image{ 
   width: 100%;
   height: 100%; 
+
 }
 
 .Login-input-icons i {

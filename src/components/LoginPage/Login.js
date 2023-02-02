@@ -91,7 +91,6 @@ const Login = (props) => {
   };
   return (
     <div className="Login-container">
-      
       <section>
       <div className="exitSection ">
           <button onClick={closeModal} className="exitbutton">
