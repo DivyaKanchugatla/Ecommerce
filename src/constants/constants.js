@@ -41,6 +41,10 @@ export const DefaultConstants = {
   ZIPCODE:"ZIP Code",
   PRODUCTS:"Products",
   PAYMENT:"Payment",
+  TWENTYPERCENTAGEOFFTHEALLORDER:'20% OFF THE ALL ORDER',
+  SHOPNOW:'Shop Now',
+  SPRINGCOLLECTION:'Spring Collection',
+  WINTERCOLLECTION:'Winter Collection',
 
 
   // FeatureSection-constants
@@ -52,9 +56,6 @@ export const DefaultConstants = {
   //offerSection-constants
 
   TWENTYPERCENTAGEOFFTHEALLOPDER: "20% OFF THE ALL ORDER",
-  SHOPNOW: "Shop Now",
-  SPRINGCOLLECTION: "Spring Collection",
-  WINTERCOLLECTION: "Winter Collection",
 
   // productsSection-constants
   FIFTEENPRODUCTS: "15 Products",

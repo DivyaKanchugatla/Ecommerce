@@ -61,6 +61,8 @@ text-decoration: none;
 width:300px;
 }
 
+
 .span:hover{
-  background-color:#D19C97;
+  color: #d19c97 !important;
+ 
 }

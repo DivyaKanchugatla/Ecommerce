@@ -35,8 +35,11 @@ const JustArrived = () => {
                              
                         
                                
-                            <Link to={`/product/${id}`} style={{textDecoration:"none"}} className="linkText">
-                               <i className="fas fa-eye mr-1 fas-color"></i><span className='' style={{color:"black"}} >{DefaultConstants.VIEWDETAIL}</span>
+                            
+                           
+                               {/* <a href="/" className=" text-dark p-0 view-button"><i className="fas fa-eye mr-1 fas-color"></i><span className="view-button">View Detail</span></a> */}
+                               <Link to={`/product/${id}`} style={{textDecoration:"none"}} className="linkText">
+                               <i className="fas fa-eye mr-1 fas-color"></i><span className='view-button' style={{color:"black"}} >View Detail</span>
                                 </Link>
                                <button onClick={()=>dispatch({type:ADD_CART,payload:{...product,quantity:1}})} className=" text-dark p-0 view-button"><i className="fas fa-shopping-cart mr-1 fas-color"></i><span className = "view-button">{DefaultConstants.ADDTOCART}</span></button>
                              </div>

@@ -65,7 +65,7 @@ import {
           ...state,
         };
       case DECREASE_QUANTITY:
-        // if quantity is greter than we are decresing quantity
+        // if quantity is greater than we are decresing quantity
         let quantity = state.Carts[payload].quantity;
         if (quantity > 1) {
           state.Carts[payload].quantity--;
