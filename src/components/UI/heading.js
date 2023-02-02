@@ -1,5 +1,7 @@
 import React from 'react'
 
+//done by kumar swamy
+
 const Heading = (props) => {
     const {heading}=props
   return(

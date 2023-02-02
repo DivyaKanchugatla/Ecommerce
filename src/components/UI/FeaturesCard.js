@@ -3,6 +3,8 @@ import React from 'react'
 import Heading from './heading'
 import Svgs from './svgs'
 
+//done by kumar swamy
+
 const FeaturesCard = (props) => {
   const {heading,viewBox,d}=props
   return (

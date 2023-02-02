@@ -1,5 +1,7 @@
 import React from 'react'
 
+//Done by kumar swamy
+
 const Svgs = (props) => {
   const {viewBox,d}=props
   return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import { DefaultConstants } from '../../constants/constants'
 import OffersectionCard from './OffersectionCard'
-import './Offersection.css'
+
 
 //done by kumar swamy
 const Offersection = () => {
