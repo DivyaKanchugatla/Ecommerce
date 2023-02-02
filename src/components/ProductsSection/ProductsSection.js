@@ -1,8 +1,9 @@
 import React from "react";
+import { DefaultConstants } from "../../constants/constants";
 import "./ProductsSection.css";
 
 
-
+//Done by kumar swamy
 
 const data = [
   {
@@ -48,7 +49,7 @@ const ProductsSection = () => {
             <div className="col-12 col-md-6 col-lg-4" key={product.id}> 
             <div  className="card mb-4  border" >
               <div className="text-end pr-4 pt-4 mr-2 products-section-heading"> 
-                <p> 15 Products</p>
+                <p> {DefaultConstants.FIFTEENPRODUCTS}</p>
               </div>
           <div className="overflow-hidden p-3">
             <img src={product.imgSrc} className="products-section-image image-fluid" alt={product.title} />

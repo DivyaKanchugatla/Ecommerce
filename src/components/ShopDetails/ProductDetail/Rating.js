@@ -3,6 +3,7 @@ import { FaStar,FaStarHalfAlt } from 'react-icons/fa';
 import { AiOutlineStar } from "react-icons/ai";
 import './Rating.css'
 
+//Done by Kanchugatla Divya
 const Rating = ({rating}) => {
  const ratingStar = Array.from({length:5},(elem,index) => {
      let number = index + 0.5;
