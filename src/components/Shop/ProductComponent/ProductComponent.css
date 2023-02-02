@@ -18,8 +18,8 @@ background: none;
 }
 .img-styling {
   transition: transform 0.2s;
-  width: 230px;
-  height: 230px;
+  width: 200px !important;
+  height: 200px !important;
   margin: 0 auto;
 } 
 
@@ -30,8 +30,8 @@ background: none;
   .img-styling {
     padding: 37px;
     transition: transform 0.2s;
-    width: 270px;
-    height: 220px;
+    width: 250px;
+    height: 200px;
     margin: 0 auto;
   }
 
