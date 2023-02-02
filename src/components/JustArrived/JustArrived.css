@@ -61,6 +61,8 @@ text-decoration: none;
 width:300px;
 }
 
-span:hover{
+
+.span:hover{
   color: #d19c97 !important;
+ 
 }

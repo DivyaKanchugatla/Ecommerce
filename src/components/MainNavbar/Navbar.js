@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Carousel from "./Carousel";
 import Login from "../LoginPage/Login";
+import { useSelector } from "react-redux";
 import { DefaultConstants } from "../../constants/constants";
 import SignUp from '../LoginPage/SignUp'
 import "./Navbar.css";
@@ -41,6 +42,12 @@ const Navbar = () => {
     console.log(nameuser)
     console.log(details)
   };
+   const products = useSelector((state) => state.allProducts.products);
+  const productId = products?.map((product) => {
+     return product.id;
+   });
+   console.log(productId[0]);
+  
    
   
   //register modal

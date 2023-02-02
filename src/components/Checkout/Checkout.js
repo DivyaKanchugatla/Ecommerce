@@ -1,5 +1,7 @@
 import React,{useState} from "react";
+import { DefaultConstants } from "../../constants/constants";
 import "./Checkout.css";
+
 
 function Checkout() {
     const [checked,setChecked]=useState(false)
@@ -7,13 +9,13 @@ function Checkout() {
     <>
       <div className="checkout-first-container text-center d-flex flex-column justify-content-center">
         <div>
-          <h2 className="checkout-heading">CHECKOUT</h2>
+          <h2 className="checkout-heading">{DefaultConstants.CHECKOUT1}</h2>
           <div className="checkout-heading-caption">
             <p>
-                <a className="checkout-heading-link" href="/">Home</a>  
+                <a className="checkout-heading-link" href="/">{DefaultConstants.HOME}</a>  
             </p>
             <p className="dashhh">-</p>
-            <p className="chechout-checkout">Checkout</p>
+            <p className="chechout-checkout">{DefaultConstants.CHECKOUT}</p>
           </div>
           
         </div>
@@ -22,34 +24,34 @@ function Checkout() {
       <div className="row rowww">
           <div class="col-lg-8">
                 <div class="mb-4">
-                    <h4 class="font-weight-semi-bold">Billing Address</h4>
+                    <h4 class="font-weight-semi-bold">{DefaultConstants.BILLINGADDRESS}</h4>
                     <div class="row">
                         <div class="col-md-6 form-group">
-                            <label className="checkout-label">First Name</label>
+                            <label className="checkout-label">{DefaultConstants.FIRSTNAME}</label>
                             <input class="checkout-input" type="text" placeholder="John"/>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label className="checkout-label">Last Name</label>
+                            <label className="checkout-label">{DefaultConstants.LASTNAME}</label>
                             <input class="checkout-input" type="text" placeholder="Doe"/>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label className="checkout-label">E-mail</label>
+                            <label className="checkout-label">{DefaultConstants.EMAIL1}</label>
                             <input class="checkout-input"  type="text" placeholder="example@email.com"/>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label className="checkout-label">Mobile No</label>
+                            <label className="checkout-label">{DefaultConstants.MOBILENO}</label>
                             <input  class="checkout-input"  type="text" placeholder="+123 456 789"/>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label className="checkout-label">Address Line 1</label>
+                            <label className="checkout-label">{DefaultConstants.ADDRESSLINE1}</label>
                             <input class="checkout-input"  type="text" placeholder="123 Street"/>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label className="checkout-label">Address Line 2</label>
+                            <label className="checkout-label">{DefaultConstants.ADDRESSLINE2}</label>
                             <input  class="checkout-input" type="text" placeholder="123 Street"/>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label className="checkout-label">Country</label>
+                            <label className="checkout-label">{DefaultConstants.COUNTRY}</label>
                             <select class="checkout-select">
                                 <option selected>United States</option>
                                 <option>Afghanistan</option>
@@ -58,15 +60,15 @@ function Checkout() {
                             </select>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label className="checkout-label">City</label>
+                            <label className="checkout-label">{DefaultConstants.CITY}</label>
                             <input  class="checkout-input" type="text" placeholder="New York"/>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label className="checkout-label">State</label>
+                            <label className="checkout-label">{DefaultConstants.STATE}</label>
                             <input class="checkout-input"  type="text" placeholder="New York"/>
                         </div>
                         <div class="col-md-6 form-group">
-                            <label className="checkout-label">ZIP Code</label>
+                            <label className="checkout-label">{DefaultConstants.ZIPCODE}</label>
                             <input class="checkout-input" type="text" placeholder="123"/>
                         </div>
                         <div class="col-md-12 form-group">
@@ -88,31 +90,31 @@ function Checkout() {
                         <h4 class="font-weight-semi-bold mb-4">Shipping Address</h4>
                         <div class="row">
                             <div class="col-md-6 form-group">
-                                <label className="checkout-label">First Name</label>
+                                <label className="checkout-label">{DefaultConstants.FIRSTNAME}</label>
                                 <input class="checkout-input" type="text" placeholder="John"/>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label className="checkout-label">Last Name</label>
+                                <label className="checkout-label">{DefaultConstants.LASTNAME}</label>
                                 <input class="checkout-input" type="text" placeholder="Doe"/>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label className="checkout-label">E-mail</label>
+                                <label className="checkout-label">{DefaultConstants.EMAIL1}</label>
                                 <input class="checkout-input"  type="text" placeholder="example@email.com"/>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label className="checkout-label">Mobile No</label>
+                                <label className="checkout-label">{DefaultConstants.MOBILENO}</label>
                                 <input  class="checkout-input"  type="text" placeholder="+123 456 789"/>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label className="checkout-label">Address Line 1</label>
+                                <label className="checkout-label">{DefaultConstants.ADDRESSLINE1}</label>
                                 <input class="checkout-input"  type="text" placeholder="123 Street"/>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label className="checkout-label">Address Line 2</label>
+                                <label className="checkout-label">{DefaultConstants.ADDRESSLINE2}</label>
                                 <input  class="checkout-input" type="text" placeholder="123 Street"/>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label className="checkout-label">Country</label>
+                                <label className="checkout-label">{DefaultConstants.COUNTRY}</label>
                                 <select class="checkout-select">
                                     <option>United States</option>
                                     <option>Afghanistan</option>
@@ -121,15 +123,15 @@ function Checkout() {
                                 </select>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label className="checkout-label">City</label>
+                                <label className="checkout-label">{DefaultConstants.CITY}</label>
                                 <input  class="checkout-input" type="text" placeholder="New York"/>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label className="checkout-label">State</label>
+                                <label className="checkout-label">{DefaultConstants.STATE}</label>
                                 <input class="checkout-input"  type="text" placeholder="New York"/>
                             </div>
                             <div class="col-md-6 form-group">
-                                <label className="checkout-label">ZIP Code</label>
+                                <label className="checkout-label">{DefaultConstants.ZIPCODE}</label>
                                 <input class="checkout-input" type="text" placeholder="123"/>
                             </div>
                         </div>
@@ -140,10 +142,10 @@ function Checkout() {
             <div class="col-lg-4">
                 <div class="checkout-billing-card">
                     <div class="checkout-billing-card-header ">
-                        <h4 class="font-weight-semi-bold m-0">Order Total</h4>
+                        <h4 class="font-weight-semi-bold m-0">{DefaultConstants.ORDERTOTAL}</h4>
                     </div>
                     <div class="checkout-card-body">
-                        <h5 class="checkout-item mb-3">Products</h5>
+                        <h5 class="checkout-item mb-3">{DefaultConstants.PRODUCTS}</h5>
                         <div class="d-flex justify-content-between">
                             <p className="checkout-card-products">Colorful Stylish Shirt 1</p>
                             <p className="checkout-card-products">$150</p>
@@ -158,24 +160,24 @@ function Checkout() {
                         </div>
                         <hr class="mt-0 checkout-hr"/>
                         <div class="d-flex justify-content-between mb-4 pt-3">
-                            <h6 class="checkout-items">Subtotal</h6>
+                            <h6 class="checkout-items">{DefaultConstants.SUBTOTAL}</h6>
                             <h6 class="checkout-items">$150</h6>
                         </div>
                         <div class="d-flex justify-content-between">
-                            <h6 class="checkout-items">Shipping</h6>
+                            <h6 class="checkout-items">{DefaultConstants.SHIPPING}</h6>
                             <h6 class="checkout-items">$10</h6>
                         </div>
                     </div>
                     <div class="checkout-total-container">
                         <div class="d-flex justify-content-between mt-2">
-                            <h5 class="checkout-total">Total</h5>
+                            <h5 class="checkout-total">{DefaultConstants.TOTAL}</h5>
                             <h5 class="checkout-total">$160</h5>
                         </div>
                     </div>
                 </div>
                 <div class="checkout-billing-card">
                     <div class="checkout-billing-card-header ">
-                        <h4 class="font-weight-semi-bold m-0">Payment</h4>
+                        <h4 class="font-weight-semi-bold m-0">{DefaultConstants.PAYMENT}</h4>
                     </div>
                     <div class="checkout-card-body">
                         <div class="form-group">
