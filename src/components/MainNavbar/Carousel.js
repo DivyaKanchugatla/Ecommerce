@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../UI/Button'
 
 //Done by Kanchugatla Divya
 const Carousel = () => {
@@ -12,7 +13,8 @@ const Carousel = () => {
                                 <div className="p-3 d-flex flex-column justify-content-center align-items-center">
                                     <h4 className="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
                                     <h3 className="display-6 text-white font-weight-semi-bold mb-4">Fashionable Dress</h3>
-                                    <a href="/" className="btn btn-light text-dark py-2 px-3 shop-button">Shop Now</a>
+                                    {/* <a href="/" className="btn btn-light text-dark py-2 px-3 shop-button">Shop Now</a> */}
+                                    <Button/>
                                 </div>
                             </div>
                         </div>
@@ -22,7 +24,8 @@ const Carousel = () => {
                                 <div className="d-flex flex-column justify-content-center align-items-center">
                                     <h4 className="text-light text-uppercase  mb-3">10% Off Your First Order</h4>
                                     <h3 className="display-6 text-white font-weight-semi-bold mb-4">Reasonable Price</h3>
-                                    <a href="/" className="btn btn-light text-dark py-2 px-3 shop-button">Shop Now</a>
+                                    {/* <a href="/" className="btn btn-light text-dark py-2 px-3 shop-button">Shop Now</a> */}
+                                    <Button/>
                                 </div>
                             </div>
                         </div>

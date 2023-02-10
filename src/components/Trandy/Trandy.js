@@ -1,66 +1,9 @@
 import React from "react";
+import { DefaultConstants } from "../../constants/constants";
 import "./Trandy.css";
 import { Link } from 'react-router-dom';
 import { ADD_CART } from "../../store/actions/CartActions";
 import { useDispatch,useSelector } from "react-redux";
-// const data = [
-//   {
-//     id: 31,
-//     image: "https://technext.github.io/eshopper/img/product-1.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-//   {
-//     id: 32,
-//     image: "https://technext.github.io/eshopper/img/product-2.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-//   {
-//     id: 33,
-//     image: "https://technext.github.io/eshopper/img/product-3.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-//   {
-//     id: 34,
-//     image: "https://technext.github.io/eshopper/img/product-4.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-//   {
-//     id: 35,
-//     image: "https://technext.github.io/eshopper/img/product-5.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-//   {
-//     id: 36,
-//     image: "https://technext.github.io/eshopper/img/product-6.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-//   {
-//     id: 37,
-//     image: "https://technext.github.io/eshopper/img/product-7.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-//   {
-//     id: 38,
-//     image: "https://technext.github.io/eshopper/img/product-8.jpg",
-//     title: "Colorful Stylish Shirt",
-//     price: 123,
-//     cross_price: 123,
-//   },
-// ];
 
 function Trandy() {
   const dispatch=useDispatch()
@@ -68,7 +11,7 @@ function Trandy() {
   return (
     <>
       <div className="trandy-heading-container">
-      <h2 className="decorated mb-4"><span>Trandy Products</span></h2>
+      <h2 className="decorated mb-4"><span>{DefaultConstants.TRANDYPRODUCTS}</span></h2>
       </div>
       <div className="container-fluid pt-5">
          <div className="row">
@@ -91,10 +34,10 @@ function Trandy() {
                              
                         
                              <Link to={`/product/${id}`} style={{textDecoration:"none"}} className="linkText">
-                               <i className="fas fa-eye mr-1 fas-color"></i><span className='' style={{color:"black"}} >View Detail</span>
+                               <i className="fas fa-eye mr-1 fas-color"></i><span className='' style={{color:"black"}} >{DefaultConstants.VIEWDETAIL}</span>
                                 </Link>
                                 
-                               <button   onClick={()=>dispatch({type:ADD_CART,payload:{...product,quantity:1}})} className="text-dark p-0 view-button"><i className="fas fa-shopping-cart mr-1 fas-color"></i><span className = "view-button">Add To Cart</span></button>
+                               <button   onClick={()=>dispatch({type:ADD_CART,payload:{...product,quantity:1}})} className="text-dark p-0 view-button"><i className="fas fa-shopping-cart mr-1 fas-color"></i><span className = "view-button">{DefaultConstants.ADDTOCART}</span></button>
                              </div>
                          </div>
                      </div>
