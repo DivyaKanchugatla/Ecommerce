@@ -1,7 +1,7 @@
 import React from 'react'
- import { useEffect } from 'react';
+ import { useEffect} from 'react';
  import { useSelector,useDispatch } from 'react-redux';
- import {fetchProducts} from '../../../store/actions/ProductActions'
+ import {fetchProducts,filteringProducts} from '../../../store/actions/ProductActions'
  import './ProductComponent.css'
  import Filters from '../Filters/Filters';
  import SearchBar from '../SearchBar/SearchBar';
@@ -9,10 +9,51 @@ import React from 'react'
  import { ADD_CART } from '../../../store/actions/CartActions';
 
  const ProductComponent = () => {
- 
+  //  const [filteringArray,setfilteringArray]=useState([])
+   const filterHandler = (e) => {
+       console.log(e,products)
+       if(Number(e)===100){
+       const filteredProducts = products.filter(
+        (product) => product.price >= 0 && product.price <= 100
+        );
+        console.log(filteredProducts)
+    dispatch(filteringProducts(filteredProducts))
+       }
+       if(Number(e)===200){
+        const filteredProducts = products.filter(
+         (product) => product.price >= 0 && product.price <= 200
+         );
+         console.log(filteredProducts)
+     dispatch(filteringProducts(filteredProducts))
+        }
+        if(Number(e)===300){
+          const filteredProducts = products.filter(
+           (product) => product.price >= 0 && product.price <= 300
+           );
+           console.log(filteredProducts)
+       dispatch(filteringProducts(filteredProducts))
+          }
+          if(Number(e)===400){
+            const filteredProducts = products.filter(
+             (product) => product.price >= 0 && product.price <= 400
+             );
+             console.log(filteredProducts)
+         dispatch(filteringProducts(filteredProducts))
+            }
+            if(Number(e)===500){
+              const filteredProducts = products.filter(
+               (product) => product.price >= 0 && product.price <= 500
+               );
+               console.log(filteredProducts)
+           dispatch(filteringProducts(filteredProducts))
+              }
+              if(e==="All Price"){                
+                   dispatch(filteringProducts(products))
+                }
+   }
    const dispatch = useDispatch();
    const products=useSelector((state)=>state.allProducts.products)
- 
+   
  useEffect(()=>{
      dispatch(fetchProducts());
  },[dispatch])
@@ -22,7 +63,7 @@ import React from 'react'
       <div className="container-fluid pt-5">
          <div className="row px-xl-5">            
              <div className="col-lg-3 col-md-12">
-               <Filters/>
+               <Filters filterHandler={filterHandler} />
              </div>
            
              <div className="col-lg-9 col-md-12">

@@ -8,6 +8,8 @@ const initialState = {
     switch (type) {
     case ActionTypes.FETCH_PRODUCTS:
          return {...state, products:payload};
+         case ActionTypes.FILTER_PRODUCTS:
+            return {...state, products:payload};
      default:
          return state;
     }
