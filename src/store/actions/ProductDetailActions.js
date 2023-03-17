@@ -10,7 +10,7 @@ export const getSingleProduct =  (id) => {
         dispatch({ type: SELECTED_PRODUCTS})
         try {
           const res = await FakeStoreApi.get(`/products/${id}`)
-        const single = await res.data
+          const single = await res.data
         dispatch({ type: SELECTED_PRODUCTS_SUCCESS, payload: single})
         }
         catch (err) {

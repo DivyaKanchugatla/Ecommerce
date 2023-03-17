@@ -7,14 +7,14 @@ import SignUp from '../LoginPage/SignUp'
 import "./Navbar.css";
 
 const Dresses = [
- { dress:DefaultConstants.MENSDRESSES},{dress:DefaultConstants.WOMENSDRESSES}, {dress:DefaultConstants.BABAYSDRESSES}
+ { dress:DefaultConstants.MENSDRESSES,click:"men"},{dress:DefaultConstants.WOMENSDRESSES,click:"women"}, {dress:DefaultConstants.BABAYSDRESSES,click:"baby"}
 ]
 const categoryItems = [
-  {category:DefaultConstants.SHIRTS},{category:DefaultConstants.JEANS},{category:DefaultConstants.SWIMWEAR},{category:DefaultConstants.SLEEPWEAR},{category:DefaultConstants.SPORTSWEAR},{category:DefaultConstants.SWIMWEAR},{category:DefaultConstants.BLAZERS},{category:DefaultConstants.JACKETS},{category:DefaultConstants.SHOES}
+  {category:DefaultConstants.SHIRTS,click:"shirts"},{category:DefaultConstants.JEANS,click:"jeans"},{category:DefaultConstants.SWIMWEAR,click:"swim"},{category:DefaultConstants.SLEEPWEAR,click:"sleep"},{category:DefaultConstants.SPORTSWEAR,click:"sports"},{category:DefaultConstants.SWIMWEAR,click:"swim"},{category:DefaultConstants.BLAZERS,click:"blazers"},{category:DefaultConstants.JACKETS,click:"jackets"},{category:DefaultConstants.SHOES,click:"shoes"}
 ]
 
 //Done by Kanchugatla Divya
-const Navbar = () => {
+const Navbar = (props) => {
   const [loginModal, setLoginmodal] = useState(false);
   const [isLogined, setIslogined] = useState(false);
   const [userName, setUserName] = useState("");
@@ -32,6 +32,7 @@ const Navbar = () => {
   const logoutButtonShow = (value) => {
     setIslogined(value);
   };
+
   //user Details hanlder
   const userDetailshandler = (details) => {
     const nameuser = details[0].firstName + details[0].lastName;
@@ -39,12 +40,18 @@ const Navbar = () => {
     console.log(nameuser)
     console.log(details)
   };
-   
+  //  const products = useSelector((state) => state.allProducts.products);
+  // const productId = products?.map((product) => {
+  //    return product.id;
+  //  });
+  //  console.log(productId[0]);
   
+   
   //register modal
   const signupHandlermodal=(value)=>{
     setRegisterModal(value)
   }
+
   //create account handler when click signup here
   const createAccountHanlder=(value)=>{
     setRegisterModal(value)
@@ -54,13 +61,11 @@ const Navbar = () => {
   const loginModalShowAfterRegister=(value)=>{
     setLoginmodal(value)
   }
-
-  // const products = useSelector((state) => state.allProducts.products);
-  // const productId = products?.map((product) => {
-  //   return product.id;
-  // });
-  // console.log(productId[0]);
-  
+  const filterResult = (item) => {
+    props.searchKeyword(item);
+    
+  }
+ 
   return (
     <>
       {/* MainNavbar starts from here */}
@@ -112,24 +117,12 @@ const Navbar = () => {
                     >
                        {Dresses.map((item,index)=>{
                     return(
-                      <a href="/" className="dropdown-item" key={index}>
+                      <button className="dropdown-item" key={index} onClick={()=>filterResult(item.click)}>
                         {item.dress}
-                      </a>                   
+                      </button>                   
                     )
                   })}
                    </div>
-                  <div
-                    className="dropdown-menu position-absolute border-0 rounded-0 w-100 m-0"
-                    style={{ backgroundColor: "#EDF1FF" }}
-                  >
-                    {Dresses.map((item,index)=>{
-                      return(
-                        <a href="/" className="dropdown-item" key={index}>
-                        {item.dress}
-                      </a> 
-                      )
-                    })}
-                  </div>
                 </div>
                 <div style={{ paddingLeft: "42px" }}>
                   {categoryItems.map((item,index)=>{

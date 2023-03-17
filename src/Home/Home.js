@@ -8,16 +8,15 @@ import JustArrived from "./../components/JustArrived/JustArrived";
 import OwlDemo from "../components/Footer/OwlDemo";
 
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div>
-
-       <Feature />
+      <Feature />
       <ProductsSection />
       <Offersection />
-      <Trandy />
+      <Trandy products={props.checked==="true" ? props.array : props.products}/>
       <Subscriber />
-      <JustArrived />
+      <JustArrived products={props.checked==="true" ? props.array : props.products}/>
       <OwlDemo/> 
     </div>
   );

@@ -1,7 +1,20 @@
-import React from 'react'
+import React,{useState} from 'react'
+import { sortReducer } from '../../../store/reducers/ProductReducers'
 import './SearchBar.css'
 
+const sortDropBtn = [
+    {sortName:"A to Z"},
+    {sortName:"Z to A"},
+]
+
 const SearchBar = () => {
+
+    const [sort,setSort]=useState(null)
+    
+    const selectOption=()=>{
+        
+    }
+
   return (
     <>
                         <div className="d-flex align-items-center justify-content-between mb-4">
@@ -15,17 +28,21 @@ const SearchBar = () => {
                                     </div>
                                 </div>
                             </form>
-                            <div className="dropdown ml-4">
-                                <button className="btn border dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" fdprocessedid="fap2qg">
-                                            Sort by
-                                        </button>
-                                <div className="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId">
-                                    <a className="dropdown-item" href="/">Latest</a>
-                                    <a className="dropdown-item" href="/">Popularity</a>
-                                    <a className="dropdown-item" href="/">Best Rating</a>
-                                </div>
-                            </div>
-                        </div>
+                            <div className="dropdown ml-4" style={{ display: "flex" }}>
+                    <h5 style={{ marginRight: "10px" }}>Sort by :</h5>
+                    <select
+                      // defaultValue={"az"}
+                      onChange={(e) => setSort(e.target.value)}
+                    >
+                      <option value="az">A - Z</option>
+                      <option value="za">Z - A</option>
+                      <option value="ratingLow">Rating Low</option>
+                      <option value="ratingHigh">Rating High</option>
+                      <option value="priceLow">Price Low to High</option>
+                      <option value="priceHigh">Price High to Low</option>
+                    </select>
+                  </div>
+                </div>
                     
     </>
   )
