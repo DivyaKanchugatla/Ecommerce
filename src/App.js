@@ -31,14 +31,12 @@ const App = () => {
       setSearchResults(products)
     }
   }
-  console.log(searchResults)
   const filterHandler = (item) => {
     const result = products.filter((product)=>{
       return Object.values( product.category).join("").toLowerCase().includes(item.toLowerCase())
     })
     setArray(result)
   }
-  console.log(array)
   const checked = array.length < 1 ? "false" : "true"
   return (
     <div>
