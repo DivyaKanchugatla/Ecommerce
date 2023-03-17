@@ -11,7 +11,7 @@ function Checkout() {
     items.Carts.forEach(function (item) {
       TotalCart += Math.round(item.quantity * item.price);
     });
-    console.log(items)
+    
 
 
    const proceedToCheckOutHandler=()=>{
@@ -27,7 +27,6 @@ function Checkout() {
                 amount: TotalCart * 100,
                 name: "Ecommerce app",
                 description: " Transaction",
-                // image: "http://localhost:1337/logo.png",
                 image:'https://thumbs.dreamstime.com/z/payment-icon-flat-style-payment-icon-flat-style-hand-holding-money-yellow-background-circle-124180489.jpg',
                 
                 handler: function (response) {
@@ -46,11 +45,9 @@ function Checkout() {
                 }
               };
             
-            
-              const pay=new window.Razorpay(options)
+            const pay=new window.Razorpay(options)
             pay.open()
-            
-    }
+            }
    }
 
   return (
@@ -101,7 +98,7 @@ function Checkout() {
                         <div className="col-md-6 form-group">
                             <label className="checkout-label" htmlFor="country">{DefaultConstants.COUNTRY}</label>
                             <select className="checkout-select" defaultValue='Unites States' id="country">
-                                <option  >United States</option>
+                                <option >United States</option>
                                 <option>Afghanistan</option>
                                 <option>Albania</option>
                                 <option>Algeria</option>
@@ -228,26 +225,6 @@ function Checkout() {
                     <div className="checkout-billing-card-header ">
                         <h4 className="font-weight-semi-bold m-0">{DefaultConstants.PAYMENT}</h4>
                     </div>
-                    {/* <div className="checkout-card-body">
-                        <div className="form-group">
-                            <div className="custom-radio">
-                                <input type="radio" className="checkout-radio" name="payment" id="paypal"/>
-                                <label className="checkout-label" htmlFor="paypal">Paypal</label>
-                            </div>
-                        </div>
-                        <div className="form-group">
-                            <div className="custom-radio">
-                                <input type="radio" className="checkout-radio" name="payment" id="directcheck"/>
-                                <label className="checkout-label" htmlFor="directcheck">Direct Check</label>
-                            </div>
-                        </div>
-                        <div className="">
-                            <div className="">
-                                <input type="radio" className="checkout-radio" name="payment" id="banktransfer"/>
-                                <label className="checkout-label mb-0" htmlFor="banktransfer">Bank Transfer</label>
-                            </div>
-                        </div>
-                    </div> */}
                     <div className="checkout-total-container">
                         <button className="checkout-button" onClick={proceedToCheckOutHandler}>Place Order</button>
                     </div>
