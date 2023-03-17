@@ -2,12 +2,12 @@ import React from "react";
 import "./Trandy.css";
 import { Link } from 'react-router-dom';
 import { ADD_CART } from "../../store/actions/CartActions";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 
 
-function Trandy() {
+function Trandy(props) {
   const dispatch=useDispatch()
-  const products=useSelector((state)=>state.allProducts.products)
+  // const products=useSelector((state)=>state.allProducts.products)
   return (
     <>
       <div className="trandy-heading-container">
@@ -15,7 +15,7 @@ function Trandy() {
       </div>
       <div className="container-fluid pt-5">
          <div className="row">
-         {products.map((product,index) => {
+         {props.products.length > 0 ? props.products.map((product,index) => {
                   const {title,image,price,id} = product; 
            return (
                  <div className="col-12 col-md-6 col-lg-3 pb-1"  key={index}>
@@ -43,7 +43,7 @@ function Trandy() {
                      </div>
                    
                   );
-                 })}
+                 }):<div className="text-center" style={{fontSize:"22px",fontWeight:"bold",color:"teal"}}>No Results Found</div>}
          </div>
       </div>
            

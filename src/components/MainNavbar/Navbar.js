@@ -7,25 +7,22 @@ import SignUp from '../LoginPage/SignUp'
 import "./Navbar.css";
 
 const Dresses = [
- { dress:DefaultConstants.MENSDRESSES},{dress:DefaultConstants.WOMENSDRESSES}, {dress:DefaultConstants.BABAYSDRESSES}
+ { dress:DefaultConstants.MENSDRESSES,click:"men"},{dress:DefaultConstants.WOMENSDRESSES,click:"women"}, {dress:DefaultConstants.BABAYSDRESSES,click:"baby"}
 ]
 const categoryItems = [
   {category:DefaultConstants.SHIRTS},{category:DefaultConstants.JEANS},{category:DefaultConstants.SWIMWEAR},{category:DefaultConstants.SLEEPWEAR},{category:DefaultConstants.SPORTSWEAR},{category:DefaultConstants.SWIMWEAR},{category:DefaultConstants.BLAZERS},{category:DefaultConstants.JACKETS},{category:DefaultConstants.SHOES}
 ]
 
 //Done by Kanchugatla Divya
-const Navbar = () => {
+const Navbar = (props) => {
   const [loginModal, setLoginmodal] = useState(false);
   const [isLogined, setIslogined] = useState(false);
   const [userName, setUserName] = useState("");
   const [registerModal,setRegisterModal]=useState(false)
    //check the cuurent location
    const location=useLocation()
+
    //this for open login modal
- 
-
-  
-
   const loginHandlermodal = (value) => {
     setLoginmodal(value);
   };
@@ -34,6 +31,7 @@ const Navbar = () => {
   const logoutButtonShow = (value) => {
     setIslogined(value);
   };
+
   //user Details hanlder
   const userDetailshandler = (details) => {
     const nameuser = details[0].firstName + details[0].lastName;
@@ -42,11 +40,11 @@ const Navbar = () => {
     console.log(details)
   };
    
-  
   //register modal
   const signupHandlermodal=(value)=>{
     setRegisterModal(value)
   }
+
   //create account handler when click signup here
   const createAccountHanlder=(value)=>{
     setRegisterModal(value)
@@ -56,20 +54,18 @@ const Navbar = () => {
   const loginModalShowAfterRegister=(value)=>{
     setLoginmodal(value)
   }
-
-  // const products = useSelector((state) => state.allProducts.products);
-  // const productId = products?.map((product) => {
-  //   return product.id;
-  // });
-  // console.log(productId[0]);
-  
+  const filterResult = (item) => {
+    props.searchKeyword(item);
+    
+  }
+ 
   return (
     <>
       {/* MainNavbar starts from here */}
       <div className="container-fluid mb-5">
         <div className="row border-top px-xl-5">
           {/* categories dropdown starts from here */}
-          <div className="col-lg-3 d-none d-lg-block">
+          <div className="col-lg-3 d-none d-md-block d-lg-block">
             <a
               className="btn shadow-none d-flex align-items-center justify-content-between text-white w-100 categoriesdropdown"
               data-toggle="collapse"
@@ -114,24 +110,12 @@ const Navbar = () => {
                     >
                        {Dresses.map((item,index)=>{
                     return(
-                      <a href="/" className="dropdown-item" key={index}>
+                      <button className="dropdown-item" key={index} onClick={()=>filterResult(item.click)}>
                         {item.dress}
-                      </a>                   
+                      </button>                   
                     )
                   })}
                    </div>
-                  <div
-                    className="dropdown-menu position-absolute border-0 rounded-0 w-100 m-0"
-                    style={{ backgroundColor: "#EDF1FF" }}
-                  >
-                    {Dresses.map((item,index)=>{
-                      return(
-                        <a href="/" className="dropdown-item" key={index}>
-                        {item.dress}
-                      </a> 
-                      )
-                    })}
-                  </div>
                 </div>
                 <div style={{ paddingLeft: "42px" }}>
                   {categoryItems.map((item,index)=>{

@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './JustArrived.css';
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { ADD_CART } from './../../store/actions/CartActions';
 
-const JustArrived = () => {
+const JustArrived = (props) => {
   const dispatch=useDispatch()
-  const products=useSelector((state)=>state.allProducts.products)
+  
     
   return (
     <>
@@ -15,7 +15,7 @@ const JustArrived = () => {
       </div>
        <div className="container-fluid pt-5">
          <div className="row">
-         {products.map((product,key) => {
+         {props.products.length>0 ? props.products.map((product,key) => {
                   const {title,image,price,id} = product; 
            return (
                  <div key={key} className="col-12 col-md-6 col-lg-3 pb-1"  >
@@ -43,7 +43,7 @@ const JustArrived = () => {
                      </div>
                    
                   );
-                 })}
+                 }):<div className="text-center" style={{fontSize:"22px",fontWeight:"bold",color:"teal"}}>No Results Found</div>}
          </div>
       </div>
     </>
