@@ -12,13 +12,16 @@ const socialIcons = [
   ]
 
 //Done by Kanchugatla Divya
-const TopNavbar = () => {
+const TopNavbar = (props) => {
+   
     const itemsInCart=useSelector((state)=>state._cardProduct)
-
     let TotalCartItems = 0;
     itemsInCart.Carts.forEach(function (item) {
       TotalCartItems += item.quantity;
     });
+const getSearchTerm = (event) =>{
+    props.searchKeyword(event.target.value);
+}
   
   return (
     <>
@@ -64,7 +67,7 @@ const TopNavbar = () => {
             <div className="col-lg-6 col-6 text-left">              
                 <form action="">
                     <div className="input-group">
-                        <input type="text" className="form-control" placeholder="Search for products"/>
+                        <input type="text"  value={props.term} onChange={getSearchTerm} className="form-control" placeholder="Search for products" />
                         <div className="input-group-append">
                             <span className="input-group-text bg-transparent icon-color">
                                 <i className="fa fa-search"></i>
