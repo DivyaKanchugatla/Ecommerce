@@ -72,7 +72,7 @@ const Navbar = (props) => {
       <div className="container-fluid mb-5">
         <div className="row border-top px-xl-5">
           {/* categories dropdown starts from here */}
-          <div className="col-lg-3 d-none d-md-block d-lg-block">
+          <div className="col-lg-3 d-none d-lg-block">
             <a
               className="btn shadow-none d-flex align-items-center justify-content-between text-white w-100 categoriesdropdown"
               data-toggle="collapse"
