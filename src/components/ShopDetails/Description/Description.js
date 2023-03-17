@@ -41,12 +41,12 @@ const Description = () => {
     <>
     <div>
         <div className="row px-xl-5">
-            <div className="col">
+            <div className="col" data-testid="tabs">
       {/* Three tabs (Description,Information,Reviews) */}
                 <div className="nav nav-tabs justify-content-center border-secondary mb-4">
                     <a className="nav-item nav-link heading-tabs" data-toggle="tab" href="#tab-pane-1">{DefaultConstants.DESCRIPTION}</a>
                     <a className="nav-item nav-link heading-tabs" data-toggle="tab" href="#tab-pane-2">{DefaultConstants.INFORMATION}</a>
-                    <a className="nav-item nav-link heading-tabs" data-toggle="tab" href="#tab-pane-3">{DefaultConstants.REVIEWS} ({count})</a>
+                    <a className="nav-item nav-link heading-tabs" data-toggle="tab" href="#tab-pane-3" data-setid="count">{DefaultConstants.REVIEWS} ({count})</a>
                 </div>
                 <div className="tab-content">
                      {/* Description Tab */}
@@ -114,7 +114,7 @@ const Description = () => {
                                 <h4 className="mb-4 heading-description">{DefaultConstants.LEAVEREVIEW}</h4>
                                 <small className="paragraph-description">Your email address will not be published. Required fields are marked *</small>
                                
-                                <form onSubmit={submitHandler}>
+                                <form onSubmit={submitHandler} data-setid="submitEvent">
                                 <div className="d-flex my-3">
                                     <p className="mb-0 mr-2 paragraph-description">{DefaultConstants.YOURRATING}</p>
                                     <div className="text-primary">

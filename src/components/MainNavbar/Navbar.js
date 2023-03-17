@@ -20,13 +20,11 @@ const Navbar = () => {
   const [isLogined, setIslogined] = useState(false);
   const [userName, setUserName] = useState("");
   const [registerModal,setRegisterModal]=useState(false)
+
    //check the cuurent location
    const location=useLocation()
+
    //this for open login modal
- 
-
-  
-
   const loginHandlermodal = (value) => {
     setLoginmodal(value);
   };
@@ -42,11 +40,11 @@ const Navbar = () => {
     console.log(nameuser)
     console.log(details)
   };
-   const products = useSelector((state) => state.allProducts.products);
-  const productId = products?.map((product) => {
-     return product.id;
-   });
-   console.log(productId[0]);
+  //  const products = useSelector((state) => state.allProducts.products);
+  // const productId = products?.map((product) => {
+  //    return product.id;
+  //  });
+  //  console.log(productId[0]);
   
    
   
@@ -270,4 +268,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

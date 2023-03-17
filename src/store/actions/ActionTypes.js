@@ -5,4 +5,5 @@ export const ActionTypes={
     REMOVE_SELECTED_PRODUCT:"REMOVE_SELECTED_PRODUCT",
     A_to_Z:'az',
     Z_to_A:'za',
+    FILTER_PRODUCTS:"FILTER_PRODUCTS"
 }

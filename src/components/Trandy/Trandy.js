@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { ADD_CART } from "../../store/actions/CartActions";
 import { useDispatch,useSelector } from "react-redux";
 
+
 function Trandy() {
   const dispatch=useDispatch()
   const products=useSelector((state)=>state.allProducts.products)

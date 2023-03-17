@@ -12,6 +12,8 @@ const initialState = {
         return {...state,products:payload};
     case ActionTypes.Z_to_A:
         return {...state,products:payload}    
+         case ActionTypes.FILTER_PRODUCTS:
+            return {...state, products:payload};
      default:
          return state;
     }
