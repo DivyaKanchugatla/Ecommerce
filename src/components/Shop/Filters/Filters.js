@@ -32,8 +32,8 @@ const Filters = () => {
 
         <div className='border-bottom mb-4 pb-4'>
         <h5 className="font-weight-semi-bold mb-4 filter-heading">{head}</h5>
-                        {items.map((item) => (
-                            <div className='d-flex justify-content-between mb-2'>
+                        {items.map((item,index) => (
+                            <div className='d-flex justify-content-between mb-2' key={index}>
                                 <div>
                                     <input type="checkbox" className="" id="price-all" />
                                     <label className="pl-2" htmlFor="price-all">{item.price}</label>

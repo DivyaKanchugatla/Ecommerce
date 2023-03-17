@@ -6,7 +6,7 @@ import Rating from './Rating';
 import { getSingleProduct } from '../../../store/actions/ProductDetailActions';
 import { ADD_CART } from '../../../store/actions/CartActions';
 import { DefaultConstants } from '../../../constants/constants';
-import './ProductDetail.css'
+import './ProductDetail.css';
 
 const sizes = [  
     {id:"size-1", size:DefaultConstants.XS,check:true},

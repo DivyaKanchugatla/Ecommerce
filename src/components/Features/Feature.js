@@ -33,7 +33,7 @@ const Feature = () => {
   <div className="container-fluid pt-5">
       <div className="row  pb-3">
         {data.map(eachItem=>
-          <FeaturesCard heading={eachItem.heading} viewBox={eachItem.viewBox} d={eachItem.d} />
+          <FeaturesCard heading={eachItem.heading} viewBox={eachItem.viewBox} d={eachItem.d} key={eachItem.id} />
           )}
       </div>
   </div>
