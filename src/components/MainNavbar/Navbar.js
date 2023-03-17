@@ -10,7 +10,7 @@ const Dresses = [
  { dress:DefaultConstants.MENSDRESSES,click:"men"},{dress:DefaultConstants.WOMENSDRESSES,click:"women"}, {dress:DefaultConstants.BABAYSDRESSES,click:"baby"}
 ]
 const categoryItems = [
-  {category:DefaultConstants.SHIRTS},{category:DefaultConstants.JEANS},{category:DefaultConstants.SWIMWEAR},{category:DefaultConstants.SLEEPWEAR},{category:DefaultConstants.SPORTSWEAR},{category:DefaultConstants.SWIMWEAR},{category:DefaultConstants.BLAZERS},{category:DefaultConstants.JACKETS},{category:DefaultConstants.SHOES}
+  {category:DefaultConstants.SHIRTS,click:"shirts"},{category:DefaultConstants.JEANS,click:"jeans"},{category:DefaultConstants.SWIMWEAR,click:"swim"},{category:DefaultConstants.SLEEPWEAR,click:"sleep"},{category:DefaultConstants.SPORTSWEAR,click:"sports"},{category:DefaultConstants.SWIMWEAR,click:"swim"},{category:DefaultConstants.BLAZERS,click:"blazers"},{category:DefaultConstants.JACKETS,click:"jackets"},{category:DefaultConstants.SHOES,click:"shoes"}
 ]
 
 //Done by Kanchugatla Divya

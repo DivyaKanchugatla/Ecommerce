@@ -34,7 +34,7 @@ const App = () => {
   console.log(searchResults)
   const filterHandler = (item) => {
     const result = products.filter((product)=>{
-      return Object.values(product.category).join("").toLowerCase().includes(item.toLowerCase())
+      return Object.values( product.category).join("").toLowerCase().includes(item.toLowerCase())
     })
     setArray(result)
   }
