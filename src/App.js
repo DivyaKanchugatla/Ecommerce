@@ -23,7 +23,7 @@ const App = () => {
     setSearchTerm(searchTerm);
     if (searchTerm !== "") {
       const newProductsList = products.filter((product)=>{
-       return  Object.values(product.category).join("").toLowerCase().includes(searchTerm.toLowerCase())
+       return  Object.values(product.category).join("").toLowerCase().startsWith(searchTerm.toLowerCase())
       })
       setSearchResults(newProductsList)
     }
