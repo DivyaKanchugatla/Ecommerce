@@ -28,14 +28,22 @@ const Description = () => {
     }
     
     
-     useEffect(()=>{
-         let reviewData=JSON.stringify(reviewList)
-         localStorage.setItem('data', reviewData);
-     },[reviewList])
+     // Save reviewList to local storage when it changes
+  useEffect(() => {
+    localStorage.setItem('reviewList', JSON.stringify(reviewList));
+  }, [reviewList]);
 
-    const saved = localStorage.getItem("data")
-    const storedItem = JSON.parse(saved);
-    let count = storedItem?.length
+     // Retrieve reviewList from local storage on mount
+  useEffect(() => {
+    const savedReviewList = localStorage.getItem('reviewList');
+    if (savedReviewList) {
+      setReviewList(JSON.parse(savedReviewList));
+    }
+  }, []);
+
+  const count = reviewList.length;
+
+
     
   return (
     <>
@@ -95,7 +103,7 @@ const Description = () => {
                         <div className="row">
                             <div className="col-md-6">
                             <h4 className="mb-4 heading-description">Reviews for this Product</h4>
-                               {storedItem?.map((each,index)=>{                               
+                               {reviewList?.map((each,index)=>{                               
                                 return(                                                                       
                                     <div className="media mb-4" key={index}>
                                         <img src="https://m.media-amazon.com/images/I/81PEBDVcoOL._SL1500_.jpg" alt="" className="img-fluid mr-3 mt-1" style={{width: "45px"}}/>
